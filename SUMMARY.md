@@ -7,7 +7,7 @@
 * [QTUM Docker Container](part1/qtum-docker.md)
   * [Tip: regtest Mode](part1/qtum-docker.md#running-regtest-mode)
   * [Tip: New Blocks On Demand](part1/qtum-docker.md#new-blocks-on-demand)
-* [Accounts & Balances](part1/uxtos-balances.md)
+* [UXTOs Accounting](part1/uxtos-balances.md)
 * [Test & Main Network](part1/running-testnet.md)
   * [Tip: Testnet Token Faucet]()
 
