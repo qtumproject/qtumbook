@@ -2,21 +2,22 @@
 
 * [Introduction](README.md)
 
-### Part 1 - QTUMD
+### Part 1 - Running QTUM
 
-* [Running In Dev Mode]()
-* [Accounts & Balances]()
-  * [Tip: New Blocks On Demand]()
-* [Running Testnet]()
+* [QTUM Docker Container](part1/qtum-docker.md)
+  * [Tip: regtest Mode](part1/qtum-docker.md#running-regtest-mode)
+  * [Tip: New Blocks On Demand](part1/qtum-docker.md#new-blocks-on-demand)
+* [Accounts & Balances](part1/uxtos-balances.md)
+* [Test & Main Network](part1/running-testnet.md)
   * [Tip: Testnet Token Faucet]()
 
 ### Part 2 - Smart Contract
 
 * [Custom Token]()
+  * [Tip: Contract Ownership]()
 * [Crowdsale]()
   * [Using Solidity Library]()
   * [Combining Contracts]()
-  * [Tip: Contract Ownership]()
 
 ### Part 3 - RPC
 
