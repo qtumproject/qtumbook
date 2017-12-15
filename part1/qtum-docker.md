@@ -209,6 +209,8 @@ qcli getinfo
 "blocks": 603,
 ```
 
+> Note: QTUM's proof-of-stake reward is unspendable until it "matures" after 500 blocks. By generating 600 blocks, we get 100 matured block rewards, of 20k QTUM each.
+
 # Summary
 
 In this chapter we have run qtumd in a docker container:
