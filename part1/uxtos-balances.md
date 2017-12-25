@@ -4,7 +4,7 @@ If you are a developer coming from Ethereum, the biggest practical difference is
 
 In Ethereum, you'd typically have an account with an unique address that holds a balance. You'd be sending/receiving money and interacting with Smart Contracts using one account.
 
-In QTUM, you don't really have accounts. Instead, you have a collection of UXTOs, each of which has its own address. An UXTO may be used only once when you send money or interact with a Smart Contract. If an UXTO has more value than you intend to send, it'd be splitted up into multiple UXTOs.
+In QTUM, you don't really have accounts. Instead, you have a collection of UXTOs, each of which has its own address. An UXTO may be used only once when you send money or interact with a Smart Contract. If an UXTO has more value than you intend to use, it'd be splitted up into multiple UXTOs after a transaction.
 
 In this chapter we'll explore the UXTO model by sending some money using the `qcli` command, and peeking into the transaction data.
 
