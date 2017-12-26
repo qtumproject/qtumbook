@@ -13,9 +13,12 @@
 
 ### Part 2 - Smart Contract
 
-* [Custom Token]()
-  * [Tip: Contract Ownership]()
-* [Crowdsale]()
+* [ERC20 Token](part2/erc20-token.md)
+  * [Deploy Contract](part2/erc20-token.md#deploy-contract)
+  * [Contract Ownership](part2/erc20-token.md#the-owner-uxto-address)
+  * [Prefund Owner](part2/erc20-token.md#prefunding-the-owner-address)
+  * [ABIPlayer](part2/erc20-token.md#using-abiplayer)
+* Crowdsale
   * [Using Solidity Library]()
   * [Combining Contracts]()
 
