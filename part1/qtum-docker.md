@@ -26,7 +26,7 @@ docker run -it --rm \
   -v `pwd`:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
-  -p 13889:13889 \
+  -p 3889:3889 \
   hayeah/qtumportal
 ```
 
@@ -100,7 +100,7 @@ docker run -it --rm \
   -v `pwd`:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
-  -p 13889:13889 \
+  -p 3889:3889 \
   hayeah/qtumportal
 ```
 
@@ -221,7 +221,7 @@ docker run -it --rm \
   -v `pwd`:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
-  -p 13889:13889 \
+  -p 3889:3889 \
   hayeah/qtumportal
 ```
 
