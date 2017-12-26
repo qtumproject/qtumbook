@@ -97,7 +97,7 @@ Then solar waits for confirmation:
 
 The contract had been deployed to `a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3`. (You'd get a different contract address).
 
-The `solar status` lists all contracts that had been deployed with solar:
+The `solar status` command lists all contracts that had been deployed with solar:
 
 ```
 solar status
@@ -136,7 +136,7 @@ modifier onlyOwner() {
 
 https://github.com/OpenZeppelin/zeppelin-solidity/blob/4ce0e211c500aa756120c4f2851cc75518123309/contracts/ownership/Ownable.sol#L28
 
-To satisfy this modifier, we'll need to call the method using the same UXTO address that created the contract. But the owner UXTO was already spent when we created the contract. We can't use it again to make another method call!
+To satisfy this modifier, we'll need to call the method using the UXTO address that created the contract. But the owner UXTO was already spent when we created the contract. We can't use it again to make another method call!
 
 The way to get around this problem is to create a new UXTO with the same address, endowing it with enough value to pay for the transaction we want to make. Since UXTO can be used once only, you'll need to generate an UXTO for each transaction.
 
@@ -149,7 +149,7 @@ OK, so to act as the owner of a contract, we need to create UXTOs that share the
 So the owner address is `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`. We could send 1 qtum to it:
 
 ```
-qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 1
+qcli sendtoaddress qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 1
 ```
 
 If we need many UXTOs, we can create them more efficiently in one single transaction by using the `sendmanywithdupes` RPC call.
@@ -166,7 +166,7 @@ Or equivalently, you can use the name of the deployed contract:
 solar prefund zeppelin-solidity/contracts/token/CappedToken.sol 1 20
 ```
 
-Wait for a bit for the transaction to confirm, then you can check if the UXTOs had been created:
+Wait for the transaction to confirm, then you can check if the UXTOs had been created:
 
 ```
 qcli listunspent 0 10 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
@@ -196,6 +196,8 @@ qcli listunspent 0 10 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
   }
 ]
 ```
+
+You can see that these UXTOs share the same address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`.
 
 # Using ABIPlayer
 
@@ -229,7 +231,9 @@ qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
 
 # Mint With ABIPlayer
 
-Let's mint some coins for the contract owner! Because we are sending the receiver address into the smart contract, we'll need to use the hexadecimal address instead of base58 address.
+Let's mint some coins for the contract owner! Because we are sending the receiver address into the smart contract, we'll need to format the address in hexadecimal instead of base58.
+
+To mint 1000 tokens:
 
 ![](./erc20-token/mint-send.jpg)
 
