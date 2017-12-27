@@ -119,6 +119,6 @@ Note that we've omitted the `-p` flags, so the network ports are not accessible 
 It's safer to do your things by shelling into the container:
 
 ```
-ocker exec -it myapp sh
+docker exec -it myapp sh
 ```
 
