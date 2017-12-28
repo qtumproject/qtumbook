@@ -18,7 +18,12 @@
   * [Contract Ownership](part2/erc20-token.md#the-owner-uxto-address)
   * [Prefund Owner](part2/erc20-token.md#prefunding-the-owner-address)
   * [ABIPlayer](part2/erc20-token.md#using-abiplayer)
-* [ERC20 With JS](part2/erc20-js.md)
+* [ERC20 With QtumJS](part2/erc20-js.md)
+  * [Load Contract](./part2/erc20-js.md#getting-the-total-supply)
+  * [Call Method](./part2/erc20-js.md#calling-a-read-only-method)
+  * [Send Tx](./part2/erc20-js.md#mint-tokens-with-send)
+  * [Stream Events](./part2/erc20-js.md#observing-contract-events)
+
 
 ### Part 3 - Crowdsale
 

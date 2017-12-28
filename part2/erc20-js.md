@@ -1,6 +1,8 @@
-# ERC20 With JS
+# ERC20 With QtumJS
 
 In this chapter we will use [qtumjs](https://github.com/qtumproject/qtumjs) to build a NodeJS CLI tool to interact with the ERC20 [token we deployed previously](./erc20-token.md).
+
+You can download the project code: [qtumproject/qtumbook-mytoken-qtumjs-cli](https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli).
 
 For now, qtumjs relies on `qtumd`'s RPC service, so make sure that the docker container is running:
 
