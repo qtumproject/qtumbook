@@ -16,7 +16,7 @@ docker run -it --rm \
 
 ## Note On NodeJS Compatibility
 
-You'll need a version of `node` that supports [async/await](https://blog.risingstack.com/mastering-async-await-in-nodejs/). You should be ok if your version number is larger than 8.
+You'll need a version of `node` that supports [async/await](https://blog.risingstack.com/mastering-async-await-in-nodejs/). You should be ok if your version number is greater than 8.
 
 My version is 8.6 (nothing special about this version...):
 
@@ -26,7 +26,7 @@ node --version
 v8.6.0
 ```
 
-I recommend that you download the Long Term Support version (8.9.3):
+I recommend that you download the [Long Term Support](https://nodejs.org/en/download/) version (8.9.3):
 
 ![](./erc20-js/node-lts-8.jpg)
 
@@ -51,7 +51,7 @@ For modern JavaScript development, you really owe it to yourself to try [VSCode]
 
 ![](./erc20-js/qtumjs-vscode.jpg)
 
-While I am on my evangelizing soapbox, you should try [TypeScript](https://www.typescriptlang.org) too! JavaScript is in fact an extremely powerful language that seems like a joke. TypeScript is the sobered-up version, yet retaining the same dynamism and expressivity that JavaScript developers love.
+While I am on my evangelizing soapbox, you should try [TypeScript](https://www.typescriptlang.org) too! JavaScript is in fact an extremely powerful language, though it seems like a joke. TypeScript is the sobered-up version, yet retaining the same dynamism and expressivity that JavaScript developers love.
 
 Now, back to QTUM :p
 
@@ -175,7 +175,7 @@ async function totalSupply() {
 
 https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/index.js#L15-L22
 
-* `myToken.call("totalSupply")` returns a [Promise](https://developers.google.com/web/fundamentals/primers/promises), and `await` is a syntatic sugar to that waits for the asynchronous computation to complete.
+* `myToken.call("totalSupply")` returns a [Promise](https://developers.google.com/web/fundamentals/primers/promises), and `await` is a syntatic sugar to that waits for the asynchronous computation, then returns the result.
 * Solidity numbers (int, uint, etc.) are represented in JavaScript using [BigNumber](https://github.com/indutny/bn.js/).
 
 The `result` object contains other useful information aside from the returned values.
@@ -202,7 +202,7 @@ Do `console.log(result)` to print it out:
   outputs: [ <BN: 36b0> ] }
 ```
 
-If you hover over mouse cursor over the `result` variable, you should see that its type is `IContractCallDecodedResult`:
+If you hover your mouse cursor over the `result` variable, you should see that its type is `IContractCallDecodedResult`:
 
 ![](./erc20-js/hover-call-result-typehint.jpg)
 
@@ -266,9 +266,9 @@ The arguments to `balanceOf` are passed in as an array.
 
 # Send VS Call
 
-Confusingly, there are two ways to invoke a method: `send` and `call`. These two names are inherited from Ethereum's terminology. A more mnemonic pair of names is perhaps to call `send` "commit" and `call` "query".
+Confusingly, there are two ways to invoke a method: `send` and `call`. These two names are inherited from Ethereum. A more descriptive way to name them is perhaps to call `send` "commit" and `call` "query".
 
-* `call` (or "query"): executes contract code on your own local qtum node as a "simulation", returning results, but not changing the blockchain. This is free.
+* `call` (or "query"): executes contract code on your own local `qtumd` node as a "simulation", returning results, but not changing the blockchain. This is free.
 * `send` (or "commit"): creates an actual transaction that would execute code globally on the network, changing the the blockchain. This costs gas.
 
 Next, we are going to mint some new tokens using qtumjs. And because minting token changes the blockchain, we'll use `send`.
@@ -276,7 +276,7 @@ Next, we are going to mint some new tokens using qtumjs. And because minting tok
 
 # Mint Tokens With Send
 
-The `mint` command creates uses `send` to create a new transaction, then waits for that transaction to confirm:
+The `mint` command creates new tokens by using `send` to create a new transaction. Then it waits for that transaction to confirm:
 
 ```
 node index.js mint dcd32b87270aeb980333213da2549c9907e09e94 10000
@@ -305,7 +305,15 @@ mint tx: 469d0e6a1e1a421c84cd009b983fc153aa5db7da26fa1f89837f2731fa75586c
 ✔ confirm mint
 ```
 
-The `mint` function:
+We should see that the balance had increased:
+
+```
+node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
+
+balance: 23700
+```
+
+The `mint` function source code:
 
 ```js
 async function mint(toAddr, amount) {
@@ -318,13 +326,8 @@ async function mint(toAddr, amount) {
 }
 ```
 
-We should see that the balance had increased:
-
-```
-node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
-
-balance: 23700
-```
+* `tx` is the transaction submitted.
+* `tx.confirm(1)` is a Promise that returns when there is one confirmation for the transaction.
 
 # Token Transfer
 
@@ -430,7 +433,7 @@ node index.js balance 9d748f98e65c6875dbed7bfb6ffbeca426ff9cc6
 balance: 100
 ```
 
-And that the origin account decremented by 100:
+And that the origin account's balance decremented by 100:
 
 ```
 node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
@@ -482,7 +485,7 @@ async function streamEvents() {
 
 https://github.com/OpenZeppelin/zeppelin-solidity/blob/323d1fa9415695f9132af17a9ebd57642afb7f29/contracts/token/BasicToken.sol#L29
 
-The above is an asynchronous loop that waits for new events to happen, print them out, then waits again for new events.
+The above is an asynchronous loop that waits for new events to happen, prints them out, then waits again for new events.
 
 Let's see it in action. Launch the `events` subscriber:
 
