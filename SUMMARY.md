@@ -11,18 +11,26 @@
 * [Test & Main Networks](part1/networks.md)
   * [Tip: Free Testnet Tokens](part1/networks.md#getting-testnet-tokens)
 
-### Part 2 - Smart Contract
+### Part 2 - ERC20
 
 * [ERC20 Token](part2/erc20-token.md)
   * [Deploy Contract](part2/erc20-token.md#deploy-contract)
   * [Contract Ownership](part2/erc20-token.md#the-owner-uxto-address)
   * [Prefund Owner](part2/erc20-token.md#prefunding-the-owner-address)
   * [ABIPlayer](part2/erc20-token.md#using-abiplayer)
+* [ERC20 With JS](part2/erc20-js.md)
+
+### Part 3 - Crowdsale
+
 * Crowdsale
   * [Using Solidity Library]()
   * [Combining Contracts]()
 
-### Part 3 - RPC
+### Part 4 - DApp
+
+* [Browser DApp]()
+
+### Part 5 - RPC
 
 * [Token, Again With RPC]()
   * [Params ABI Encoding]()
@@ -30,10 +38,3 @@
   * [Tip: Wait For Confirmations]()
   * [Send & Call]()
   * [Tip: Event Logs]()
-
-### Part 4 - DApp & QTUMJS
-
-* [Calling RPC]()
-* [Calling Contracts]()
-* [NodeJS Log Monitor]()
-* [Browser DApp]()

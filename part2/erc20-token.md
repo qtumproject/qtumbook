@@ -249,7 +249,7 @@ Wait for confirmation, and you should see information about the transaction:
 
 ![](./erc20-token/mint-result.jpg)
 
-You may now call `balanceOf` and `totalSupply` to check if the owner had received the minted tokens, and the supply and increased accordingly:
+You may now call `balanceOf` and `totalSupply` to check if the owner had received the minted tokens, and that the supply had increased accordingly:
 
 ![](./erc20-token/mint-balance-supply.jpg)
 
