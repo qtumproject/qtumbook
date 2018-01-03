@@ -160,7 +160,7 @@ The ABI definition (loaded from `solar.json`) is:
 ```
 https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/solar.development.json.example#L46-L60
 
-And the call this method using JavaScript:
+And to call this method using JavaScript:
 
 ```js
 // const myToken = new Contract( ... )

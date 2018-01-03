@@ -23,6 +23,7 @@
   * [Call Method](./part2/erc20-js.md#calling-a-read-only-method)
   * [Send Tx](./part2/erc20-js.md#mint-tokens-with-send)
   * [Stream Events](./part2/erc20-js.md#observing-contract-events)
+* [ERC20 DApp](part2/erc20-dapp.md)
 
 
 ### Part 3 - Crowdsale
