@@ -104,7 +104,7 @@ docker run -it --rm \
   hayeah/qtumportal
 ```
 
-*Optional* - you can run on the `Testnet` by using the `-e "QTUM_NETWORK=testnet"` flag like so
+**Optional** - you can run on the `Testnet` by using the `-e "QTUM_NETWORK=testnet"` flag like so
 ```
 docker run -it --rm \
   --name myapp \
