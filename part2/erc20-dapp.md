@@ -21,6 +21,8 @@ The ERC20 DApp is more complex than the CLI App, because it needs to track multi
 
 We will use [mobx.js](https://mobx.js.org/), a reactive programming framework, to keep data and view synchronized.
 
+You can get the code at [qtumproject/qtumjs-dapp-erc20](https://github.com/qtumproject/qtumjs-dapp-erc20), and use it to jump start your own DApp project.
+
 # Brief Intro To Reactive Programming
 
 Most of the complexity in GUI programming is in synchronizing the underlying data and the UI state. When data changes, the UI also needs to change. Conversely, when the UI changes (say user inputs a number), the data needs to change.
@@ -269,9 +271,11 @@ Your app may need to give indication as to where transactions are in each of the
 
 # Minting Tokens
 
-The ERC20 DApp tracks the mint transactions that had been made, and update the UI as they progress through the various stages of their lifecycles.
+The `mintTokens` method tracks the mint transactions that had been made, and update the UI as they progress through the various stages of their lifecycles.
 
-The annotated code for `mintToken`:
+The first half of the method creates a new observable `txRecord`. The second half updates the txRecord as the transaction moves through stages of its lifecycle.
+
+The annotated code for `mintTokens`:
 
 ```js
 public async mintTokens(toAddress: string, amount: number) {
@@ -319,8 +323,6 @@ public async mintTokens(toAddress: string, amount: number) {
   }
 }
 ```
-
-The first half of the function creates a new observable `txRecord`. The second half updates the txRecord as the transaction moves through stages of its lifecycle.
 
 Without the record keeping logic, the code boils down to:
 
