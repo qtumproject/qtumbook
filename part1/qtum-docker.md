@@ -104,18 +104,6 @@ docker run -it --rm \
   hayeah/qtumportal
 ```
 
-**Optional** - you can run on the `Testnet` by using the `-e "QTUM_NETWORK=testnet"` flag like so
-```
-docker run -it --rm \
-  --name myapp \
-  -e "QTUM_NETWORK=testnet" \
-  -v `pwd`:/dapp \
-  -p 9899:9899 \
-  -p 9888:9888 \
-  -p 3889:3889 \
-  -p 13888:13888 \
-  hayeah/qtumportal
-```
 ## Shell Access Into The Container
 
 Let's verify that the container is running:
