@@ -271,9 +271,9 @@ Your app may need to give indication as to where transactions are in each of the
 
 # Minting Tokens
 
-The `mintTokens` method tracks the mint transactions that had been made, and update the UI as they progress through the various stages of their lifecycles.
+The `mintTokens` method tracks the mint transactions that had been made, and updates the UI as the transactions progress through the various stages of their lifecycles.
 
-The first half of the method creates a new observable `txRecord`. The second half updates the txRecord as the transaction moves through stages of its lifecycle.
+The first half of the method creates a new observable `txRecord`. The second half updates the txRecord, which in turn triggers views to update.
 
 The annotated code for `mintTokens`:
 
