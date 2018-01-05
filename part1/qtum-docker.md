@@ -104,7 +104,10 @@ docker run -it --rm \
   hayeah/qtumportal
 ```
 
-**Optional** - you can run on the `Testnet` by using the `-e "QTUM_NETWORK=testnet"` flag like so
+#### Running Testnet
+
+You can run on the test network by setting the QTUM_NETWORK environment variable inside the container, like so:
+
 ```
 docker run -it --rm \
   --name myapp \
@@ -116,6 +119,7 @@ docker run -it --rm \
   -p 13888:13888 \
   hayeah/qtumportal
 ```
+
 ## Shell Access Into The Container
 
 Let's verify that the container is running:
