@@ -271,7 +271,7 @@ The arguments to `balanceOf` are passed in as an array.
 Confusingly, there are two ways to invoke a method: `send` and `call`. These two names are inherited from Ethereum. A more descriptive way to name them is perhaps to call `send` "commit" and `call` "query".
 
 * `call` (or "query"): executes contract code on your own local `qtumd` node as a "simulation", returning results, but not changing the blockchain. This is free.
-* `send` (or "commit"): creates an actual transaction that would execute code globally on the network, changing the the blockchain. This costs gas.
+* `send` (or "commit"): creates an actual transaction that would execute code globally on the network, changing the blockchain. This costs gas.
 
 Next, we are going to mint some new tokens using qtumjs. And because minting token changes the blockchain, we'll use `send`.
 
