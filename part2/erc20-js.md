@@ -462,32 +462,11 @@ async function streamEvents() {
   console.log("Subscribed to contract events")
   console.log("Ctrl-C to terminate events subscription")
 
-  // Start observing from the latest block height
-  let nextblock = "latest"
-
-  while (true) {
-    // This is a long-poll HTTP request, which waits, and returns
-    // when events become available.
-    const result = await myToken.logs({
-      from: nextblock,
-      minconf: 1,
-    })
-
-    // Print out all event items
-    for (const entry of result.entries) {
-      console.log(entry)
-    }
-
-    // The result tells us which block to start
-    // looking for new events.
-    nextblock = result.nextblock
-  }
+  myToken.onLog((entry) => {
+    console.log(entry)
+  }, { minconf: 1 })
 }
 ```
-
-https://github.com/OpenZeppelin/zeppelin-solidity/blob/323d1fa9415695f9132af17a9ebd57642afb7f29/contracts/token/BasicToken.sol#L29
-
-The above is an asynchronous loop that waits for new events to happen, prints them out, then waits again for new events.
 
 Let's see it in action. Launch the `events` subscriber:
 
