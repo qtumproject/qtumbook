@@ -80,7 +80,7 @@ qcli getbalance
 94.00000000
 ```
 
-You can also see the UXTOs created for that amount:
+You can also see the UTXOs created for that amount:
 
 ```
 qcli listunspent

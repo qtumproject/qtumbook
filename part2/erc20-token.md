@@ -109,15 +109,15 @@ solar status
        owner: qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
 ```
 
-Note that the contract has an `owner`. This is the address of the UXTO used to create this contract. We'll see in just a bit how you can act as the owner of this contract, to perform administrative tasks protected by the `onlyOwner` modifier.
+Note that the contract has an `owner`. This is the address of the UTXO used to create this contract. We'll see in just a bit how you can act as the owner of this contract, to perform administrative tasks protected by the `onlyOwner` modifier.
 
 You can find information about the deployed contracts in `solar.development.json`.
 
-# The Owner UXTO Address
+# The Owner UTXO Address
 
-The main difference between QTUM and Ethereum is that QTUM is built on Bitcoin's UXTO model, and Ethereum has its own account model, as we've seen in the [QTUM UXTO](../part1/uxtos-balances.md) chapter.
+The main difference between QTUM and Ethereum is that QTUM is built on Bitcoin's UTXO model, and Ethereum has its own account model, as we've seen in the [QTUM UTXO](../part1/uxtos-balances.md) chapter.
 
-The implication is that each time a contract is deployed a different UXTO from the wallet is used, and that UXTO becomes the "owner" of the contract. In other words, the address of the UXTO that is spent is the `msg.sender` of a transaction.
+The implication is that each time a contract is deployed a different UTXO from the wallet is used, and that UTXO becomes the "owner" of the contract. In other words, the address of the UTXO that is spent is the `msg.sender` of a transaction.
 
 Now, let's look at the method `mint`:
 
@@ -136,15 +136,15 @@ modifier onlyOwner() {
 
 https://github.com/OpenZeppelin/zeppelin-solidity/blob/4ce0e211c500aa756120c4f2851cc75518123309/contracts/ownership/Ownable.sol#L28
 
-To satisfy this modifier, we'll need to call the method using the UXTO address that created the contract. But the owner UXTO was already spent when we created the contract. We can't use it again to make another method call!
+To satisfy this modifier, we'll need to call the method using the UTXO address that created the contract. But the owner UTXO was already spent when we created the contract. We can't use it again to make another method call!
 
-The way to get around this problem is to create a new UXTO with the same address, endowing it with enough value to pay for the transaction we want to make. Since UXTO can be used once only, you'll need to generate an UXTO for each transaction.
+The way to get around this problem is to create a new UTXO with the same address, endowing it with enough value to pay for the transaction we want to make. Since UTXO can be used once only, you'll need to generate an UTXO for each transaction.
 
 This is slightly more cumbersome than in Ethereum, where the account has a balance, and each transaction simply reduces the account balance.
 
 ## Prefunding The Owner Address
 
-OK, so to act as the owner of a contract, we need to create UXTOs that share the same address as the owner address.
+OK, so to act as the owner of a contract, we need to create UTXOs that share the same address as the owner address.
 
 So the owner address is `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`. We could send 1 qtum to it:
 
@@ -152,9 +152,9 @@ So the owner address is `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`. We could send 1 qt
 qcli sendtoaddress qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 1
 ```
 
-If we need many UXTOs, we can create them more efficiently in one single transaction by using the `sendmanywithdupes` RPC call.
+If we need many UTXOs, we can create them more efficiently in one single transaction by using the `sendmanywithdupes` RPC call.
 
-The `solar prefund` command is a more convenient wrapper for `sendmanywithdupes` to create the UXTOs. To create 20 UXTOs of 1 qtum each for the address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`:
+The `solar prefund` command is a more convenient wrapper for `sendmanywithdupes` to create the UTXOs. To create 20 UTXOs of 1 qtum each for the address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`:
 
 ```
 solar prefund qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 1 20
@@ -166,7 +166,7 @@ Or equivalently, you can use the name of the deployed contract:
 solar prefund zeppelin-solidity/contracts/token/CappedToken.sol 1 20
 ```
 
-Wait for the transaction to confirm, then you can check if the UXTOs had been created:
+Wait for the transaction to confirm, then you can check if the UTXOs had been created:
 
 ```
 qcli listunspent 0 10 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
@@ -197,7 +197,7 @@ qcli listunspent 0 10 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
 ]
 ```
 
-You can see that these UXTOs share the same address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`.
+You can see that these UTXOs share the same address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`.
 
 # Using ABIPlayer
 
@@ -221,7 +221,7 @@ And we see the owner address returned as a hexadecimal address:
 
 ![](./erc20-token/owner-call-result.jpg)
 
-We can convert it back to the base58 UXTO address:
+We can convert it back to the base58 UTXO address:
 
 ```
 qcli fromhexaddress dcd32b87270aeb980333213da2549c9907e09e94
@@ -258,7 +258,7 @@ You may now call `balanceOf` and `totalSupply` to check if the owner had receive
 In this chapter we have deployed a basic ERC20 token, and encounter a few tools along the way:
 
 + `solar deploy` to compile & create a contract.
-+ `solar prefund` to create UXTOs that has the same address as the contract owner.
++ `solar prefund` to create UTXOs that has the same address as the contract owner.
 + Use ABIPlayer to interact with deployed contracts: http://localhost:9899/abiplay/
 + Authorize requests that cost money: http://localhost:9899/
 
