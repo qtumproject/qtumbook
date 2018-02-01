@@ -28,9 +28,7 @@
 
 ### Part 3 - Crowdsale
 
-* Crowdsale
-  * [Using Solidity Library]()
-  * [Combining Contracts]()
+* [Crowdsale](part3/ico.md)
 
 ### Part 4 - DApp
 
