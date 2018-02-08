@@ -44,12 +44,12 @@ The supply allocation is as follows:
 The prices are:
 
 * Presale
-  * Price: 500 QTUM Satoshi ($0.05 in fiat)
+  * Price: 50000 QTUM Satoshi ($0.05 in fiat)
   * Presale tokens: 10,000,000
   * 2000 MTK : 1 QTUM
   * Presale amount: 5000 QTUM ($500,000)
 * Public ICO
-  * Price: 1000 QTUM Satoshi ($0.1 in fiat)
+  * Price: 100000 QTUM Satoshi ($0.1 in fiat)
   * ICO tokens: 60,000,000
   * 1000 MTK : 1 QTUM
   * ICO funding: 60000 QTUM ($6,000,000)
@@ -223,7 +223,7 @@ We'll need the start and end time, in [unix time](https://en.wikipedia.org/wiki/
 The deploy command:
 
 ```
-solar deploy --force contracts/MintedTokenCappedCrowdsale.sol:Crowdsale '
+solar deploy contracts/MintedTokenCappedCrowdsale.sol:Crowdsale '
 [
   ${MyToken},
   ${contracts/FlatPricing.sol},
@@ -321,7 +321,7 @@ console.log("qtum raised:", await crowdsale.returnCurrency("qtum", "weiRaised"))
 console.log("tokens sold:", await crowdsale.return("tokensSold"))
 ```
 
-Run the script:
+Run the CLI script to print the info:
 
 ```
 node index.js info
@@ -400,3 +400,477 @@ tokens sold: 0
 ```
 
 > The info shows the state as `PreFunding` even if the current time had past the start date. The actual state should be `Funding`. This problem will be fixed by [qtum #480](https://github.com/qtumproject/qtum/issues/480)
+
+# Preallocate
+
+According to our ICO plan, we have already sold 10% of the token supply (10,000,000) to early investors. We'd like to record their investments on the ledger.
+
+We assume that there are two investors, who invested at the same price:
+
+```yaml
+- address: "77913e470293e72c1e93ed8dda8c1372dfc0274f"
+  tokens: 6000000
+  price: 50000
+
+- address: "78d55bb60f8c0e80fda479b02e40407ee0a88ab1"
+  tokens: 4000000
+  price: 50000
+```
+
+The [preallocate](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/Crowdsale.sol#L65) method allows the crowdsale owner to assign tokens to investor addresses. It is assumed that the investment money had already been transfered to the owner privately.
+
+```
+function preallocate(
+  address receiver,
+  uint fullTokens,
+  uint weiPrice
+) public onlyOwner;
+```
+
+To invoke `preallocate` with qtumjs:
+
+```ts
+async function preallocate(receiverAddress, tokens, price) {
+  const tx = await crowdsale.send("preallocate", [receiverAddress, tokens, price])
+  console.log("preallocate txid", tx.txid)
+
+  const receipt = await tx.confirm(1)
+  console.log("preallocate receipt:")
+
+  console.log(JSON.stringify(receipt, null, 2))
+}
+```
+
+Let's use the CLI script to allocate tokens to the first investor:
+
+```
+node index.js preallocate \
+  77913e470293e72c1e93ed8dda8c1372dfc0274f \
+  6000000 \
+  50000
+```
+
+After the transaction confirms, you should see that the events `Transfer` and `Invested` are generated:
+
+```
+"logs": [
+  {
+    "value": "5b8d80",
+    "from": "0000000000000000000000000000000000000000",
+    "to": "77913e470293e72c1e93ed8dda8c1372dfc0274f",
+    "type": "Transfer"
+  },
+  {
+    "investor": "77913e470293e72c1e93ed8dda8c1372dfc0274f",
+    "weiAmount": "45d964b800",
+    "tokenAmount": "5b8d80",
+    "customerId": "0",
+    "type": "Invested"
+  }
+]
+```
+
+Check that the ledger had indeed allocated the tokens to this investor:
+
+```
+node index.js investedBy \
+  77913e470293e72c1e93ed8dda8c1372dfc0274f
+
+invested by: 77913e470293e72c1e93ed8dda8c1372dfc0274f
+amount (qtum): 3000
+token balance: 6000000
+```
+
+We've finished allocation for one investor, let's repeat it for the second investor:
+
+```
+node index.js preallocate \
+  78d55bb60f8c0e80fda479b02e40407ee0a88ab1 \
+  4000000 \
+  50000
+```
+
+Check the ledger:
+
+```
+node index.js investedBy 78d55bb60f8c0e80fda479b02e40407ee0a88ab1
+
+invested by: 78d55bb60f8c0e80fda479b02e40407ee0a88ab1
+amount (qtum): 2000
+token balance: 4000000
+```
+
+After preallocation, the crowdsale info should have changed accordingly:
+
+```
+node index.js info
+
+token supply: 40000000
+crowdsale state: PreFunding
+crowdsale start date: 2018-01-15T00:00:00.000Z
+crowdsale end date: 2018-03-01T00:00:00.000Z
+investor count: 0
+qtum raised: 5000
+tokens sold: 10000000
+```
+
+> Note: the investor count is still 0 because the contract implementation assumes that one preallocation address may in fact distribute the tokens further to an arbitrary number of a smaller investors.
+
+# Invest
+
+Once the crowdsale is in the `Funding` state, public investors may start to send in money. We'll let the investors use the [invest](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/Crowdsale.sol#L104) method.
+
+> The precise conditions that determines the state of the crowdsale is defined in the [getState](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L361) method.
+
+The `invest` method sends in an amount of qtum, and receive a corresponding amount of tokens as determined by the pricing strategy. This method is more expensive to compute, so we set a higher gas limit of 300,000:
+
+```ts
+async function invest(address, amount) {
+  console.log("invest", address, amount)
+  const tx = await crowdsale.send("invest", [address], {
+    amount,
+    gasLimit: 300000,
+  })
+  console.log("invest txid", tx.txid)
+  const receipt = await tx.confirm(1)
+  console.log("invest receipt:")
+  console.log(JSON.stringify(receipt, null, 2))
+}
+```
+
+Invoke the CLI tool to invest 7000 QTUMs:
+
+```
+node index.js invest \
+  6607919dd81d8e958b31e2ef089139505faada4d \
+  7000
+```
+
+After confirmation, we should see that this address had received 3000 MTKs:
+
+```
+node index.js investedBy 6607919dd81d8e958b31e2ef089139505faada4d
+
+invested by: 6607919dd81d8e958b31e2ef089139505faada4d
+amount (qtum): 7000
+token balance: 7000000
+```
+
+And the crowdsale info should have updated as well:
+
+```
+node index.js info
+
+investor count: 1
+qtum raised: 12000
+tokens sold: 17000000
+minimum funding goal: 12000
+minimum funding goal reached: true
+```
+
+This single investor had helped us reach the funding goal!
+
+## The Default Payment Method
+
+By default an investor is not allowed to invest by sending money to this contract directly. The default action is to throw:
+
+```
+/**
+  * Don't expect to just send in money and get tokens.
+  */
+function() payable {
+  throw;
+}
+```
+
+If this is a desired behaviour, you could override the default method in your on subclass of the `Crowdsale` contract.
+
+# Ending The Crowdsale
+
+There are two ways to end a crowdsale once the end date is reached, depending on whether the sale was successful.
+
+1. If the minimum funding goal was reached, finalize the crowdsale, so investors can start to transfer and trade the tokens.
+2. If the minimum funding goal was not reached, refund each investor the amount they sent.
+
+## Ending Early
+
+We can set the `endsAt` property of the contract to either extend the deadline or to end the crowdsale early.
+
+For our example, we'll end the crowdsale early. Invoke the [setEndsAt](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L265) method to end the crowdsale 60 seconds from now:
+
+```ts
+async function endCrowdsaleNow() {
+  const nowDate = new Date()
+  // You may need to choose a larger delay than 60s on a
+  // real network, where there may be a larger clock skew.
+  const now = Math.floor(nowDate / 1000) + 60
+  const tx = await crowdsale.send("setEndsAt", [now])
+  const receipt = await tx.confirm(1)
+  console.log("end now receipt:")
+  console.log(JSON.stringify(receipt, null, 2))
+}
+```
+
+Run the CLI script:
+
+```json
+node index.js endnow
+```
+
+The expected output:
+
+```json
+{
+  "blockHash": "66f22e1eb5baa344393de75b8133fadd81aa06b9697ef89eb5fcc5d4f1146507",
+  "blockNumber": 6351,
+  "transactionHash": "ea267d815839a89db017b8c9f83dfa7c15d9b83cff3893c6ca1831e0525dd975",
+  "transactionIndex": 1,
+  "from": "eb6a149ec16aaaa6e47b6c0048520f7d9563b20a",
+  "to": "d7329343d159af9b628212e4ec6986d54882b3f3",
+  "cumulativeGasUsed": 29025,
+  "gasUsed": 29025,
+  "contractAddress": "d7329343d159af9b628212e4ec6986d54882b3f3",
+  "logs": [
+    {
+      "newEndsAt": "5a7c063b",
+      "type": "EndsAtChanged"
+    }
+  ],
+  "rawlogs": [
+    {
+      "address": "d7329343d159af9b628212e4ec6986d54882b3f3",
+      "topics": [
+        "d34bb772c4ae9baa99db852f622773b31c7827e8ee818449fef20d30980bd310"
+      ],
+      "data": "000000000000000000000000000000000000000000000000000000005a7c063b"
+    }
+  ]
+}
+```
+
+## Success: Finalize The Crowdsale
+
+Suppose the funding goal was reached, invoking [finalize](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L226) will release the token for transferring.
+
+```js
+async function finalize() {
+  const finalized = await crowdsale.return("finalized")
+
+  if (finalized) {
+    throw new Error("crowdsale is already finalized")
+  }
+
+  const tx = await crowdsale.send("finalize")
+  const receipt = await tx.confirm(1)
+  console.log("finalize receipt:", receipt)
+}
+```
+
+Run the CLI script:
+
+```
+node index.js finalize
+```
+
+The output:
+
+```
+finalize receipt:
+
+{ blockHash: '1bb4bce0b258eb5cb7fa99cc59d1c3e8eca7fabdba98bf1ddcf329ba35943f00',
+  blockNumber: 6468,
+  transactionHash: '460942ae789a0c86674663fe9740bfbe5db843efec64a8074d35bcba31eb7d7c',
+  transactionIndex: 1,
+  from: 'eb6a149ec16aaaa6e47b6c0048520f7d9563b20a',
+  to: '004fece7860cfa26a5be3009020430440e4784a4',
+  cumulativeGasUsed: 83254,
+  gasUsed: 83254,
+  contractAddress: '004fece7860cfa26a5be3009020430440e4784a4',
+  logs: [],
+  rawlogs: [] }
+```
+
+### Testing Token Transfer
+
+After finalizing, the tokens should become transferrable. Let's generate a new address and try to send it some tokens:
+
+```
+qcli getnewaddress
+qdobbjdAGJmi4Syu7EjDN7XcdE8nFpbgCm
+
+qcli gethexaddress qdobbjdAGJmi4Syu7EjDN7XcdE8nFpbgCm
+de12b9e72a21394a405ce1830e223beaf2dc1a40
+```
+
+One of the investor should have 7000000 tokens from the ICO:
+
+```
+node index.js balanceOf 6607919dd81d8e958b31e2ef089139505faada4d
+
+balance: 7000000
+```
+
+We need to prefund the sender address with UXTOs to pay for transactions:
+
+```
+$ qcli fromhexaddress 6607919dd81d8e958b31e2ef089139505faada4d
+qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o
+
+$ solar prefund qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o 0.1 100
+```
+
+Now, transfer 1000 tokens to the address `de12b9e72a21394a405ce1830e223beaf2dc1a40`:
+
+```
+node index.js transfer \
+  qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o \
+  de12b9e72a21394a405ce1830e223beaf2dc1a40 \
+  1000
+```
+
+After confirmation, the balance of the receiving address should be 1000:
+
+```
+node index.js balanceOf \
+  de12b9e72a21394a405ce1830e223beaf2dc1a40
+```
+
+And the balance of the original sender should have decremented by 1000:
+
+```
+node index.js balanceOf \
+  6607919dd81d8e958b31e2ef089139505faada4d
+balance: 6999000
+```
+
+Congrats, you have completed a successful crowdsale!
+
+## Failure: Refund The Crowdsale
+
+Suppose the crowdsale ended but the minimum funding goal was not reached:
+
+```
+node index.js info
+token supply: 37000000
+crowdsale state: PreFunding
+crowdsale start date: 2018-01-15T00:00:00.000Z
+crowdsale end date: 2018-02-08T09:43:00.000Z
+investor count: 1
+qtum raised: 7000
+tokens sold: 7000000
+minimum funding goal: 12000
+minimum funding goal reached: false
+```
+
+We could extend the end date to give investors more time. But in this demostration we'll just refund everyone.
+
+To initiate the refund process:
+
+1. The crowdsale owner invokes [loadRefund](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L315) to fund the contract with the total amount raised so far.
+2. Individual investor invoke [refund](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L326) to claim the fund.
+
+### Owner Loading Refund
+
+```js
+async function loadRefund() {
+  const amountRaised = await crowdsale.returnCurrency("qtum", "weiRaised")
+
+  const loadedRefund = await crowdsale.returnCurrency("qtum", "loadedRefund")
+
+  const amountToLoad = amountRaised - loadedRefund
+
+  console.log("amount to load as refund", amountToLoad)
+
+  if (amountToLoad > 0) {
+    const tx = await crowdsale.send("loadRefund", [], {
+      amount: amountToLoad,
+    })
+    console.log("tx:", tx)
+    const receipt = await tx.confirm(1)
+    console.log("receipt", receipt)
+  }
+}
+```
+
+```
+node index.js loadRefund
+```
+
+### Investor Claiming Fund
+
+The amount invested by `6607919dd81d8e958b31e2ef089139505faada4d` should be 7000 qtum:
+
+```
+node index.js investedBy \
+ 6607919dd81d8e958b31e2ef089139505faada4d
+
+invested by: 6607919dd81d8e958b31e2ef089139505faada4d
+amount (qtum): 7000
+token balance: 7000000
+```
+
+The investory can invoke [refund](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/CrowdsaleBase.sol#L326) like this:
+
+```js
+async function refund(addr) {
+  const tx = await crowdsale.send("refund", [], {
+    senderAddress: addr,
+  })
+  const receipt = await tx.confirm(1)
+  console.log("receipt", receipt)
+}
+```
+
+Running the CLI:
+
+```
+node index.js refund \
+  qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o
+
+{ blockHash: '09ea6c4cdf9e0007d21d43f9a3f6fe9fd124621118d8384bb9c6575a04320faa',
+  blockNumber: 6641,
+  transactionHash: '11290f6e8809a94273d12fe202c5f2898e14be3f51edf81c43b73bf4259c412d',
+  transactionIndex: 1,
+  from: '6607919dd81d8e958b31e2ef089139505faada4d',
+  to: '8a4e597e966b9c8886c006ce84168b9fc6734c22',
+  cumulativeGasUsed: 53815,
+  gasUsed: 53815,
+  contractAddress: '8a4e597e966b9c8886c006ce84168b9fc6734c22',
+  logs:
+   [ Result {
+       investor: '6607919dd81d8e958b31e2ef089139505faada4d',
+       weiAmount: <BN: a2fb405800>,
+       type: 'Refund' } ],
+  rawlogs:
+   [ { address: '8a4e597e966b9c8886c006ce84168b9fc6734c22',
+       topics: [Array],
+       data: '0000000000000000000000006607919dd81d8e958b31e2ef089139505faada4d000000000000000000000000000000000000000000000000000000a2fb405800' } ] }
+```
+
+Use the `listunspent` command to check if the fund had indeed been returned:
+
+```
+qcli listunspent 0 999990 \
+  '["qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o"]'
+```
+
+There should be an uxto created for this address with 7000 qtum:
+
+```
+[
+  // other uxtos ...
+
+  {
+    "txid": "e0afc2742ffa636c6ff788fbb808f5b34276206d713bb25874cb0e48a0070974",
+    "vout": 0,
+    "address": "qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o",
+    "account": "",
+    "scriptPubKey": "76a9146607919dd81d8e958b31e2ef089139505faada4d88ac",
+    "amount": 7000.00000000,
+    "confirmations": 5,
+    "spendable": true,
+    "solvable": true
+  }
+]
+```
+
