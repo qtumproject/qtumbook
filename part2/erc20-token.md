@@ -115,7 +115,7 @@ You can find information about the deployed contracts in `solar.development.json
 
 # The Owner UTXO Address
 
-The main difference between QTUM and Ethereum is that QTUM is built on Bitcoin's UTXO model, and Ethereum has its own account model, as we've seen in the [QTUM UTXO](../part1/uxtos-balances.md) chapter.
+The main difference between QTUM and Ethereum is that QTUM is built on Bitcoin's UTXO model, and Ethereum has its own account model, as we've seen in the [QTUM UTXO](../part1/UTXOs-balances.md) chapter.
 
 The implication is that each time a contract is deployed a different UTXO from the wallet is used, and that UTXO becomes the "owner" of the contract. In other words, the address of the UTXO that is spent is the `msg.sender` of a transaction.
 

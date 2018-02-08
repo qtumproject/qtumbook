@@ -7,7 +7,7 @@
 * [QTUM Docker Container](part1/qtum-docker.md)
   * [Tip: regtest Mode](part1/qtum-docker.md#running-regtest-mode)
   * [Tip: New Blocks On Demand](part1/qtum-docker.md#new-blocks-on-demand)
-* [UTXOs Accounting](part1/uxtos-balances.md)
+* [UTXOs Accounting](part1/UTXOs-balances.md)
 * [Test & Main Networks](part1/networks.md)
   * [Tip: Free Testnet Tokens](part1/networks.md#getting-testnet-tokens)
 
@@ -15,7 +15,7 @@
 
 * [ERC20 Token](part2/erc20-token.md)
   * [Deploy Contract](part2/erc20-token.md#deploy-contract)
-  * [Contract Ownership](part2/erc20-token.md#the-owner-uxto-address)
+  * [Contract Ownership](part2/erc20-token.md#the-owner-UTXO-address)
   * [Prefund Owner](part2/erc20-token.md#prefunding-the-owner-address)
   * [ABIPlayer](part2/erc20-token.md#using-abiplayer)
 * [ERC20 With QtumJS](part2/erc20-js.md)

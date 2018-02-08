@@ -355,7 +355,7 @@ Note that the API does not require the `_from` address. It is assumed that `msg.
 
 Ah, `msg.sender`, our old nemesis.
 
-As we've learned in [The Owner UTXO Address](./erc20-token.html#the-owner-uxto-address), QTUM doesn't really have the idea of an "account". The `msg.sender` is the address of whatever UTXO that was used to pay for the transaction.
+As we've learned in [The Owner UTXO Address](./erc20-token.html#the-owner-UTXO-address), QTUM doesn't really have the idea of an "account". The `msg.sender` is the address of whatever UTXO that was used to pay for the transaction.
 
 To act as `dcb3...9e94`, we need to explicitly specify an UTXO that has the same address. We can do this by using the `senderAddress` option.
 

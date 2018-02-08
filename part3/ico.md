@@ -100,7 +100,7 @@ qcli gethexaddress qf292iYbjJ41oMoArA3PrHpxTdAHuQsuAu
 eb6a149ec16aaaa6e47b6c0048520f7d9563b20a
 ```
 
-Prefund it with 100 uxtos:
+Prefund it with 100 UTXOs:
 
 ```
 solar prefund qf292iYbjJ41oMoArA3PrHpxTdAHuQsuAu 0.1 100
@@ -854,11 +854,11 @@ qcli listunspent 0 999990 \
   '["qSrs9VHVveZpiYojiaZc8VAz8JJFDu9y7o"]'
 ```
 
-There should be an uxto created for this address with 7000 qtum:
+There should be an UTXO created for this address with 7000 qtum:
 
 ```
 [
-  // other uxtos ...
+  // other UTXOs ...
 
   {
     "txid": "e0afc2742ffa636c6ff788fbb808f5b34276206d713bb25874cb0e48a0070974",
