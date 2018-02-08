@@ -355,9 +355,9 @@ Note that the API does not require the `_from` address. It is assumed that `msg.
 
 Ah, `msg.sender`, our old nemesis.
 
-As we've learned in [The Owner UXTO Address](./erc20-token.html#the-owner-uxto-address), QTUM doesn't really have the idea of an "account". The `msg.sender` is the address of whatever UXTO that was used to pay for the transaction.
+As we've learned in [The Owner UTXO Address](./erc20-token.html#the-owner-uxto-address), QTUM doesn't really have the idea of an "account". The `msg.sender` is the address of whatever UTXO that was used to pay for the transaction.
 
-To act as `dcb3...9e94`, we need to explicitly specify an UXTO that has the same address. We can do this by using the `senderAddress` option.
+To act as `dcb3...9e94`, we need to explicitly specify an UTXO that has the same address. We can do this by using the `senderAddress` option.
 
 ```js
 async function transfer(fromAddr, toAddr, amount) {
@@ -375,7 +375,7 @@ async function transfer(fromAddr, toAddr, amount) {
 }
 ```
 
-In the above code, the third argument of `send` allows you to specify the `msg.sender`. Remember to [prefund](http://localhost:4000/part2/erc20-token.html#prefunding-the-owner-address) this address with UXTOs.
+In the above code, the third argument of `send` allows you to specify the `msg.sender`. Remember to [prefund](http://localhost:4000/part2/erc20-token.html#prefunding-the-owner-address) this address with UTXOs.
 
 There are other options you can specify for send. The full type definition is `IContractSendRequestOptions`:
 
