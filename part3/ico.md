@@ -1,6 +1,43 @@
 # Holding A Crowdsale
 
-In this chapter, we'll hold an hypothetical crowdsale for an ERC20 token. We will use the crowdsale contracts developed [TokenMarketNet](https://github.com/TokenMarketNet/ico). These contracts are significantly more complex than the toy examples we have seen up to now. There are many configurable options you may tweak to suit your needs.
+In this chapter, we'll hold a crowdsale for an ERC20 token. We will use the crowdsale contracts developed by [TokenMarketNet](https://github.com/TokenMarketNet/ico). These contracts are significantly more complex than the toy examples we have seen up to now.
+
+There are six different roles involved in this setup.
+
+The human roles:
+
++ The owner of the crowdsale.
++ Presale investors.
++ ICO Investors.
+
+The smart contract roles:
+
++ The token minter.
++ The token's release agent.
++ The crowdsale finalizing agent.
+
+The full example can be found in the repo [qtumproject/qtumjs-crowdsale-cli](https://github.com/qtumproject/qtumjs-crowdsale-cli).
+
+## TL;DR
+
+An outline of the crowdsale process:
+
+1. [Design the crowdsale and token allocation](#the-ico-design).
+1. [Deploy the SafeMathLib library](#deploy-library).
+1. [Deploy the contracts](#deploy-the-crowdsale-contracts).
+1. [Configure the contracts](#crowdsale-setup).
+1. [Preallocate tokens for pre-sale](#presale-pre-allocation).
+1. [Allow the public to invest](#public-investment).
+1. [Ending the crowdsale](#ending-the-crowdsale).
+    + [If successful, finalize](#success-finalize-the-crowdsale).
+    + [If failed, refund](#failure-refund-the-crowdsale).
+
+For a quick overview of the all the commands run for the whole crowdsale process, look at [recipe.sh](https://github.com/qtumproject/qtumjs-crowdsale-cli/blob/master/recipe.sh).
+
+The NodeJS script that interacts with the crowdsale is [index.js](https://github.com/qtumproject/qtumjs-crowdsale-cli/blob/master/index.js).
+
+An sample of the deployment data of the contracts involved: [solar.development.json](https://github.com/qtumproject/qtumjs-crowdsale-cli/blob/master/solar.development.json.example).
+
 
 # The ICO Design
 
@@ -61,7 +98,8 @@ The valuation of the token is 10M post ICO.
 Clone contracts:
 
 ```
-git clone --recursive https://github.com/TokenMarketNet/ico.git
+git clone --recursive \
+  https://github.com/qtumproject/qtumjs-crowdsale-cli
 ```
 
 ## Running QTUMD
@@ -401,7 +439,7 @@ tokens sold: 0
 
 > The info shows the state as `PreFunding` even if the current time had past the start date. The actual state should be `Funding`. This problem will be fixed by [qtum #480](https://github.com/qtumproject/qtum/issues/480)
 
-# Preallocate
+# Presale Pre-Allocation
 
 According to our ICO plan, we have already sold 10% of the token supply (10,000,000) to early investors. We'd like to record their investments on the ledger.
 
@@ -516,7 +554,7 @@ tokens sold: 10000000
 
 > Note: the investor count is still 0 because the contract implementation assumes that one preallocation address may in fact distribute the tokens further to an arbitrary number of a smaller investors.
 
-# Invest
+# Public Investment
 
 Once the crowdsale is in the `Funding` state, public investors may start to send in money. We'll let the investors use the [invest](https://github.com/TokenMarketNet/ico/blob/2835f331fd9a9356131dfcf0ddd2cee471b9e32f/contracts/Crowdsale.sol#L104) method.
 
