@@ -106,7 +106,7 @@ Prefund it with 100 UTXOs:
 solar prefund qf292iYbjJ41oMoArA3PrHpxTdAHuQsuAu 0.1 100
 ```
 
-Then we need to configure `solar` to use this address when creating contracts (otherwise a random UXTO would be selected as the owner). In the container shell, set the `QTUM_SENDER` environment variable:
+Then we need to configure `solar` to use this address when creating contracts (otherwise a random UTXO would be selected as the owner). In the container shell, set the `QTUM_SENDER` environment variable:
 
 ```
 export QTUM_SENDER=qf292iYbjJ41oMoArA3PrHpxTdAHuQsuAu
@@ -710,7 +710,7 @@ node index.js balanceOf 6607919dd81d8e958b31e2ef089139505faada4d
 balance: 7000000
 ```
 
-We need to prefund the sender address with UXTOs to pay for transactions:
+We need to prefund the sender address with UTXOs to pay for transactions:
 
 ```
 $ qcli fromhexaddress 6607919dd81d8e958b31e2ef089139505faada4d

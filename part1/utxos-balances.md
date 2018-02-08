@@ -1,18 +1,18 @@
-# UXTOs & Balances
+# UTXOs & Balances
 
-If you are a developer coming from Ethereum, the biggest practical difference is that QTUM's account model is built on Bitcoin's UXTOs.
+If you are a developer coming from Ethereum, the biggest practical difference is that QTUM's account model is built on Bitcoin's UTXOs.
 
 In Ethereum, you'd typically have an account with an unique address that holds a balance. You'd be sending/receiving money and interacting with Smart Contracts using one account.
 
-In QTUM, you don't really have accounts. Instead, you have a collection of UXTOs, each of which has its own address. An UXTO may be used only once when you send money or interact with a Smart Contract. If an UXTO has more value than you intend to use, it'd be splitted up into multiple UXTOs after a transaction.
+In QTUM, you don't really have accounts. Instead, you have a collection of UTXOs, each of which has its own address. An UTXO may be used only once when you send money or interact with a Smart Contract. If an UTXO has more value than you intend to use, it'd be splitted up into multiple UTXOs after a transaction.
 
-In this chapter we'll explore the UXTO model by sending some money using the `qcli` command, and peeking into the transaction data.
+In this chapter we'll explore the UTXO model by sending some money using the `qcli` command, and peeking into the transaction data.
 
-Later in Part II we'll see how QTUM's Smart Contract implementation bridges Bitcoin's UXTO model with Ethereum's account model.
+Later in Part II we'll see how QTUM's Smart Contract implementation bridges Bitcoin's UTXO model with Ethereum's account model.
 
-# UXTO Address
+# UTXO Address
 
-With UXTO, you *can* reuse a payment address. For better anonymity, though, you'd typically generate new addresses for each payment you'd like to receive.
+With UTXO, you *can* reuse a payment address. For better anonymity, though, you'd typically generate new addresses for each payment you'd like to receive.
 
 Let's generate an address:
 
@@ -39,7 +39,7 @@ qJbSKruSXWnjSRZvSXMf2Y33gEw9FqHMHf
 qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
 ```
 
-An UXTO address is 20 bytes (160 bits) long, [base58 encoded](https://en.bitcoin.it/wiki/Base58Check_encoding). This is the same length as Ethereum's address. We can convert it to an Ethereum compatible hexadecimal address:
+An UTXO address is 20 bytes (160 bits) long, [base58 encoded](https://en.bitcoin.it/wiki/Base58Check_encoding). This is the same length as Ethereum's address. We can convert it to an Ethereum compatible hexadecimal address:
 
 ```
 qcli gethexaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
@@ -47,7 +47,7 @@ qcli gethexaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
 dd2c6512563e4274dafd8312e0e738ede48f3046
 ```
 
-And to convert it back to base58 UXTO address:
+And to convert it back to base58 UTXO address:
 
 ```
 qcli fromhexaddress dd2c6512563e4274dafd8312e0e738ede48f3046
@@ -57,7 +57,7 @@ qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
 
 # Send Money Transaction
 
-Now let's send money to an UXTO address. You'd be sending money to yourself, but this is exactly the same process as when you send money to somebody else.
+Now let's send money to an UTXO address. You'd be sending money to yourself, but this is exactly the same process as when you send money to somebody else.
 
 First generate a new receiving address:
 
@@ -139,7 +139,7 @@ This transaction had been confirmed twice so far:
 "confirmations": 2,
 ```
 
-Let's now use `listunspent` to list recently created UXTOs. List UXTOs that had been confirmed less than 20 times:
+Let's now use `listunspent` to list recently created UTXOs. List UTXOs that had been confirmed less than 20 times:
 
 ```
 qcli listunspent 0 20
@@ -169,14 +169,14 @@ qcli listunspent 0 20
 ]
 ```
 
-Note that both of these UXTOs share the same txid. In other words, one send money transaction created two new UXTOs:
+Note that both of these UTXOs share the same txid. In other words, one send money transaction created two new UTXOs:
 
 + `qdiqg2mp646KhSQjVud3whv6C34hNHQnL2`: Receiving address, holding value of 10.
-+ `qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k`: The original sender UXTO had 20k qtum, the amount generated. This a new UXTO created to hold the change, minus fees.
++ `qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k`: The original sender UTXO had 20k qtum, the amount generated. This a new UTXO created to hold the change, minus fees.
 
 ## Decoding Transaction Data
 
-We can dig a little deeper into the transaction data to see that QTUM really shares the same UXTO data structure as Bitcoin. From the earlier `gettransaction` output, we got the raw transaction data in hexadecimals (i.e. `02000000017d2...ac90060000`).
+We can dig a little deeper into the transaction data to see that QTUM really shares the same UTXO data structure as Bitcoin. From the earlier `gettransaction` output, we got the raw transaction data in hexadecimals (i.e. `02000000017d2...ac90060000`).
 
 Let's decode the transaction data:
 
@@ -241,4 +241,4 @@ As you can see, this is a [Pay-to-PubkeyHash](https://en.bitcoin.it/wiki/Transac
 
 # Summary
 
-QTUM manages money using Bitcoin's UXTO model. Instead of using accounts to track balances, a QTUM wallet keeps track of the collection of UXTOs. When a transaction is created, the wallet searches the collection to find UXTOs that add up to enough value to pay for the amount transferred and the fees.
+QTUM manages money using Bitcoin's UTXO model. Instead of using accounts to track balances, a QTUM wallet keeps track of the collection of UTXOs. When a transaction is created, the wallet searches the collection to find UTXOs that add up to enough value to pay for the amount transferred and the fees.
