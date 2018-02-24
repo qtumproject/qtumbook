@@ -83,7 +83,7 @@ The [solar](https://github.com/qtumproject/solar.git) Smart Contract deployment 
 To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array:
 
 ```
-solar deploy zeppelin-solidity/contracts/token/CappedToken.sol \
+solar deploy zeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
   '[21000000]'
 ```
 
