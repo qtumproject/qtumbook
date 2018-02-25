@@ -23,7 +23,7 @@ By default, the `hayeah/qtumportal` docker image will start `qtumd` in `regtest`
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v `pwd`/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \
