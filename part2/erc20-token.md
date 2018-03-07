@@ -62,7 +62,71 @@ Generate some initial balance:
 qcli generate 600
 ```
 
-## Deploy Contract
+# The Owner Address
+
+The ERC20 token we deploy will be "owned" by a particular address. A few administrative methods are protected, such that only the owner of the contract may call them.
+
+These methods are protected by the `onlyOwner` modifier, which checks whether the `msg.sender` is the contract's `owner`:
+
+```
+modifier onlyOwner() {
+  require(msg.sender == owner);
+  _;
+}
+```
+
+For example, the method `mint` makes sure that only the owner can use it:
+
+```
+function mint(address _to, uint256 _amount) onlyOwner canMint public returns (bool)
+```
+
+## Create The Owner Address And Fund It
+
+Let's generate an address to act as the owner.
+
+```
+qcli getnewaddress
+qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
+```
+
+There's nothing special about this address. You could use the address of any UTXO in your wallet.
+
+Let's fund the owner address with 10 QTUM, to pay for gas when we deploy our contract later:
+
+```
+qcli sendtoaddress qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 10
+cf652f54e6a6dde3e60fa4e38eee1c529bf4ecf3f8424c7ac7ef9717850cc984
+```
+
+After the payment confirms, you should that there is one UTXO for this owner address:
+
+```
+qcli listunspent 1 99999 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
+[
+  {
+    "txid": "cf652f54e6a6dde3e60fa4e38eee1c529bf4ecf3f8424c7ac7ef9717850cc984",
+    "vout": 1,
+    "address": "qdgznat81MfTHZUrQrLZDZteAx212X4Wjj",
+    "account": "",
+    "scriptPubKey": "76a91437158152a9768477770ecb7a9e55a5875b9f35b088ac",
+    "amount": 10.00000000,
+    "confirmations": 1,
+    "spendable": true,
+    "solvable": true
+  }
+]
+```
+
+Finally, we'll need to configure the deployment tool `solar` to use this particular address as the owner:
+
+```
+export QTUM_SENDER=qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
+```
+
+We are now ready to deploy our token contract.
+
+## Deploy The Token Contract
 
 The `CappedToken` constructor requires the `_capacity` parameter, to specify the maximum number of tokens we can mint:
 
@@ -80,7 +144,7 @@ It takes quite a few steps to deploy a contract:
 
 The [solar](https://github.com/qtumproject/solar.git) Smart Contract deployment tool (included in the container) handles all of this for you.
 
-To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array:
+To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array (remember to set `QTUM_SENDER`):
 
 ```
 solar deploy zeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
@@ -103,103 +167,54 @@ The `solar status` command lists all contracts that had been deployed with solar
 solar status
 
 ✅  zeppelin-solidity/contracts/token/CappedToken.sol
-        txid: 58bbe3b39adeccdce5cfca5e8b284224da9fcd32c00b2147aecd0a0438735c11
-     address: a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3
+        txid: 457a5afe15686c0bd596635aeb78d4ff7d2bf6a75df66c7251e89ce4d9c8f6d3
+     address: 3db297ee4c225b45219d2a7aa68afea7f4e68832
    confirmed: true
        owner: qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
 ```
 
-Note that the contract has an `owner`. This is the address of the UTXO used to create this contract. We'll see in just a bit how you can act as the owner of this contract, to perform administrative tasks protected by the `onlyOwner` modifier.
+Note that the contract's owner should be set to the `QTUM_SENDER` value we have specified earlier. If you did not set `QTUM_SENDER` to anything, a random UTXO from the wallet is selected, and that become the owner.
 
-You can find information about the deployed contracts in `solar.development.json`.
+You can find more information about the deployed contracts in `solar.development.json`.
 
-# The Owner UTXO Address
+# The Owner UTXO Address As Sender
 
 The main difference between QTUM and Ethereum is that QTUM is built on Bitcoin's UTXO model, and Ethereum has its own account model, as we've seen in the [QTUM UTXO](../part1/UTXOs-balances.md) chapter.
 
-The implication is that each time a contract is deployed a different UTXO from the wallet is used, and that UTXO becomes the "owner" of the contract. In other words, the address of the UTXO that is spent is the `msg.sender` of a transaction.
+In Ethereum, the cost of a transaction is paid by an account. The amount paid is decremented from the account, but the account is still there.
 
-Now, let's look at the method `mint`:
+UTXO, however, may be spent only once. So earlier we used an UTXO with the address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj` to deploy the contract. That UTXO is now gone, with its entire value spent.
 
-```
-function mint(address _to, uint256 _amount) onlyOwner canMint public returns (bool)
-```
+So every time you act as the owner of a contract, you destroy the owner UTXO. And next time you want to act as the owner of the contract, you'd need a new UTXO with the same address. This could be very annoying if you had to do it manually.
 
-We see that the method is protected by the `onlyOwner` modifier, which checks whether the `msg.sender` is the contract's `owner`
+Fortunately, when interacting with a contract, QTUM always create a new UTXO with the same address to replace UTXO that was used up.
 
-```
-modifier onlyOwner() {
-  require(msg.sender == owner);
-  _;
-}
-```
-
-https://github.com/OpenZeppelin/zeppelin-solidity/blob/4ce0e211c500aa756120c4f2851cc75518123309/contracts/ownership/Ownable.sol#L28
-
-To satisfy this modifier, we'll need to call the method using the UTXO address that created the contract. But the owner UTXO was already spent when we created the contract. We can't use it again to make another method call!
-
-The way to get around this problem is to create a new UTXO with the same address, endowing it with enough value to pay for the transaction we want to make. Since UTXO can be used once only, you'll need to generate an UTXO for each transaction.
-
-This is slightly more cumbersome than in Ethereum, where the account has a balance, and each transaction simply reduces the account balance.
-
-## Prefunding The Owner Address
-
-OK, so to act as the owner of a contract, we need to create UTXOs that share the same address as the owner address.
-
-So the owner address is `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`. We could send 1 qtum to it:
+Listing the UTXO for the owner address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`, we see that, hey, there's still one UTXO, even though we already spent one:
 
 ```
-qcli sendtoaddress qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 1
-```
-
-If we need many UTXOs, we can create them more efficiently in one single transaction by using the `sendmanywithdupes` RPC call.
-
-The `solar prefund` command is a more convenient wrapper for `sendmanywithdupes` to create the UTXOs. To create 20 UTXOs of 1 qtum each for the address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`:
-
-```
-solar prefund qdgznat81MfTHZUrQrLZDZteAx212X4Wjj 1 20
-```
-
-Or equivalently, you can use the name of the deployed contract:
-
-```
-solar prefund zeppelin-solidity/contracts/token/CappedToken.sol 1 20
-```
-
-Wait for the transaction to confirm, then you can check if the UTXOs had been created:
-
-```
-qcli listunspent 0 10 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
-
+qcli listunspent 1 99999 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
 [
-  ...
-
   {
-    "txid": "fe77d9c01ab72e22b83180aa485aabb6ac3814edf853c986ce0e0bf532fffcfa",
-    "vout": 19,
+    "txid": "457a5afe15686c0bd596635aeb78d4ff7d2bf6a75df66c7251e89ce4d9c8f6d3",
+    "vout": 1,
     "address": "qdgznat81MfTHZUrQrLZDZteAx212X4Wjj",
-    "scriptPubKey": "76a914dcd32b87270aeb980333213da2549c9907e09e9488ac",
-    "amount": 1.00000000,
-    "confirmations": 3,
-    "spendable": true,
-    "solvable": true
-  },
-  {
-    "txid": "fe77d9c01ab72e22b83180aa485aabb6ac3814edf853c986ce0e0bf532fffcfa",
-    "vout": 20,
-    "address": "qdgznat81MfTHZUrQrLZDZteAx212X4Wjj",
-    "scriptPubKey": "76a914dcd32b87270aeb980333213da2549c9907e09e9488ac",
-    "amount": 1.00000000,
-    "confirmations": 3,
+    "account": "",
+    "scriptPubKey": "76a91437158152a9768477770ecb7a9e55a5875b9f35b088ac",
+    "amount": 8.78777200,
+    "confirmations": 61,
     "spendable": true,
     "solvable": true
   }
 ]
 ```
 
-You can see that these UTXOs share the same address `qdgznat81MfTHZUrQrLZDZteAx212X4Wjj`.
+Note, however, that the transaction id `457a...f6d3` is different from the UTXO we had `cf65...c984`. This is a different UTXO, and its amount is 10 minus the fee we paid to deploy the contract.
 
-# Using ABIPlayer
+The amount `8.78777200` is the "change". For a transaction that interacts with a contract, the "change" is paid to the sender. Whereas in a typical payment transaction, the change is paid to a newly generated address controlled by the wallet.
+
+The upshot is that despite the vastly different accounting model between Bitcoin UTXO and Ethereum account, in QTUM they behave in very similar ways.
+
+# Using The ABIPlayer
 
 The `solar.development.json` file stores information about the deployed CappedToken contract. You can load this file into the ABIPlayer to interact with any contracts deployed with solar.
 
