@@ -64,7 +64,7 @@ qcli generate 600
 
 # The Owner Address
 
-The ERC20 token we deploy will be "owned" by a particular address. A few administrative methods are protected, such that only the owner of the contract may call them.
+The ERC20 token we deploy will be "owned" by a particular UTXO address. A few administrative methods are protected, such that only the owner of the contract may use them.
 
 These methods are protected by the `onlyOwner` modifier, which checks whether the `msg.sender` is the contract's `owner`:
 
