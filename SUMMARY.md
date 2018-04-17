@@ -30,16 +30,3 @@
 ### Part 3 - Crowdsale
 
 * [Crowdsale](part3/ico.md)
-
-### Part 4 - DApp
-
-* [Browser DApp]()
-
-### Part 5 - RPC
-
-* [Token, Again With RPC]()
-  * [Params ABI Encoding]()
-  * [Create Contract]()
-  * [Tip: Wait For Confirmations]()
-  * [Send & Call]()
-  * [Tip: Event Logs]()
