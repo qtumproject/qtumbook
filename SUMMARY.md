@@ -30,3 +30,7 @@
 ### Part 3 - Crowdsale
 
 * [Crowdsale](part3/ico.md)
+
+### Part 4 - Blockchain API
+
+* [Inspect Raw TX](part4/inspect-raw-tx.md)
