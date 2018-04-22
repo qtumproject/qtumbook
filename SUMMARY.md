@@ -35,3 +35,4 @@
 ### Part 4 - Blockchain API
 
 * [Inspect Raw TX](part4/inspect-raw-tx.md)
+* [Smart Contract](part4/smart-contract.md)
