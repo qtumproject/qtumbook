@@ -29,7 +29,8 @@
 
 ### Part 3 - Crowdsale
 
-* [Crowdsale](part3/ico.md)
+* [Simple Crowdsale](part3/vevue-ico/README.md)
+* [Complex Crowdsale](part3/ico.md)
 
 ### Part 4 - Blockchain API
 
