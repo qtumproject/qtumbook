@@ -4,3 +4,4 @@ Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, but wi
 
 For more general information about Qtum as well as links to join our community, go to https://qtum.org
 
+This book is hosted at https://book.qtum.org
