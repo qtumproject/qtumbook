@@ -44,7 +44,7 @@ For this exercise, we'll start `qtumd` from scratch, in regtest mode:
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   hayeah/qtumportal

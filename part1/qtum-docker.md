@@ -23,7 +23,7 @@ By default, the `hayeah/qtumportal` docker image will start `qtumd` in `regtest`
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \
@@ -97,7 +97,7 @@ Let's restart the container, and `qtumd` should reuse the blockchain database sa
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \
@@ -112,7 +112,7 @@ You can run on the test network by setting the QTUM_NETWORK environment variable
 docker run -it --rm \
   --name myapp \
   -e "QTUM_NETWORK=testnet" \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \
@@ -234,7 +234,7 @@ In this chapter we have run qtumd in a docker container:
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \

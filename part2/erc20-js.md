@@ -9,7 +9,7 @@ For now, qtumjs relies on `qtumd`'s RPC service, so make sure that the docker co
 ```
 docker run -it --rm \
   --name myapp \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \

@@ -10,7 +10,7 @@ The docker container connects to different networks depending on which `QTUM_NET
 docker run -it --rm \
   --name myapp \
   -e "QTUM_NETWORK=testnet" \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   -p 9899:9899 \
   -p 9888:9888 \
   -p 3889:3889 \
@@ -110,7 +110,7 @@ To connect to the mainnet, set `QTUM_NETWORK=mainnet`:
 docker run -it --rm \
   --name myapp \
   -e "QTUM_NETWORK=mainnet" \
-  -v `pwd`:/dapp \
+  -v $PWD:/dapp \
   hayeah/qtumportal
 ```
 
