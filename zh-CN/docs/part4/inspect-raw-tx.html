@@ -1,0 +1,718 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Inspect Raw TX · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="smart-contract.html" />
+    
+    
+    <link rel="prev" href="../part3/ico.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="inspect-raw-tx.html">
+            
+                <a href="inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="smart-contract.html">
+            
+                <a href="smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Inspect Raw TX</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="inspect-raw-transaction"><a name="inspect-raw-transaction" class="plugin-anchor" href="#inspect-raw-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Inspect Raw Transaction</h1><p>In this chapter we will examine the raw transaction data to understand how payment transactions work.</p><p>In particular:</p><ol><li>How the sender construct a transaction to express how much money transfer, and to whom
+</li>
+<li>How the sender proves ownership of an UTXO
+</li>
+<li>How the sender creates new UTXO as payment, and make sure that only the intended receiver can cliam it
+</li></ol>
+<h1 id="money-transfer"><a name="money-transfer" class="plugin-anchor" href="#money-transfer"><i class="fa fa-link" aria-hidden="true"></i></a>Money Transfer</h1><p>Let&apos;s generate a new address to receive fund</p><pre><code>qcli getnewaddress
+
+qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD</code></pre>
+<p>For testing, let&apos;s send some money from our own wallet to this address:</p><pre><code>qcli sendtoaddress qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD 10</code></pre>
+<p>The transaction id is returned:</p><pre><code>f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<p>Once the transaction is confirmed, we can see that the receiving address has money:</p><pre><code>qcli getreceivedbyaddress qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD
+
+10.00000000</code></pre>
+<h1 id="look-up-the-send-transaction"><a name="look-up-the-send-transaction" class="plugin-anchor" href="#look-up-the-send-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Look Up The Send Transaction</h1><p>Use the transaction id to look up information about it:</p><pre><code>qcli gettransaction \
+  f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">0.00000000</span>,
+  <span class="hljs-string">&quot;fee&quot;</span>: <span class="hljs-number">-0.00076800</span>,
+  <span class="hljs-string">&quot;confirmations&quot;</span>: <span class="hljs-number">4</span>,
+  <span class="hljs-string">&quot;blockhash&quot;</span>: <span class="hljs-string">&quot;f7567e97f8c7d0145592b04f9913b1005226913b391f55428accce1624ddd871&quot;</span>,
+  <span class="hljs-string">&quot;blockindex&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-string">&quot;blocktime&quot;</span>: <span class="hljs-number">1523947568</span>,
+  <span class="hljs-string">&quot;txid&quot;</span>: <span class="hljs-string">&quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;</span>,
+  <span class="hljs-string">&quot;walletconflicts&quot;</span>: [
+  ],
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-number">1523947557</span>,
+  <span class="hljs-string">&quot;timereceived&quot;</span>: <span class="hljs-number">1523947557</span>,
+  <span class="hljs-string">&quot;bip125-replaceable&quot;</span>: <span class="hljs-string">&quot;no&quot;</span>,
+  <span class="hljs-string">&quot;details&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;account&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;</span>,
+      <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;send&quot;</span>,
+      <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">-10.00000000</span>,
+      <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;vout&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">&quot;fee&quot;</span>: <span class="hljs-number">-0.00076800</span>,
+      <span class="hljs-string">&quot;abandoned&quot;</span>: <span class="hljs-literal">false</span>
+    },
+    {
+      <span class="hljs-string">&quot;account&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;</span>,
+      <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;receive&quot;</span>,
+      <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">10.00000000</span>,
+      <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;vout&quot;</span>: <span class="hljs-number">1</span>
+    }
+  ],
+  <span class="hljs-string">&quot;hex&quot;</span>: <span class="hljs-string">&quot;0200000001a65a0dad79515e70b2ee1406aa0bc083704b4d4a7528d7d4511210d6abbcb93902000000494830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01feffffff02002aae6dd10100001976a914722b74ca801e90be5240d2f084440d71c3c2572488ac00ca9a3b000000001976a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac98040000&quot;</span>
+}</code></pre>
+<h1 id="deciphering-the-raw-transaction"><a name="deciphering-the-raw-transaction" class="plugin-anchor" href="#deciphering-the-raw-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Deciphering The Raw Transaction</h1><p>The <code>gettransaction</code> command presents the transaction data in a more human friendly form. We can see the underlying bitcoin data structure by decoding the raw data of a transaction.</p><p>This data structure is key to understanding how the bitcoin ledger works.</p><p>The <code>hex</code> property returned previously is the raw transaction data. Or we could also look it up with <code>getrawtransaction</code>:</p><pre><code>qcli getrawtransaction f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<p>Let&apos;s now decode the raw tx data:</p><pre><code>qcli decoderawtransaction \
+0200000001a65a0dad79515e70b2ee1406aa0bc083704b4d4a7528d7d4511210d6abbcb93902000000494830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01feffffff02002aae6dd10100001976a914722b74ca801e90be5240d2f084440d71c3c2572488ac00ca9a3b000000001976a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac98040000</code></pre>
+<pre><code>{
+  &quot;txid&quot;: &quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;,
+  &quot;hash&quot;: &quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;,
+  &quot;size&quot;: 192,
+  &quot;vsize&quot;: 192,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 1176,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6&quot;,
+      &quot;vout&quot;: 2,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;30450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd[ALL]&quot;,
+        &quot;hex&quot;: &quot;4830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19989.99923200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 722b74ca801e90be5240d2f084440d71c3c25724 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914722b74ca801e90be5240d2f084440d71c3c2572488ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qTy4FHpEsGkwXGfzSUDirCQf8RCHsJSPhH&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 10.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 35dbe99b7be1e43463e0fec2d431b67bcc6ef67e OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>This transaction has one vins (input value) and two vouts (output values).</p><h3 id="transaction-vins"><a name="transaction-vins" class="plugin-anchor" href="#transaction-vins"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction Vins</h3><p>When constructing a transaction, the wallet finds an UTXO that satifies the amount requested.</p><p>The input refers to an UTXO, which is the second output of the transaction <code>39b9...5aa6</code>. This particular UTXO is worth 20,000.</p><p>Since we are only sending 10 qtums, this input is more than enough pay for the transfer itself, as well as the fees.</p><h3 id="transaction-vouts"><a name="transaction-vouts" class="plugin-anchor" href="#transaction-vouts"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction Vouts</h3><p>The UTXO used is worth 20,000, but we actually only want to spend a smart part of it. Unlike a bank account, it is not possible to partially spend the value of the UTXO.</p><p>So what we do is that we spend 10 qtums by sending it to the receiving address, and &quot;spend&quot; the rest of the amount by sending it back to ourself.</p><p>The result is that are two outputs in this transaction, creating two new UTXOs.</p><ul><li>19989.99923200 is the change returning to sender.
+</li>
+<li>10 is the amount sent to receiver.
+</li></ul>
+<h3 id="transaction-fee"><a name="transaction-fee" class="plugin-anchor" href="#transaction-fee"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction Fee</h3><p>The sum of the two outputs is less than the input.</p><pre><code>20000 - 19989.99923200 - 10 = 0.000768000</code></pre>
+<p>This difference is given to the miner as the fee.</p><h1 id="cryptographic-proof-of-ownership"><a name="cryptographic-proof-of-ownership" class="plugin-anchor" href="#cryptographic-proof-of-ownership"><i class="fa fa-link" aria-hidden="true"></i></a>Cryptographic Proof of Ownership</h1><p>By decoding the raw transaction, we can see that Vins and Vouts specifies where the money come from, and where it should go.</p><p>But how does the network know who has the authority to spend what money?</p><p>In the old financial world, the bank acts as the authority that decides whether a transaction can go through. Bitcoin, however, uses cryptogrpahy to distribute the authority to its end users.</p><p>The &quot;authority&quot; to spend money is like a uniquely shaped lock. If a person can present the key that has the correct shape to unlock it, the network then allows the money to be spent.</p><ul><li>The sender must have the key to unlock the UTXOs used as inputs.
+</li>
+<li>The sender create new locks as outputs, that only the receiver can unlock.
+</li></ul>
+<h1 id="btc-standard-pay-scripts"><a name="btc-standard-pay-scripts" class="plugin-anchor" href="#btc-standard-pay-scripts"><i class="fa fa-link" aria-hidden="true"></i></a>BTC Standard Pay Scripts</h1><p>The cryptographic &quot;lock&quot; alluded to are just simple fragments of BTC scripts. The sender needs to provide the correct input, so the script evaluates to true.</p><h2 id="pay-to-public-key"><a name="pay-to-public-key" class="plugin-anchor" href="#pay-to-public-key"><i class="fa fa-link" aria-hidden="true"></i></a>Pay To Public Key</h2><p>The UTXO that&apos;s used as input is the second output of the transaction <code>39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6</code>. Let&apos;s decode that transaction:</p><pre><code>qcli decoderawtransaction \
+  `qcli getrawtransaction 39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6`</code></pre>
+<p>The data for this UTXO is:</p><pre><code>{
+  // ...
+  &quot;vout&quot;: [
+    // ...
+    {
+      &quot;value&quot;: 20000.00000000,
+      &quot;n&quot;: 2,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211 OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;2103795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkey&quot;,
+        &quot;addresses&quot;: [
+          &quot;qNdjKvCjBLUwb2RuWxEXLSgpVtLSanQ7Cu&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>The &quot;lock&quot; is the script:</p><pre><code>03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211
+OP_CHECKSIG</code></pre>
+<p>This script says that whoever that can produce a cryptographic signature attributable to the public key &quot;03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211&quot; may spend this output.</p><p>To unlock the script, the sender creates a cryptographic signature that signs the outputs (i.e. how much money and to whom).</p><p>The script is the lock, and signature is the key. Combine the two, we get a script that evaluates to &quot;true&quot;:</p><pre><code>30450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd[ALL]
+
+03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211
+
+OP_CHECKSIG</code></pre>
+<p>The <a href="https://bitcoin.org/en/developer-reference#opcodes" target="_blank">OP_CHECKSIG</a> operation does two things:</p><ol><li>It verifies that the signature is attributable to the public key <code>03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211</code>
+</li>
+<li>Verifies the transaction outputs against the signature. If a miner tries to tamper with the outputs in anyway (adjusting the amount of recipient), the check would fail.
+</li></ol>
+<p>A Pay-To-Public-Key UTXOs are typically created as mining/staking rewards and gas refunds. For payment to addresses, another type of script is more frequently seen.</p><h2 id="pay-to-public-hash"><a name="pay-to-public-hash" class="plugin-anchor" href="#pay-to-public-hash"><i class="fa fa-link" aria-hidden="true"></i></a>Pay To Public Hash</h2><p>When sending money to an address, the output created is usually a &quot;Pay To Public Hash&quot; (P2PKH) script.</p><p>In the raw transaction above we see that an output has a script like this:</p><pre><code>OP_DUP
+OP_HASH160
+35dbe99b7be1e43463e0fec2d431b67bcc6ef67e
+OP_EQUALVERIFY
+OP_CHECKSIG</code></pre>
+<p>This script is essentially saying &quot;whoever that can create a signature attributable to a public key that hashes to 35dbe99b7be1e43463e0fec2d431b67bcc6ef67e can spend this output&quot;.</p><p>This script is the same as <code>Pay To Public Key</code>, except for the extra indirection introduced by the public key hashing.</p><p>See <a href="https://bitcoin.org/en/developer-guide#p2pkh-script-validation" target="_blank">pay to public hash validation</a> for details on how this type of script can be validated.</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../part3/ico.html" class="navigation navigation-prev " aria-label="Previous page: Complex Crowdsale">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="smart-contract.html" class="navigation navigation-next " aria-label="Next page: Smart Contract">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Inspect Raw TX","level":"5.1","depth":1,"next":{"title":"Smart Contract","level":"5.2","depth":1,"path":"part4/smart-contract.md","ref":"part4/smart-contract.md","articles":[]},"previous":{"title":"Complex Crowdsale","level":"4.2","depth":1,"path":"part3/ico.md","ref":"part3/ico.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors"],"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part4/inspect-raw-tx.md","mtime":"2018-04-17T14:06:38.689Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-26T10:31:38.680Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

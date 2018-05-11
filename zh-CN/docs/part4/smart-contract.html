@@ -1,0 +1,783 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Smart Contract · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="inspect-raw-tx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="inspect-raw-tx.html">
+            
+                <a href="inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="smart-contract.html">
+            
+                <a href="smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Smart Contract</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="smart-contract-raw-tx"><a name="smart-contract-raw-tx" class="plugin-anchor" href="#smart-contract-raw-tx"><i class="fa fa-link" aria-hidden="true"></i></a>Smart Contract Raw TX</h1><p>In this chapter we will deploy and interact with a smart contract using the JSON RPC. We will also see the underlying raw transaction that implements QTUM&apos;s Smart Contract platform.</p><p>The example is a contract with one single storage variable:</p><pre><code>pragma solidity ^0.4.18;
+contract SimpleStore {
+  function SimpleStore(uint _value) public {
+    value = _value;
+  }
+
+    function set(uint newValue) public {
+        value = newValue;
+    }
+
+    function get() public constant returns (uint) {
+        return value;
+    }
+
+    uint value;
+}</code></pre>
+<h1 id="create-the-contract"><a name="create-the-contract" class="plugin-anchor" href="#create-the-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Create The Contract</h1><p>Compile the contract to bytecode:</p><pre><code>solc --optimize --bin SimpleStore.sol
+
+======= SimpleStore.sol:SimpleStore =======
+Binary:
+608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b200029</code></pre>
+<p>To create this contract, we&apos;ll essentially need to create a special transaction that uses the bytecode as the transaction payload data.</p><p>The contract constructor requires an initializing <code>_value</code>:</p><pre><code>function SimpleStore(uint _value) public {
+  value = _value;
+}</code></pre>
+<p>Let&apos;s use <code>1</code> as the initial value. We&apos;ll need to ABI encode all the constructor parameters. The ABI encoded value for <code>1</code> is a 32 bytes hexadecimal string:</p><pre><code>0000000000000000000000000000000000000000000000000000000000000001</code></pre>
+<p>How do we pass in the ABI-encoded constructor parameters? Simple, just append it to the end of the bytecode. So, the transaction payload for creating a smart contract should follow this structure:</p><pre><code>&lt;bytecode&gt;&lt;constructor parameters&gt;</code></pre>
+<p>The RPC command to create a contract is <code>createcontract</code>. Let&apos;s call it, combining together the compiler bytecode output and the constructor parameters:</p><pre><code>qcli createcontract \
+  608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001
+
+{
+  &quot;txid&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;sender&quot;: &quot;qZ2kTyK4vLvGSngtYynmRdfd8n9UBFNwMv&quot;,
+  &quot;hash160&quot;: &quot;a9b6e7e59974d92b949a9c9aa8eb420f73518364&quot;,
+  &quot;address&quot;: &quot;ecb30fa67545211d0e4b859213872442cd9d37c5&quot;
+}</code></pre>
+<h2 id="raw-tx-for-createcontract"><a name="raw-tx-for-createcontract" class="plugin-anchor" href="#raw-tx-for-createcontract"><i class="fa fa-link" aria-hidden="true"></i></a>Raw TX For CREATECONTRACT</h2><p>To gain some insight into the <code>createcontract</code> RPC call, let&apos;s examine the underlying UTXO that&apos;s used to create the TX. First, get the raw tx data associated with the txid:</p><pre><code>qcli getrawtransaction 4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68
+02000000019b96d26a797a9952dbd8d81400de9143e30cc73ae2d83fe6d3bcc46dc665ebb5000000004847304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01feffffff02107851a3d10100001976a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac0000000000000000fd1e01010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1fe010000</code></pre>
+<p>Then decode it:</p><pre><code>qcli decoderawtransaction \
+  02000000019b96d26a797a9952dbd8d81400de9143e30cc73ae2d83fe6d3bcc46dc665ebb5000000004847304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01feffffff02107851a3d10100001976a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac0000000000000000fd1e01010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1fe010000</code></pre>
+<p>The output:</p><pre><code>{
+  &quot;txid&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;hash&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;size&quot;: 454,
+  &quot;vsize&quot;: 454,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 510,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;b5eb65c66dc4bcd3e63fd8e23ac70ce34391de0014d8d8db52997a796ad2969b&quot;,
+      &quot;vout&quot;: 0,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d[ALL]&quot;,
+        &quot;hex&quot;: &quot;47304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19998.99818000,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 41d6ac4feec70a7b28c59c23e92be5ea2a15879a OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qPZWFFMrHtxsaop1wJKh6SCnnurMFjPexC&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 0.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;4 2500000 40 608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001 OP_CREATE&quot;,
+        &quot;hex&quot;: &quot;010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1&quot;,
+        &quot;type&quot;: &quot;create&quot;
+      }
+    }
+  ]
+}</code></pre>
+<ul><li>The first vout is a the change returned to the wallet of the sender
+</li>
+<li>The second vout is an OP_CREATE script
+</li></ul>
+<p>The OP_CREATE is a new instruction added by QTUM to support smart contract platforms. It takes four arguments on the stack, as commented below:</p><pre><code># VM version
+4
+# gas limit
+2500000
+# gas price
+40
+# bytecode + constructor params
+608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001
+# create instruction
+OP_CREATE</code></pre>
+<h1 id="deploy-using-solar"><a name="deploy-using-solar" class="plugin-anchor" href="#deploy-using-solar"><i class="fa fa-link" aria-hidden="true"></i></a>Deploy Using Solar</h1><p>Let&apos;s deploy the <code>SimpleStore</code> contract again using solar. Under the hood, it&apos;s doing exactly what you just did:</p><pre><code>solar deploy SimpleStore.sol &apos;[1]&apos;
+
+&#x1F680;   All contracts confirmed
+   deployed SimpleStore.sol =&gt; cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4</code></pre>
+<h2 id="interacting-with-a-contract"><a name="interacting-with-a-contract" class="plugin-anchor" href="#interacting-with-a-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Interacting With A Contract</h2><p>There are two ways to interact with a deployed contract.</p><ol><li><code>callcontract</code> - read-only query of a contract&apos;s method.
+</li>
+<li><code>sendtocontract</code> - create a tx that changes the state of the contract.
+</li></ol>
+<p>Both of these will invoke a contract&apos;s method. The parameters will need to be ABI encoded, and we will use <code>solar</code> to create the &quot;data payload&quot; that we&apos;ll need to send to the underlying RPC commands.</p><h1 id="calling-a-contract"><a name="calling-a-contract" class="plugin-anchor" href="#calling-a-contract"><i class="fa fa-link" aria-hidden="true"></i></a>Calling A Contract</h1><p>The &quot;call&quot; a contract, we ABI encode a method invokation, and send it to the <code>callcontract</code> RPC call.</p><p>Let&apos;s call the <code>get</code> method, to return the current value of the SimpleStore contract:</p><pre><code>solar encode SimpleStore.sol get
+6d4ce63c</code></pre>
+<p>The callcontract using the contract address, and the ABI encoded method invokation:</p><pre><code>qcli callcontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  6d4ce63c</code></pre>
+<p>The result is:</p><pre><code>{
+  &quot;address&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+  &quot;executionResult&quot;: {
+    &quot;gasUsed&quot;: 21678,
+    &quot;excepted&quot;: &quot;None&quot;,
+    &quot;newAddress&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+    &quot;output&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000001&quot;,
+    &quot;codeDeposit&quot;: 0,
+    &quot;gasRefunded&quot;: 0,
+    &quot;depositSize&quot;: 0,
+    &quot;gasForDeposit&quot;: 0
+  },
+  &quot;transactionReceipt&quot;: {
+    &quot;stateRoot&quot;: &quot;88407020db33e8aca4ac47b16940fb31f9942bf8ff734e68156e899992465eda&quot;,
+    &quot;gasUsed&quot;: 21678,
+    &quot;bloom&quot;: &quot;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;,
+    &quot;log&quot;: [
+    ]
+  }
+}</code></pre>
+<p>You can see that the <code>output</code> property returned the value we used to construct the contract.</p><h1 id="sending-a-contract-transaction"><a name="sending-a-contract-transaction" class="plugin-anchor" href="#sending-a-contract-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Sending A Contract Transaction</h1><p>Now let&apos;s use <code>sendtocontract</code> to create a transaction that modifies the state of the SimpleStore contract.</p><p>To encode <code>set(2)</code>:</p><pre><code>solar encode SimpleStore.sol set &apos;[2]&apos;
+60fe47b10000000000000000000000000000000000000000000000000000000000000002</code></pre>
+<p>Then we use the <code>sendtocontract</code> RPC call, with the address and ABI encoded method invokation:</p><pre><code>qcli sendtocontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  60fe47b10000000000000000000000000000000000000000000000000000000000000002</code></pre>
+<p>The returned transaction id:</p><pre><code>{
+  &quot;txid&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;sender&quot;: &quot;qKNc7xc44W9teoxoWLUaxeJNq1967JaUoD&quot;,
+  &quot;hash160&quot;: &quot;13e67f7e74b6e81a841292ebeaabfc7333d3e1cb&quot;
+}</code></pre>
+<p>Once the transaction had been confirmed, we can call <code>get()</code> again to get the new value:</p><pre><code>qcli callcontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  6d4ce63c
+
+{
+  &quot;address&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+  &quot;executionResult&quot;: {
+    &quot;gasUsed&quot;: 21678,
+    &quot;excepted&quot;: &quot;None&quot;,
+    &quot;newAddress&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+    &quot;output&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000002&quot;,
+    &quot;codeDeposit&quot;: 0,
+    &quot;gasRefunded&quot;: 0,
+    &quot;depositSize&quot;: 0,
+    &quot;gasForDeposit&quot;: 0
+  },
+  &quot;transactionReceipt&quot;: {
+    &quot;stateRoot&quot;: &quot;c4c0aac17cdde49eb2ae303941c8721c7e4b2f394d27e15aec4f15778e4cd087&quot;,
+    &quot;gasUsed&quot;: 21678,
+    &quot;bloom&quot;: &quot;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;,
+    &quot;log&quot;: [
+    ]
+  }
+}</code></pre>
+<p>Yay, the <code>value</code> storage variable had indeeded been modified.</p><h1 id="the-sendtocontract-transaction"><a name="the-sendtocontract-transaction" class="plugin-anchor" href="#the-sendtocontract-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>The SendToContract Transaction</h1><p>Finally, let&apos;s examine the raw transaction that implements <code>sendtocontract</code>:</p><pre><code>qcli getrawtransaction f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139
+
+0200000001c919f89ddefa4bc09ad83330f993360fc419c9c91ef1560ede7f2df4f680eca6010000006a47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30ffeffffff02c0348d9bd10100001976a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac00000000000000004301040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c221020000</code></pre>
+<p>Then decode it:</p><pre><code>qcli decoderawtransaction 0200000001c919f89ddefa4bc09ad83330f993360fc419c9c91ef1560ede7f2df4f680eca6010000006a47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30ffeffffff02c0348d9bd10100001976a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac00000000000000004301040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c221020000</code></pre>
+<p>The tx:</p><pre><code>{
+  &quot;txid&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;hash&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;size&quot;: 267,
+  &quot;vsize&quot;: 267,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 545,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;a6ec80f6f42d7fde0e56f11ec9c919c40f3693f93033d89ac04bfade9df819c9&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b[ALL] 02f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30f&quot;,
+        &quot;hex&quot;: &quot;47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30f&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19997.69515200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 58a1b81dbdeedd166bb166f528bb861048baf9b2 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qRe2MMp8cyzXs7WpCGZKvpdrJJYyoKm9Lg&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 0.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;4 250000 40 60fe47b10000000000000000000000000000000000000000000000000000000000000002 cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 OP_CALL&quot;,
+        &quot;hex&quot;: &quot;01040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c2&quot;,
+        &quot;type&quot;: &quot;call&quot;
+      }
+    }
+  ]
+}</code></pre>
+<p>The second vout is the script that invokes a smart contract. Its structure is very similar to the OP_CREATE script that was used to create the contract.</p><p>The commented script:</p><pre><code># VM version
+4
+# gas limit
+250000
+# gas price
+40
+# ABI-encoded method invokation
+60fe47b10000000000000000000000000000000000000000000000000000000000000002
+# address of contract
+cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4
+OP_CALL</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="inspect-raw-tx.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Inspect Raw TX">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Smart Contract","level":"5.2","depth":1,"previous":{"title":"Inspect Raw TX","level":"5.1","depth":1,"path":"part4/inspect-raw-tx.md","ref":"part4/inspect-raw-tx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors"],"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part4/smart-contract.md","mtime":"2018-04-22T03:16:07.119Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-26T10:31:38.680Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

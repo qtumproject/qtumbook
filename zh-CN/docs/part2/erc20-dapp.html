@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>ERC20 DApp · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../part3/vevue-ico/" />
+    
+    
+    <link rel="prev" href="erc20-js.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="erc20-dapp.html">
+            
+                <a href="erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERC20 DApp</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="erc20-dapp"><a name="erc20-dapp" class="plugin-anchor" href="#erc20-dapp"><i class="fa fa-link" aria-hidden="true"></i></a>ERC20 DApp</h1><p>In this chapter, we&apos;ll build a React DApp for the <a href="erc20-token.html">ERC20 Token we deployed previously</a>.</p><p>The features for this DApp are similar to the NodeJS CLI tool we&apos;ve built. The DApp should:</p><ul><li>Subscribe to and display token transfer events.
+</li>
+<li>Display total supply, and update it automatically.
+</li>
+<li>Be able to mint new tokens.
+</li>
+<li>Display information about transactions made, e.g. number of confirmations.
+</li></ul>
+<p>It looks something like this:</p><p><img src="erc20-dapp/erc20-dapp.jpg"></p><p>The only additional complication is that we no longer allow DApp to create a transaction without user permission. Now for every transaction, we should give the user an opportunity to approve or deny it:</p><p><img src="erc20-dapp/auth-ui.jpg"></p><p>The ERC20 DApp is more complex than the CLI App, because it needs to track multiple transactions, and update the UI when a new confirmation occurs.</p><p>We will use <a href="https://mobx.js.org/" target="_blank">mobx.js</a>, a reactive programming framework, to keep data and view synchronized.</p><p>You can get the code at <a href="https://github.com/qtumproject/qtumjs-dapp-erc20" target="_blank">qtumproject/qtumjs-dapp-erc20</a>, and use it to jump start your own DApp project.</p><h1 id="brief-intro-to-reactive-programming"><a name="brief-intro-to-reactive-programming" class="plugin-anchor" href="#brief-intro-to-reactive-programming"><i class="fa fa-link" aria-hidden="true"></i></a>Brief Intro To Reactive Programming</h1><p>Most of the complexity in GUI programming is in synchronizing the underlying data and the UI state. When data changes, the UI also needs to change. Conversely, when the UI changes (say user inputs a number), the data needs to change.</p><p>It is tedious and error-prone to keep the UI and data in sync.</p><p>It&apos;d be nice to bind the UI and data, so they always change together. <code>mobx</code> provides the tool to do that, and it is almost indistinguishable from magic.</p><p>Let&apos;s first see how we manually update UI without reactive programming, then we&apos;ll see how mobx automates that process.</p><h2 id="manual-ui-update"><a name="manual-ui-update" class="plugin-anchor" href="#manual-ui-update"><i class="fa fa-link" aria-hidden="true"></i></a>Manual UI Update</h2><p>Suppose the data is:</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> obj = {
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+}</code></pre>
+<p>We read the data in a view rendering function:</p><pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderView</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">const</span> view = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      a: {obj.a}
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      b: {obj.b}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+  ReactDOM.render(view, <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#root&quot;</span>))
+}</code></pre>
+<p>Now we update the data:</p><pre><code class="lang-js">obj.a = <span class="hljs-number">10</span></code></pre>
+<p>Next, we&apos;ll need to manually call <code>renderView</code> again to refresh:</p><pre><code class="lang-js">renderView(obj)</code></pre>
+<p>If we forget to rerender, the view would be stale. In a complex application, there could be many different views using different pieces of data. It&apos;s a big challenge to keep track of everything correctly.</p><h2 id="reactive-ui-update"><a name="reactive-ui-update" class="plugin-anchor" href="#reactive-ui-update"><i class="fa fa-link" aria-hidden="true"></i></a>Reactive UI Update</h2><p>Instead of calling <code>renderView</code> manually, we&apos;d like it to be called automatically when we modify the object, like so:</p><pre><code class="lang-js">obj.a = <span class="hljs-number">10</span>
+<span class="hljs-comment">// &#x2728;&#x2728;&#x2728; the view automagically updates &#x2728;&#x2728;&#x2728;</span></code></pre>
+<p>To accomplish this, <code>mobx</code> introduces two magic functions:</p><ul><li><a href="https://mobx.js.org/refguide/observable.html" target="_blank">observable</a>: If you modify an observable object, code that depends on the object&apos;s data should automatically re-execute.
+</li>
+<li><a href="https://mobx.js.org/refguide/autorun.html" target="_blank">autorun</a>: Execute a piece of code, and track all the pieces of observable data that had been used. If anything changed, re-execute.
+</li></ul>
+<p>We change the previously example like this:</p><pre><code class="lang-js"><span class="hljs-comment">// Turn an object into an observable</span>
+<span class="hljs-keyword">const</span> obj = observable({
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+})</code></pre>
+<p>And we render the UI using <code>autorun</code>, so it gets re-executed when <code>obj</code> is changed:</p><pre><code class="lang-js"><span class="hljs-comment">// Will automatically run `renderView` if obj changes</span>
+autorun(() =&gt; {
+  renderView(obj)
+})</code></pre>
+<p>You can <a href="https://codepen.io/hayeah/pen/MrEVxy?editors=1011" target="_blank">try this example on codepen.io</a>.  Modify <code>obj</code> in the provided console, and see the view changing.</p><p><img src="erc20-dapp/mobx-reaction.jpg"></p><blockquote><p>Note: In actual React code, we won&apos;t explicitly call <code>autorun</code>, the framework handles it. But the idea is the same, modify an object, and the components that uses the object would automatically re-render.</p></blockquote><h1 id="running-the-project"><a name="running-the-project" class="plugin-anchor" href="#running-the-project"><i class="fa fa-link" aria-hidden="true"></i></a>Running The Project</h1><p>Clone the project:</p><pre><code>git clone https://github.com/qtumproject/qtumjs-dapp-erc20.git</code></pre>
+<p>Install project dependencies:</p><pre><code>yarn install
+# or: npm install</code></pre>
+<p>Like the nodejs CLI tool, we&apos;ll need to make the information about deployed contracts available. Let&apos;s copy/link <code>solar.development.json</code> into the project:</p><pre><code>ln -s ~/qtumbook/examples/mytoken/solar.development.json solar.development.json</code></pre>
+<p>Then start the web server:</p><pre><code>npm start
+
+&gt; qutm-portal-ui@0.0.1 start /Users/howard/p/qtum/qtumjs-dapp-erc20
+&gt; neutrino start
+
+&#x2714; Development server running on: http://localhost:3000
+&#x2714; Build completed</code></pre>
+<p>Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>, you should see:</p><p><img src="erc20-dapp/initial-view.jpg"></p><h2 id="project-structure"><a name="project-structure" class="plugin-anchor" href="#project-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Project Structure</h2><ul><li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/index.tsx" target="_blank">src/index.ts</a>: the entry of the project, doing a little bit of setup.
+</li>
+<li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/tree/master/src/views" target="_blank">src/views</a>: this directory contains all React components.
+</li>
+<li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/Store.ts" target="_blank">src/Store.ts</a>: this observable object manages the logic and data of the application.
+</li></ul>
+<p>The <code>rpc</code> and <code>myToken</code> instances are initialized with two global constants:</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> QtumRPC(QTUM_RPC)
+
+<span class="hljs-keyword">const</span> myToken = <span class="hljs-keyword">new</span> Contract(rpc, SOLAR_REPO.contracts[<span class="hljs-string">&quot;zeppelin-solidity/contracts/token/CappedToken.sol&quot;</span>])</code></pre>
+<p>The constants <code>QTUM_RPC</code> and <code>SOLAR_REPO</code> are defined in <a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/config/development.js" target="_blank">config/development.js</a>.</p><h1 id="display-total-supply"><a name="display-total-supply" class="plugin-anchor" href="#display-total-supply"><i class="fa fa-link" aria-hidden="true"></i></a>Display Total Supply</h1><p><code>Store</code> is an observable object. If the <code>totalSupply</code> property changes, the React component that uses it would update.</p><p>When the app first loads, it calls <code>updateTotalSupply</code> to get the total supply. The simplified <code>Store</code> code:</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+  @observable public totalSupply: number = <span class="hljs-number">0</span>
+
+  <span class="hljs-comment">// `updateTotalSupply` is called when app is first loaded</span>
+  public <span class="hljs-keyword">async</span> updateTotalSupply() {
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> myToken.call(<span class="hljs-string">&quot;totalSupply&quot;</span>)
+    <span class="hljs-keyword">const</span> supply = result.outputs[<span class="hljs-number">0</span>]
+
+    <span class="hljs-comment">// Triggers update</span>
+    <span class="hljs-keyword">this</span>.totalSupply = supply.toNumber()
+  }
+}</code></pre>
+<p>Simply by setting <code>this.totalSupply</code>, the view that uses it would get re-rendered. Specifically, this chunk of JSX:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;is-size-2&quot;</span>&gt;</span> {totalSupply} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  Total Supply
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<p><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/92d4aed5128ff5685e23bc1bb4e0b1842e0dccca/src/views/App.tsx#L28-L32" target="_blank">https://github.com/qtumproject/qtumjs-dapp-erc20/blob/92d4aed5128ff5685e23bc1bb4e0b1842e0dccca/src/views/App.tsx#L28-L32</a></p><h2 id="subscribe-to-mint-events"><a name="subscribe-to-mint-events" class="plugin-anchor" href="#subscribe-to-mint-events"><i class="fa fa-link" aria-hidden="true"></i></a>Subscribe To Mint Events</h2><p>Let&apos;s subscribe to the <code>Mint</code> event so we can update the total supply immediately if somebody minted additional tokens. The simplified code:</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+  @observable.shallow public transferEvents: ITransferLog[] = []
+
+  <span class="hljs-comment">// `observeEvents` is called by `init`</span>
+  private <span class="hljs-keyword">async</span> observeEvents() {
+    <span class="hljs-keyword">this</span>.emitter = myToken.logEmitter()
+
+    <span class="hljs-keyword">this</span>.emitter.on(<span class="hljs-string">&quot;Mint&quot;</span>, () =&gt; {
+      <span class="hljs-keyword">this</span>.updateTotalSupply()
+    })
+
+    <span class="hljs-keyword">this</span>.emitter.on(<span class="hljs-string">&quot;Transfer&quot;</span>, (log: ITransferLog) =&gt; {
+      <span class="hljs-keyword">this</span>.transferEvents.unshift(log)
+    })
+  }
+}</code></pre>
+<p>Here the app subscribe to both <code>Mint</code> and <code>Transfer</code> events, and does something when notified:</p><ul><li><code>Mint</code>: update the total supply.
+</li>
+<li><code>Transfer</code>: add the transfer event to an array, so we can display it in the UI.
+</li></ul>
+<p>The view that renders <code>transferEvents</code> is straightforward:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Transfers <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+{transferEvents.length === 0 &amp;&amp; &quot;no transfer event observed yet&quot;}
+
+{
+  transferEvents.map((log) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">TransferLog</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{log.transactionHash}</span> <span class="hljs-attr">log</span>=<span class="hljs-string">{log}</span> /&gt;</span>)
+}</code></pre>
+<p>This view get updated when a new item is added to <code>transferEvents</code>.</p><p>Let&apos;s test this out. Use the NodeJS CLI to mint more tokens:</p><pre><code>node index.js mint dcd32b87270aeb980333213da2549c9907e09e94 1000
+
+mint tx: 7f0ff25475e2e6e0943fa6fb934999019d7a6a886126c220d0fa7cdcc3c36feb
+
+&#x2714; confirm mint</code></pre>
+<p>Even though the minting was done outside app, we still get notified. The total supply should increment by 1000, and a new <code>Transfer</code> event should show up in the UI:</p><p><img src="erc20-dapp/new-tokens-minted.jpg"></p><h1 id="transaction-lifecycle-management"><a name="transaction-lifecycle-management" class="plugin-anchor" href="#transaction-lifecycle-management"><i class="fa fa-link" aria-hidden="true"></i></a>Transaction Lifecycle Management</h1><p>In a typical web app, the user clicks a button, and the app makes an HTTP request to the server and get a response back. It&apos;s a simple cycle, and the user does not need to approve the HTTP request, or to know whether the request had been accepted by the server.</p><p>The lifecycle for a transaction has more stages:</p><ol><li>A transaction pending user audit &amp; approval.
+</li>
+<li>A transaction is sent to qtumd, and broadcasted to the network.
+</li>
+<li>User waits for transaction to reach some number of confirmations.
+</li></ol>
+<p>Your app may need to give indication as to where transactions are in each of these stages.</p><h1 id="minting-tokens"><a name="minting-tokens" class="plugin-anchor" href="#minting-tokens"><i class="fa fa-link" aria-hidden="true"></i></a>Minting Tokens</h1><p>The <code>mintTokens</code> method tracks the mint transactions that had been made, and updates the UI as the transactions progress through the various stages of their lifecycles.</p><p>The first half of the method creates a new observable <code>txRecord</code>. The second half updates the txRecord, which in turn triggers views to update.</p><p>The annotated code for <code>mintTokens</code>:</p><pre><code class="lang-js">public <span class="hljs-keyword">async</span> mintTokens(toAddress: string, amount: number) {
+  <span class="hljs-comment">// `txRecords` is an observable array. Adding an object into the array</span>
+  <span class="hljs-comment">// will recursively convert the object into an observable.</span>
+  <span class="hljs-keyword">this</span>.txRecords.unshift({
+    method: <span class="hljs-string">&quot;mint&quot;</span>,
+    params: {
+      toAddress,
+      amount,
+    },
+
+    <span class="hljs-comment">// Initially undefined, until user approves or denies a mint request.</span>
+    tx: <span class="hljs-literal">undefined</span>,
+    error: <span class="hljs-literal">undefined</span>,
+  })
+
+  <span class="hljs-comment">// Getting the newly created observable txRecord instance.</span>
+  <span class="hljs-keyword">const</span> txRecord = <span class="hljs-keyword">this</span>.txRecords[<span class="hljs-number">0</span>]
+
+  <span class="hljs-comment">/*******************************************************
+
+  ********************************************************/</span>
+
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// `send` returns if user approved the tx, and the tx had</span>
+    <span class="hljs-comment">// been sent to qtumd.</span>
+    <span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;mint&quot;</span>, [toAddress, amount])
+
+    <span class="hljs-comment">// Updates txRecord with transaction info. This triggers view update.</span>
+    txRecord.tx = tx
+
+    <span class="hljs-comment">// Transaction is initially unconfirmed. Wait for 3 confirmations.</span>
+    <span class="hljs-keyword">await</span> tx.confirm(<span class="hljs-number">3</span>, (tx2) =&gt; {
+      <span class="hljs-comment">// Each additional confirmation would invoke this callback.</span>
+      <span class="hljs-comment">//</span>
+      <span class="hljs-comment">// Update txRecord with transaction info &amp; trigger view update.</span>
+      txRecord.tx = tx2
+    })
+  } <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-comment">// User denied the transaction.</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Update the error info &amp; trigger view update.</span>
+    txRecord.error = err
+  }
+}</code></pre>
+<p>Without the record keeping logic, the code boils down to:</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;mint&quot;</span>, [toAddress, amount])
+<span class="hljs-keyword">await</span> tx.confirm(<span class="hljs-number">3</span>)</code></pre>
+<h2 id="mint-token-ux-workflow"><a name="mint-token-ux-workflow" class="plugin-anchor" href="#mint-token-ux-workflow"><i class="fa fa-link" aria-hidden="true"></i></a>Mint Token UX Workflow</h2><p>Enter the address and amount, click mint. Initially the tx should be pending for authorization:</p><p><img src="erc20-dapp/tx-pending.jpg"></p><p>Go to the authorization UI to approve it (<a href="http://localhost:9899/" target="_blank">http://localhost:9899/</a>):</p><p><img src="erc20-dapp/tx-authorize.jpg"></p><p>The transaction record should update, and show the number of confirmations reached (up to 3):</p><p><img src="erc20-dapp/tx-confirmed.jpg"></p><h1 id="conclusion"><a name="conclusion" class="plugin-anchor" href="#conclusion"><i class="fa fa-link" aria-hidden="true"></i></a>Conclusion</h1><p>We&apos;ve built a DApp for our ERC20 token. Next let&apos;s hold a crowdsale ICO for it!</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="erc20-js.html#observing-contract-events" class="navigation navigation-prev " aria-label="Previous page: Stream Events">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../part3/vevue-ico/" class="navigation navigation-next " aria-label="Next page: Simple Crowdsale">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERC20 DApp","level":"3.3","depth":1,"next":{"title":"Simple Crowdsale","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"previous":{"title":"Stream Events","level":"3.2.4","depth":2,"anchor":"#observing-contract-events","path":"part2/erc20-js.md","ref":"./part2/erc20-js.md#observing-contract-events","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors"],"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part2/erc20-dapp.md","mtime":"2018-01-05T12:21:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-26T10:31:38.680Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
