@@ -26,7 +26,7 @@
 1. [部署SafeMathLib库](#部署库)
 1. [部署合约](#部署众筹合约)
 1. [配置合约](#众筹设置)
-1. [分配用于预售的token](#Presale-pre-allocation（预售的预分配）)
+1. [分配用于预售的token](#Presale预分配）)
 1. [允许公众进行投资](#公众投资)
 1. [众筹结束](#结束众筹)
     + [如果成功，则结束](#众筹成功：结束众筹)。
@@ -439,7 +439,7 @@ tokens sold: 0
 
 > 该信息显示状态为`PreFunding`，即使当前时间已经超过了众筹的开始日期。实际的状态应该是`Funding`。 这个问题将会在 [qtum #480](https://github.com/qtumproject/qtum/issues/480) 里解决。
 
-# Presale Pre-Allocation（预售的预分配）
+# Presale预分配
 
 按照我们的ICO计划，我们已经将token供应量的10%（1千万个token）出售给早期的投资者。我们希望将他们的投资记录在账本上。
 

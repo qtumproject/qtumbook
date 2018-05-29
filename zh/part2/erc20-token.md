@@ -218,7 +218,7 @@ qcli listunspent 1 99999 '["qdgznat81MfTHZUrQrLZDZteAx212X4Wjj"]'
 
 `solar.development.json`文件存储了关于已部署的CappedToken合约的信息。开发者可以将该文件加载到ABIPlayer中，这样就可以和使用solar部署的任何合约进行交互。
 
-确保docker容器正在运行，访问：http://localhost:9899/abiplay/
+确保docker容器正在运行，访问：[http://localhost:9899/abiplay/](http://localhost:9899/abiplay/)
 
 ![](./erc20-token/abiplayer-empty.jpg)
 
@@ -256,7 +256,7 @@ qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
 
 ![](./erc20-token/mint-waiting-authorization.jpg)
 
-这个请求需要你的授权，因为它会花费QTUM。访问授权UI(http://localhost:9899/)来批准该请求：
+这个请求需要你的授权，因为它会花费QTUM。访问授权UI([http://localhost:9899/](http://localhost:9899/))来批准该请求：
 
 ![](./erc20-token/mint-auth.jpg)
 
@@ -274,6 +274,6 @@ qdgznat81MfTHZUrQrLZDZteAx212X4Wjj
 
 + `solar deploy` 编译&创建一个合约。
 + `solar prefund` 创建和合约owner具有相同地址的UTXOs。
-+ 使用ABIPlayer和已部署的合约进行交互：http://localhost:9899/abiplay/
-+ 对花费资金的请求进行授权：http://localhost:9899/
++ 使用ABIPlayer和已部署的合约进行交互：[http://localhost:9899/abiplay/](http://localhost:9899/abiplay/)
++ 对花费资金的请求进行授权：[http://localhost:9899/](http://localhost:9899/)
 
