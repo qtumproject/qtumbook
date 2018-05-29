@@ -1,7 +1,24 @@
-# Mastering QTUM - Developer's Guide to QTUM
+# qtum documents
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, but with support for Ethereum Virtual Machine based smart contracts. It achieves this through the revolutionary Account Abstraction Layer.
+```
+# npm install gitbook-cli -g
+yarn global add gitbook-cli
+```
 
-For more general information about Qtum as well as links to join our community, go to https://qtum.org
+Install GitBook plugins:
 
-This book is hosted at https://book.qtum.org
+```
+gitbook install
+```
+
+To serve locally:
+
+```
+gitbook serve
+```
+
+# To Publish
+
+```
+yarn run deploy
+```
