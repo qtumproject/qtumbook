@@ -1,0 +1,721 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <title>UTXOs & 余额 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="networks.html" />
+    
+    
+    <link rel="prev" href="qtum-docker-codenvy/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第1部分  运行QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html">
+            
+                    
+                    QTUM Docker Container（Docker容器）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#运行regtest模式">
+            
+                    
+                    运行regtest模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#生成新区块">
+            
+                    
+                    生成新区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="qtum-docker-codenvy/">
+            
+                <a href="qtum-docker-codenvy/">
+            
+                    
+                    浏览器中的Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="utxos-balances.html">
+            
+                <a href="utxos-balances.html">
+            
+                    
+                    UTXOs & 余额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="networks.html">
+            
+                <a href="networks.html">
+            
+                    
+                    测试网和主网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="networks.html">
+            
+                <a href="networks.html#获取测试网代币(Token">
+            
+                    
+                    获取测试网代币(Token)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >UTXOs & 余额</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="utxos--&#x4F59;&#x989D;"><a name="utxos--&#x4F59;&#x989D;" class="plugin-anchor" href="#utxos--&#x4F59;&#x989D;"><i class="fa fa-link" aria-hidden="true"></i></a>UTXOs &amp; &#x4F59;&#x989D;</h1><p>&#x5982;&#x679C;&#x4F60;&#x4E4B;&#x524D;&#x662F;&#x4E00;&#x4E2A;&#x4EE5;&#x592A;&#x574A;&#x7684;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x90A3;&#x4E48;QTUM&#x548C;&#x4EE5;&#x592A;&#x574A;&#x5F00;&#x53D1;&#x5B9E;&#x9645;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;QTUM&#x7684;&#x8D26;&#x6237;&#x6A21;&#x578B;&#x662F;&#x57FA;&#x4E8E;&#x6BD4;&#x7279;&#x5E01;&#x7684;UTXOs&#x3002;</p><p>&#x5728;&#x4EE5;&#x592A;&#x574A;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x8D26;&#x6237;&#xFF0C;&#x8BE5;&#x8D26;&#x6237;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x5730;&#x5740;&#x5E76;&#x4E14;&#x8BB0;&#x5F55;&#x7740;&#x8D26;&#x6237;&#x7684;&#x4F59;&#x989D;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8D26;&#x6237;&#x6765;&#x53D1;&#x9001;/&#x63A5;&#x6536;&#x8D44;&#x91D1;&#x4EE5;&#x53CA;&#x548C;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p><p>&#x5728;QTUM&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x8D26;&#x6237;&#xFF0C;&#x800C;&#x662F;&#x8BB8;&#x591A;&#x7684;UTXO&#xFF0C;&#x6BCF;&#x4E2A;UTXO&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x5730;&#x5740;&#x3002;&#x5728;&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x6216;&#x4E0E;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x4EA4;&#x4E92;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;UTXO&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x6B21;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;UTXO&#x4E2D;&#x7684;&#x8D44;&#x91D1;&#x6570;&#x91CF;&#x5927;&#x4E8E;&#x7528;&#x6237;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8D44;&#x91D1;&#x6570;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x540E;&#x8BE5;UTXO&#x4F1A;&#x88AB;&#x5206;&#x6210;&#x591A;&#x4E2A;UTXO&#x3002;</p><p>&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>qcli</code>&#x547D;&#x4EE4;&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x6765;&#x63A2;&#x7D22;UTXO&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x67E5;&#x770B;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x3002;</p><p>&#x5728;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x5230;QTUM&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x5B9E;&#x73B0;&#x662F;&#x5982;&#x4F55;&#x5C06;&#x6BD4;&#x7279;&#x5E01;&#x7684;UTXO&#x6A21;&#x578B;&#x548C;&#x4EE5;&#x592A;&#x574A;&#x7684;&#x8D26;&#x6237;&#x6A21;&#x578B;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x3002;</p><h1 id="utxo&#x5730;&#x5740;"><a name="utxo&#x5730;&#x5740;" class="plugin-anchor" href="#utxo&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>UTXO&#x5730;&#x5740;</h1><p>&#x5728;UTXO&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x4E00;&#x4E2A;&#x652F;&#x4ED8;&#x5730;&#x5740;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x533F;&#x540D;&#x6027;&#xFF0C;&#x7528;&#x6237;&#x901A;&#x5E38;&#x4F1A;&#x4E3A;&#x6BCF;&#x4E2A;&#x671F;&#x671B;&#x6536;&#x5230;&#x7684;&#x652F;&#x4ED8;&#x751F;&#x6210;&#x65B0;&#x7684;&#x5730;&#x5740;&#x3002;</p><p>&#x9996;&#x5148;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli getnewaddress</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qfsPCLrjjmqXptxWNXXg3wQruzC8bhPx63</code></pre>
+<p>&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x751F;&#x6210;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5730;&#x5740;&#xFF1A;</p><pre><code>&gt; qcli getnewaddress
+qZWeFWECjKQ3KstHhCjxFj9hiM7jzXWw3p
+
+&gt; qcli getnewaddress
+qJbSKruSXWnjSRZvSXMf2Y33gEw9FqHMHf
+
+&gt; qcli getnewaddress
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<p>&#x4E00;&#x4E2A;UTXO&#x5730;&#x5740;&#x7684;&#x957F;&#x5EA6;&#x662F;20&#x5B57;&#x8282;(160&#x6BD4;&#x7279;)&#xFF0C;<a href="https://en.bitcoin.it/wiki/Base58Check_encoding" target="_blank">base58 encoded</a>&#xFF0C;&#x548C;&#x4EE5;&#x592A;&#x574A;&#x5730;&#x5740;&#x7684;&#x957F;&#x5EA6;&#x4E00;&#x6837;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x8F6C;&#x6362;&#x4E3A;&#x4EE5;&#x592A;&#x574A;&#x517C;&#x5BB9;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli gethexaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
+
+dd2c6512563e4274dafd8312e0e738ede48f3046</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x8F6C;&#x6362;&#x56DE;base58&#x7F16;&#x7801;&#x7684;UTXO&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli fromhexaddress dd2c6512563e4274dafd8312e0e738ede48f3046
+
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<h1 id="&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x4EA4;&#x6613;"><a name="&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x4EA4;&#x6613;" class="plugin-anchor" href="#&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x4EA4;&#x6613;</h1><p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x628A;&#x8D44;&#x91D1;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A;UTXO&#x5730;&#x5740;&#x4E0A;&#x3002;&#x53EF;&#x4EE5;&#x628A;&#x8D44;&#x91D1;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;&#xFF0C;&#x8FD9;&#x548C;&#x628A;&#x8D44;&#x91D1;&#x53D1;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x4EBA;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;&#x3002;</p><p>&#x9996;&#x5148;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x63A5;&#x6536;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli getnewaddress
+
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<p>(&#x5728;&#x81EA;&#x5DF1;&#x7535;&#x8111;&#x4E0A;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x7528;&#x81EA;&#x5DF1;&#x751F;&#x6210;&#x7684;&#x5730;&#x5740;&#x66FF;&#x6362;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x3002;)</p><p>&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x53D1;&#x9001;10&#x4E2A;qtum&#x7ED9;&#x8BE5;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 10</code></pre>
+<p>&#x9488;&#x5BF9;&#x8BE5;&#x6B21;&#x8D44;&#x91D1;&#x8F6C;&#x79FB;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;ID&#xFF08;txid&#xFF09;&#xFF1A;</p><pre><code>11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d</code></pre>
+<p>&#x7B49;&#x5F85;&#x4EA4;&#x6613;&#x88AB;&#x786E;&#x8BA4;&#xFF0C;&#x5927;&#x6982;&#x9700;&#x8981;1&#x6216;2&#x5206;&#x949F;&#x3002;&#x7136;&#x540E;&#x5C31;&#x80FD;&#x5728;&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x4E2D;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p><pre><code>07:25:54  qtumd | CTransaction(hash=11e790d26d, ver=2, vin.size=1, vout.size=2, nLockTime=1680)
+07:25:54  qtumd |     CTxIn(COutPoint(5ada2447bc, 1), scriptSig=473044022063b61ff64f6340, nSequence=4294967294)
+07:25:54  qtumd |     CScriptWitness()
+07:25:54  qtumd |     CTxOut(nValue=19979.99832800, scriptPubKey=76a914dc41025b0c419681bffc3446)
+07:25:54  qtumd |     CTxOut(nValue=10.00000000, scriptPubKey=76a914dd2c6512563e4274dafd8312)</code></pre>
+<p>&#x4F7F;&#x7528;<code>gettransaction</code>&#x83B7;&#x53D6;&#x8BE5;&#x4EA4;&#x6613;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF1A;</p><pre><code>qcli gettransaction 11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+
+{
+  &quot;amount&quot;: 0.00000000,
+  &quot;fee&quot;: -0.00090400,
+  &quot;confirmations&quot;: 2,
+  &quot;blockhash&quot;: &quot;63b646290e7924a15073b7a2b1bde9f35c40d8de73a15eeea00d80a3ee7f7f70&quot;,
+  &quot;blockindex&quot;: 2,
+  &quot;blocktime&quot;: 1513149968,
+  &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;walletconflicts&quot;: [
+  ],
+  &quot;time&quot;: 1513149954,
+  &quot;timereceived&quot;: 1513149954,
+  &quot;bip125-replaceable&quot;: &quot;no&quot;,
+  &quot;details&quot;: [
+    {
+      &quot;account&quot;: &quot;&quot;,
+      &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+      &quot;category&quot;: &quot;send&quot;,
+      &quot;amount&quot;: -10.00000000,
+      &quot;label&quot;: &quot;&quot;,
+      &quot;vout&quot;: 1,
+      &quot;fee&quot;: -0.00090400,
+      &quot;abandoned&quot;: false
+    },
+    {
+      &quot;account&quot;: &quot;&quot;,
+      &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+      &quot;category&quot;: &quot;receive&quot;,
+      &quot;amount&quot;: 10.00000000,
+      &quot;label&quot;: &quot;&quot;,
+      &quot;vout&quot;: 1
+    }
+  ],
+  &quot;hex&quot;: &quot;02000000017d2c908ccf224c7204024699fa9bee9cafc4319297e3c682b2d2d4bc4724da5a010000006a473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017feffffff02e0fe1132d10100001976a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac00ca9a3b000000001976a914dd2c6512563e4274dafd8312e0e738ede48f304688ac90060000&quot;
+}</code></pre>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x8BE5;&#x4EA4;&#x6613;&#x5DF2;&#x7ECF;&#x83B7;&#x5F97;2&#x6B21;&#x786E;&#x8BA4;&#xFF1A;</p><pre><code>&quot;confirmations&quot;: 2,</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>listunspent</code>&#x5217;&#x51FA;&#x6700;&#x8FD1;&#x521B;&#x5EFA;&#x7684;UTXO&#x3002;&#x5217;&#x51FA;&#x7684;&#x4E3A;&#x786E;&#x8BA4;&#x6B21;&#x6570;&#x5C11;&#x4E8E;20&#x6B21;&#x7684;UTXO&#xFF1A;</p><pre><code>qcli listunspent 0 20
+
+[
+  {
+    &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+    &quot;vout&quot;: 0,
+    &quot;address&quot;: &quot;qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k&quot;,
+    &quot;scriptPubKey&quot;: &quot;76a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac&quot;,
+    &quot;amount&quot;: 19989.99923200,
+    &quot;confirmations&quot;: 11,
+    &quot;spendable&quot;: true,
+    &quot;solvable&quot;: true
+  },
+  {
+    &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+    &quot;vout&quot;: 1,
+    &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+    &quot;account&quot;: &quot;&quot;,
+    &quot;scriptPubKey&quot;: &quot;76a914dd2c6512563e4274dafd8312e0e738ede48f304688ac&quot;,
+    &quot;amount&quot;: 10.00000000,
+    &quot;confirmations&quot;: 11,
+    &quot;spendable&quot;: true,
+    &quot;solvable&quot;: true
+  }
+]</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E24;&#x4E2A;UTXO&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;txid&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x4E00;&#x4E2A;&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x7684;&#x4EA4;&#x6613;&#x521B;&#x5EFA;&#x4E86;&#x4E24;&#x4E2A;&#x65B0;&#x7684;UTXO&#xFF1A;</p><ul><li><code>qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code>: &#x63A5;&#x6536;&#x5730;&#x5740;&#xFF0C;&#x8D44;&#x91D1;&#x6570;&#x91CF;&#x4E3A;10&#x3002;
+</li>
+<li><code>qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k</code>: &#x539F;&#x59CB;&#x7684;&#x53D1;&#x9001;&#x65B9;UTXO&#x6709;2&#x4E07;&#x4E2A;qtum&#xFF0C;&#x5373;&#x751F;&#x6210;&#x7684;&#x6570;&#x91CF;&#x3002;&#x800C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x521B;&#x5EFA;&#x7684;UTXO&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x51CF;&#x53BB;&#x4EA4;&#x6613;&#x624B;&#x7EED;&#x8D39;&#x540E;&#x7684;&#x627E;&#x96F6;&#x3002;
+</li></ul>
+<h2 id="&#x89E3;&#x6790;&#x4EA4;&#x6613;&#x6570;&#x636E;"><a name="&#x89E3;&#x6790;&#x4EA4;&#x6613;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x89E3;&#x6790;&#x4EA4;&#x6613;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6790;&#x4EA4;&#x6613;&#x6570;&#x636E;</h2><p>&#x53EF;&#x4EE5;&#x5BF9;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x66F4;&#x6DF1;&#x5165;&#x5730;&#x6316;&#x6398;&#xFF0C;&#x770B;&#x770B;QTUM&#x662F;&#x5426;&#x548C;&#x6BD4;&#x7279;&#x5E01;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;UTXO&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x4ECE;&#x524D;&#x9762;&#x7684;<code>gettransaction</code>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;(&#x4F8B;&#x5982;&#xFF0C;<code>02000000017d2...ac90060000</code>).</p><p>&#x5BF9;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF1A;</p><pre><code>qcli decoderawtransaction \
+02000000017d2c908ccf224c7204024699fa9bee9cafc4319297e3c682b2d2d4bc4724da5a010000006a473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017feffffff02e0fe1132d10100001976a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac00ca9a3b000000001976a914dd2c6512563e4274dafd8312e0e738ede48f304688ac90060000</code></pre>
+<p>&#x89E3;&#x6790;&#x51FA;&#x6765;&#x7684;&#x4EA4;&#x6613;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code>{
+  &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;hash&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;size&quot;: 225,
+  &quot;vsize&quot;: 225,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 1680,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;5ada2447bcd4d2b282c6e3979231c4af9cee9bfa99460204724c22cf8c902c7d&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;3044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699[ALL] 02dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017&quot;,
+        &quot;hex&quot;: &quot;473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19989.99923200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 dc41025b0c419681bffc3446ee8b506dde59e18e OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 10.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 dd2c6512563e4274dafd8312e0e738ede48f3046 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914dd2c6512563e4274dafd8312e0e738ede48f304688ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>&#x6B63;&#x5982;&#x4F60;&#x6240;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A; <a href="https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash" target="_blank">Pay-to-PubkeyHash</a> &#x4EA4;&#x6613;!</p><h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1><p>QTUM&#x4F7F;&#x7528;&#x6BD4;&#x7279;&#x5E01;&#x7684;UTXO&#x6A21;&#x578B;&#x6765;&#x7BA1;&#x7406;&#x8D44;&#x4EA7;&#x3002;QTUM&#x94B1;&#x5305;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x8D26;&#x6237;&#x6765;&#x8BB0;&#x5F55;&#x4F59;&#x989D;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x8FFD;&#x8E2A;UTXO&#x7684;&#x96C6;&#x5408;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x94B1;&#x5305;&#x901A;&#x8FC7;&#x641C;&#x7D22;UTXO&#x7684;&#x96C6;&#x5408;&#x6765;&#x627E;&#x5230;&#x52A0;&#x8D77;&#x6765;&#x8DB3;&#x591F;&#x652F;&#x4ED8;&#x8F6C;&#x8D26;&#x91D1;&#x989D;&#x548C;&#x4EA4;&#x6613;&#x8D39;&#x7528;&#x7684;&#x591A;&#x4E2A;UTXO&#x3002;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="qtum-docker-codenvy/" class="navigation navigation-prev " aria-label="Previous page: 浏览器中的Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="networks.html" class="navigation navigation-next " aria-label="Next page: 测试网和主网">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"UTXOs & 余额","level":"2.2","depth":1,"next":{"title":"测试网和主网","level":"2.3","depth":1,"path":"part1/networks.md","ref":"part1/networks.md","articles":[{"title":"获取测试网代币(Token)","level":"2.3.1","depth":2,"anchor":"#获取测试网代币(Token","path":"part1/networks.md","ref":"part1/networks.md#获取测试网代币(Token","articles":[]}]},"previous":{"title":"浏览器中的Docker","level":"2.1.3","depth":2,"path":"part1/qtum-docker-codenvy/README.md","ref":"part1/qtum-docker-codenvy/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part1/utxos-balances.md","mtime":"2018-05-29T03:18:23.307Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:22:18.438Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

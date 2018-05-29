@@ -10,8 +10,10 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "gitbook serve",
     "build": "gitbook build . docs",
-    "deploy": "npm run build && git add docs && git commit -m 'update gitbook build' && git push origin master"
+    "publish": "git add docs && git commit -m 'update gitbook build' && git push origin master",
+    "deploy": "npm run build && npm run deploy"
   },
   "repository": {
     "type": "git",

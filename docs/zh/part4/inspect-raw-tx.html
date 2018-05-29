@@ -1,0 +1,726 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <title>Inspect Raw TX · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="smart-contract.html" />
+    
+    
+    <link rel="prev" href="../part3/ico.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第1部分  运行QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container（Docker容器）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#运行regtest模式">
+            
+                    
+                    运行regtest模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#生成新区块">
+            
+                    
+                    生成新区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    浏览器中的Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs & 余额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    测试网和主网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#获取测试网代币(Token">
+            
+                    
+                    获取测试网代币(Token)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="inspect-raw-tx.html">
+            
+                <a href="inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="smart-contract.html">
+            
+                <a href="smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Inspect Raw TX</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;"><a name="&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;</h1><p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x89E3;&#x6790;&#x539F;&#x59CB;&#x7684;&#x4EA4;&#x6613;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x4E86;&#x89E3;&#x652F;&#x4ED8;&#x4EA4;&#x6613;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;</p><p>&#x5C24;&#x5176;&#x662F;&#x4EE5;&#x4E0B;&#x51E0;&#x65B9;&#x9762;&#xFF1A;</p><ol><li>&#x53D1;&#x9001;&#x65B9;&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x6765;&#x8868;&#x8FBE;&#x8F6C;&#x8D26;&#x7684;&#x91D1;&#x989D;&#xFF0C;&#x4EE5;&#x53CA;&#x53D1;&#x9001;&#x7ED9;&#x8C01;
+</li>
+<li>&#x53D1;&#x9001;&#x65B9;&#x5982;&#x4F55;&#x8BC1;&#x660E;&#x81EA;&#x5DF1;&#x5BF9;&#x4E00;&#x4E2A;UTXO&#x7684;&#x62E5;&#x6709;&#x6743;
+</li>
+<li>&#x53D1;&#x9001;&#x65B9;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x65B0;&#x7684;UTXO&#x7528;&#x4E8E;&#x652F;&#x4ED8;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x4F55;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x9884;&#x671F;&#x7684;&#x63A5;&#x53D7;&#x8005;&#x53EF;&#x4EE5;&#x8BA4;&#x9886;&#x5B83;&#x3002;
+</li></ol>
+<h1 id="&#x8F6C;&#x8D26;"><a name="&#x8F6C;&#x8D26;" class="plugin-anchor" href="#&#x8F6C;&#x8D26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6C;&#x8D26;</h1><p>&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x8D44;&#x91D1;&#x3002;</p><pre><code>qcli getnewaddress
+
+qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD</code></pre>
+<p>&#x4E3A;&#x4E86;&#x6D4B;&#x8BD5;&#x8F6C;&#x8D26;&#x529F;&#x80FD;&#xFF0C;&#x4ECE;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x94B1;&#x5305;&#x53D1;&#x9001;&#x4E00;&#x4E9B;&#x8D44;&#x91D1;&#x5230;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF1A;</p><pre><code>qcli sendtoaddress qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD 10</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x4EA4;&#x6613;id&#x5982;&#x4E0B;&#xFF1A;</p><pre><code>f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<p>&#x4E00;&#x65E6;&#x4EA4;&#x6613;&#x88AB;&#x786E;&#x8BA4;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x63A5;&#x6536;&#x5730;&#x5740;&#x4E0A;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x8FD9;&#x7B14;&#x8D44;&#x91D1;&#xFF1A;</p><pre><code>qcli getreceivedbyaddress qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD
+
+10.00000000</code></pre>
+<h1 id="&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x4FE1;&#x606F;</h1><p>&#x4F7F;&#x7528;&#x4EA4;&#x6613;id&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF1A;</p><pre><code>qcli gettransaction \
+  f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">0.00000000</span>,
+  <span class="hljs-string">&quot;fee&quot;</span>: <span class="hljs-number">-0.00076800</span>,
+  <span class="hljs-string">&quot;confirmations&quot;</span>: <span class="hljs-number">4</span>,
+  <span class="hljs-string">&quot;blockhash&quot;</span>: <span class="hljs-string">&quot;f7567e97f8c7d0145592b04f9913b1005226913b391f55428accce1624ddd871&quot;</span>,
+  <span class="hljs-string">&quot;blockindex&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-string">&quot;blocktime&quot;</span>: <span class="hljs-number">1523947568</span>,
+  <span class="hljs-string">&quot;txid&quot;</span>: <span class="hljs-string">&quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;</span>,
+  <span class="hljs-string">&quot;walletconflicts&quot;</span>: [
+  ],
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-number">1523947557</span>,
+  <span class="hljs-string">&quot;timereceived&quot;</span>: <span class="hljs-number">1523947557</span>,
+  <span class="hljs-string">&quot;bip125-replaceable&quot;</span>: <span class="hljs-string">&quot;no&quot;</span>,
+  <span class="hljs-string">&quot;details&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;account&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;</span>,
+      <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;send&quot;</span>,
+      <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">-10.00000000</span>,
+      <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;vout&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">&quot;fee&quot;</span>: <span class="hljs-number">-0.00076800</span>,
+      <span class="hljs-string">&quot;abandoned&quot;</span>: <span class="hljs-literal">false</span>
+    },
+    {
+      <span class="hljs-string">&quot;account&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;</span>,
+      <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;receive&quot;</span>,
+      <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">10.00000000</span>,
+      <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;vout&quot;</span>: <span class="hljs-number">1</span>
+    }
+  ],
+  <span class="hljs-string">&quot;hex&quot;</span>: <span class="hljs-string">&quot;0200000001a65a0dad79515e70b2ee1406aa0bc083704b4d4a7528d7d4511210d6abbcb93902000000494830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01feffffff02002aae6dd10100001976a914722b74ca801e90be5240d2f084440d71c3c2572488ac00ca9a3b000000001976a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac98040000&quot;</span>
+}</code></pre>
+<h1 id="&#x89E3;&#x6790;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;"><a name="&#x89E3;&#x6790;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x89E3;&#x6790;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6790;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;</h1><p><code>gettransaction</code>&#x547D;&#x4EE4;&#x4EE5;&#x66F4;&#x4EBA;&#x6027;&#x5316;&#x7684;&#x5F62;&#x5F0F;&#x5448;&#x73B0;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x3002;&#x901A;&#x8FC7;&#x89E3;&#x6790;&#x4EA4;&#x6613;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5E95;&#x5C42;&#x7684;&#x6BD4;&#x7279;&#x5E01;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p><p>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5BF9;&#x4E8E;&#x6211;&#x4EEC;&#x7406;&#x89E3;&#x6BD4;&#x7279;&#x5E01;&#x8D26;&#x672C;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x3002;</p><p>&#x524D;&#x9762;&#x8FD4;&#x56DE;&#x7684;<code>hex</code>&#x9879;&#x5C31;&#x662F;&#x539F;&#x59CB;&#x7684;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x3002;&#x6216;&#x8005;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;<code>getrawtransaction</code>&#x6765;&#x67E5;&#x8BE2;&#xFF1A;</p><pre><code>qcli getrawtransaction f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x89E3;&#x6790;&#x8BE5;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;&#xFF1A;</p><pre><code>qcli decoderawtransaction \
+0200000001a65a0dad79515e70b2ee1406aa0bc083704b4d4a7528d7d4511210d6abbcb93902000000494830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01feffffff02002aae6dd10100001976a914722b74ca801e90be5240d2f084440d71c3c2572488ac00ca9a3b000000001976a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac98040000</code></pre>
+<pre><code>{
+  &quot;txid&quot;: &quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;,
+  &quot;hash&quot;: &quot;f2cb9a0cac73b7bf9dd1ba2fcfddfe91ae2f6d1e8083f8a848e61427a85d830d&quot;,
+  &quot;size&quot;: 192,
+  &quot;vsize&quot;: 192,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 1176,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6&quot;,
+      &quot;vout&quot;: 2,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;30450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd[ALL]&quot;,
+        &quot;hex&quot;: &quot;4830450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd01&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19989.99923200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 722b74ca801e90be5240d2f084440d71c3c25724 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914722b74ca801e90be5240d2f084440d71c3c2572488ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qTy4FHpEsGkwXGfzSUDirCQf8RCHsJSPhH&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 10.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 35dbe99b7be1e43463e0fec2d431b67bcc6ef67e OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91435dbe99b7be1e43463e0fec2d431b67bcc6ef67e88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qNUAQzJCy4UZXTsUWLdBsgMDfS8yF4nuGD&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>&#x8BE5;&#x4EA4;&#x6613;&#x6709;&#x4E00;&#x4E2A;vins&#xFF08;&#x8F93;&#x5165;&#x503C;&#xFF09;&#x548C;&#x4E24;&#x4E2A;vouts&#xFF08;&#x8F93;&#x51FA;&#x503C;&#xFF09;&#x3002;</p><h3 id="&#x4EA4;&#x6613;&#x8F93;&#x5165;"><a name="&#x4EA4;&#x6613;&#x8F93;&#x5165;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x8F93;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x8F93;&#x5165;</h3><p>&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x65F6;&#xFF0C;&#x94B1;&#x5305;&#x4F1A;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x6EE1;&#x8DB3;&#x8BF7;&#x6C42;&#x7684;&#x91D1;&#x989D;&#x6570;&#x91CF;&#x7684;UTXO&#x3002;</p><p>&#x8F93;&#x5165;&#x503C;&#x5373;&#x4E3A;&#x8BE5;UTXO&#xFF0C;&#x8BE5;&#x8F93;&#x5165;&#x503C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x4EA4;&#x6613;<code>39b9...5aa6</code>&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x51FA;&#x503C;&#x3002;&#x8FD9;&#x4E2A;UTXO&#x7684;&#x8D44;&#x91D1;&#x6570;&#x4E3A;2&#x4E07;&#x4E2A;qtum&#x3002;</p><p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x53D1;&#x9001;10&#x4E2A;qtum&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x4E2A;&#x8F93;&#x5165;&#x662F;&#x8DB3;&#x591F;&#x652F;&#x4ED8;&#x8BE5;&#x8F6C;&#x8D26;&#x672C;&#x8EAB;&#xFF0C;&#x4EE5;&#x53CA;&#x4EA4;&#x6613;&#x8D39;&#x7528;&#x3002;</p><h3 id="&#x4EA4;&#x6613;&#x8F93;&#x51FA;"><a name="&#x4EA4;&#x6613;&#x8F93;&#x51FA;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x8F93;&#x51FA;</h3><p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;UTXO&#x7684;&#x8D44;&#x91D1;&#x6570;&#x4E3A;2&#x4E07;&#x4E2A;qtum&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x94F6;&#x884C;&#x8D26;&#x6237;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x53EA;&#x82B1;&#x8D39;UTXO&#x7684;&#x4E00;&#x90E8;&#x5206;&#x91D1;&#x989D;&#x3002;</p><p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5C06;10&#x4E2A;qtum&#x53D1;&#x9001;&#x5230;&#x63A5;&#x6536;&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5269;&#x4F59;&#x7684;&#x91D1;&#x989D;&#x53D1;&#x9001;&#x56DE;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x3002;</p><p>&#x5BFC;&#x81F4;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x8BE5;&#x4EA4;&#x6613;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x521B;&#x9020;&#x4E86;&#x4E24;&#x4E2A;&#x65B0;&#x7684;UTXO&#x3002;</p><ul><li>19989.99923200 &#x662F;&#x4EA4;&#x6613;&#x627E;&#x56DE;&#x7684;&#x96F6;&#x94B1;&#xFF0C;&#x9700;&#x8FD4;&#x8FD8;&#x7ED9;&#x53D1;&#x9001;&#x65B9;&#x3002;
+</li>
+<li>10 &#x662F;&#x53D1;&#x9001;&#x7ED9;&#x63A5;&#x6536;&#x65B9;&#x7684;&#x91D1;&#x989D;&#x3002;
+</li></ul>
+<h3 id="&#x4EA4;&#x6613;&#x8D39;&#x7528;"><a name="&#x4EA4;&#x6613;&#x8D39;&#x7528;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x8D39;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x8D39;&#x7528;</h3><p>&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x503C;&#x7684;&#x603B;&#x548C;&#x662F;&#x5C0F;&#x4E8E;&#x8F93;&#x5165;&#x503C;&#x7684;&#x3002;</p><pre><code>20000 - 19989.99923200 - 10 = 0.000768000</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5DEE;&#x503C;&#x5C31;&#x662F;&#x4ED8;&#x7ED9;&#x77FF;&#x5DE5;&#x7684;&#x8D39;&#x7528;&#x3002;</p><h1 id="&#x6240;&#x6709;&#x6743;&#x7684;&#x52A0;&#x5BC6;&#x8BC1;&#x660E;"><a name="&#x6240;&#x6709;&#x6743;&#x7684;&#x52A0;&#x5BC6;&#x8BC1;&#x660E;" class="plugin-anchor" href="#&#x6240;&#x6709;&#x6743;&#x7684;&#x52A0;&#x5BC6;&#x8BC1;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6240;&#x6709;&#x6743;&#x7684;&#x52A0;&#x5BC6;&#x8BC1;&#x660E;</h1><p>&#x901A;&#x8FC7;&#x5BF9;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x89E3;&#x6790;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;Vins&#x548C;Vouts&#x6307;&#x5B9A;&#x4E86;&#x8D44;&#x91D1;&#x7684;&#x6765;&#x6E90;&#x4EE5;&#x53CA;&#x53BB;&#x5904;&#x3002;</p><p>&#x4F46;&#x662F;&#x7F51;&#x7EDC;&#x600E;&#x4E48;&#x77E5;&#x9053;&#x8C01;&#x6709;&#x6743;&#x5229;&#x82B1;&#x54EA;&#x4E9B;&#x94B1;&#xFF1F;</p><p>&#x5728;&#x73B0;&#x5B9E;&#x7684;&#x91D1;&#x878D;&#x4E16;&#x754C;&#x91CC;&#xFF0C;&#x94F6;&#x884C;&#x5145;&#x5F53;&#x4E86;&#x8FD9;&#x4E2A;&#x6743;&#x5A01;&#x673A;&#x6784;&#xFF0C;&#x94F6;&#x884C;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6BD4;&#x7279;&#x5E01;&#x4F7F;&#x7528;&#x52A0;&#x5BC6;&#x6280;&#x672F;&#x5C06;&#x8BE5;&#x51B3;&#x5B9A;&#x6743;&#x5206;&#x914D;&#x7ED9;&#x4E86;&#x5B83;&#x7684;&#x7EC8;&#x7AEF;&#x7528;&#x6237;&#x3002;</p><p>&#x8FD9;&#x4E2A;&#x82B1;&#x94B1;&#x7684;&#x201C;&#x51B3;&#x5B9A;&#x6743;&#x201D;&#x5C31;&#x50CF;&#x4E00;&#x628A;&#x5F62;&#x72B6;&#x72EC;&#x7279;&#x7684;&#x9501;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4EBA;&#x80FD;&#x62FF;&#x51FA;&#x5F62;&#x72B6;&#x6B63;&#x786E;&#x7684;&#x94A5;&#x5319;&#x6253;&#x5F00;&#x5B83;&#xFF0C;&#x7F51;&#x7EDC;&#x5C31;&#x5141;&#x8BB8;&#x94B1;&#x88AB;&#x82B1;&#x51FA;&#x53BB;&#x3002;</p><ul><li>&#x53D1;&#x9001;&#x65B9;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x80FD;&#x591F;&#x6253;&#x5F00;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x503C;UTXO&#x7684;&#x94A5;&#x5319;&#x3002;
+</li>
+<li>&#x53D1;&#x9001;&#x65B9;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x9501;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6709;&#x63A5;&#x6536;&#x65B9;&#x624D;&#x80FD;&#x6253;&#x5F00;&#x3002;
+</li></ul>
+<h1 id="&#x6BD4;&#x7279;&#x5E01;&#x6807;&#x51C6;&#x652F;&#x4ED8;&#x811A;&#x672C;"><a name="&#x6BD4;&#x7279;&#x5E01;&#x6807;&#x51C6;&#x652F;&#x4ED8;&#x811A;&#x672C;" class="plugin-anchor" href="#&#x6BD4;&#x7279;&#x5E01;&#x6807;&#x51C6;&#x652F;&#x4ED8;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6BD4;&#x7279;&#x5E01;&#x6807;&#x51C6;&#x652F;&#x4ED8;&#x811A;&#x672C;</h1><p>&#x524D;&#x9762;&#x7528;&#x4F5C;&#x6BD4;&#x55BB;&#x7684;&#x52A0;&#x5BC6;&#x201C;&#x9501;&#x201D;&#x53EA;&#x662F;&#x6BD4;&#x7279;&#x5E01;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7247;&#x6BB5;&#x3002;&#x53D1;&#x9001;&#x65B9;&#x9700;&#x63D0;&#x4F9B;&#x6B63;&#x786E;&#x7684;&#x8F93;&#x5165;&#x503C;&#xFF0C;&#x811A;&#x672C;&#x8BA1;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x624D;&#x80FD;&#x4E3A;true&#x3002;</p><h2 id="pay-to-public-key&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#xFF09;"><a name="pay-to-public-key&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#xFF09;" class="plugin-anchor" href="#pay-to-public-key&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Pay To Public Key&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#xFF09;</h2><p>&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x503C;&#x7684;UTXO&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x4EA4;&#x6613;<code>39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6</code>&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x51FA;&#x3002;&#x4E0B;&#x9762;&#x5BF9;&#x8BE5;&#x4EA4;&#x6613;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF1A;</p><pre><code>qcli decoderawtransaction \
+  `qcli getrawtransaction 39b9bcabd6101251d4d728754a4d4b7083c00baa0614eeb2705e5179ad0d5aa6`</code></pre>
+<p>&#x8BE5;UTXO&#x7684;&#x6570;&#x636E;&#x4E3A;:</p><pre><code>{
+  // ...
+  &quot;vout&quot;: [
+    // ...
+    {
+      &quot;value&quot;: 20000.00000000,
+      &quot;n&quot;: 2,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211 OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;2103795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkey&quot;,
+        &quot;addresses&quot;: [
+          &quot;qNdjKvCjBLUwb2RuWxEXLSgpVtLSanQ7Cu&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x201C;&#x9501;&#x201D;&#x7684;&#x90E8;&#x5206;&#x5982;&#x4E0B;</p><pre><code>03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211
+OP_CHECKSIG</code></pre>
+<p>&#x8BE5;&#x811A;&#x672C;&#x8868;&#x8FBE;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x5C5E;&#x4E8E;&#x516C;&#x94A5;&#x201C;03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211&#x201D;&#x7684;&#x52A0;&#x5BC6;&#x7B7E;&#x540D;&#x7684;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8BE5;&#x8F93;&#x51FA;&#x503C;&#x3002;</p><p>&#x4E3A;&#x4E86;&#x89E3;&#x9501;&#x8BE5;&#x811A;&#x672C;&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A0;&#x5BC6;&#x7B7E;&#x540D;&#x7528;&#x4E8E;&#x7B7E;&#x7F72;&#x8BE5;&#x8F93;&#x51FA;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x53D1;&#x9001;&#x91D1;&#x989D;&#x4E3A;&#x591A;&#x5C11;&#x4EE5;&#x53CA;&#x53D1;&#x9001;&#x7ED9;&#x8C01;&#xFF09;&#x3002;</p><p>&#x8FD9;&#x6BB5;&#x811A;&#x672C;&#x5C31;&#x662F;&#x201C;&#x9501;&#x201D;&#xFF0C;&#x7B7E;&#x540D;&#x5C31;&#x662F;&#x94A5;&#x5319;&#x3002;&#x5C06;&#x4E8C;&#x8005;&#x7ED3;&#x5408;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A;&#x201C;true&#x201D;&#x7684;&#x811A;&#x672C;&#xFF1A;</p><pre><code>30450221008c2f779baa08239d707f758068346b15b4c3b6a0cfc7ccb361bcc69f01eebfb2022018f2e38074c2f8673ebcb30358da6822c30a74a26b7feb852bab44e4ec5c40dd[ALL]
+
+03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211
+
+OP_CHECKSIG</code></pre>
+<p><a href="https://bitcoin.org/en/developer-reference#opcodes" target="_blank">OP_CHECKSIG</a> &#x64CD;&#x4F5C;&#x4F1A;&#x5B8C;&#x6210;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;</p><ol><li>&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;&#x662F;&#x5C5E;&#x4E8E;&#x516C;&#x94A5;<code>03795cd550a584caf7818cbe2d71cbc05bbf59fdb6bacb876969b319c4d07a0211</code>&#x7684;&#x3002;
+</li>
+<li>&#x6839;&#x636E;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x4EA4;&#x6613;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x679C;&#x77FF;&#x5DE5;&#x8BD5;&#x56FE;&#x7BE1;&#x6539;&#x4EA4;&#x6613;&#x8F93;&#x51FA;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x8C03;&#x6574;&#x63A5;&#x6536;&#x7684;&#x91D1;&#x989D;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x9A8C;&#x8BC1;&#x5C31;&#x4F1A;&#x5931;&#x8D25;&#x3002;
+</li></ol>
+<p>&#x4E00;&#x4E2A;Pay-To-Public-Key UTXO&#x901A;&#x5E38;&#x88AB;&#x521B;&#x5EFA;&#x7528;&#x4E8E;&#x6316;&#x77FF;&#x5956;&#x52B1;&#x4EE5;&#x53CA;&#x591A;&#x4F59;gas&#x8FD4;&#x8FD8;&#x3002;&#x5BF9;&#x4E8E;&#x652F;&#x4ED8;&#x7ED9;&#x5730;&#x5740;&#x7684;&#x4EA4;&#x6613;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x811A;&#x672C;&#x66F4;&#x5E38;&#x89C1;&#x3002;</p><h2 id="pay-to-public-hash&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#x54C8;&#x5E0C;&#xFF09;"><a name="pay-to-public-hash&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#x54C8;&#x5E0C;&#xFF09;" class="plugin-anchor" href="#pay-to-public-hash&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#x54C8;&#x5E0C;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Pay To Public Hash&#xFF08;&#x652F;&#x4ED8;&#x7ED9;&#x516C;&#x94A5;&#x54C8;&#x5E0C;&#xFF09;</h2><p>&#x5F53;&#x53D1;&#x9001;&#x8D44;&#x91D1;&#x7ED9;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x65F6;&#xFF0C;&#x521B;&#x5EFA;&#x7684;&#x8F93;&#x51FA;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x201C;Pay To Public Hash&#x201D;&#xFF08;P2PKH&#xFF09;&#x811A;&#x672C;&#x3002;</p><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x503C;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x811A;&#x672C;&#xFF1A;</p><pre><code>OP_DUP
+OP_HASH160
+35dbe99b7be1e43463e0fec2d431b67bcc6ef67e
+OP_EQUALVERIFY
+OP_CHECKSIG</code></pre>
+<p>&#x8BE5;&#x811A;&#x672C;&#x57FA;&#x672C;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x8C01;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;&#x54C8;&#x5E0C;&#x7ED3;&#x679C;&#x4E3A;35dbe99b7be1e43463e0fec2d431b67bcc6ef67e&#x7684;&#x516C;&#x94A5;&#x7684;&#x7B7E;&#x540D;&#xFF0C;&#x8C01;&#x5C31;&#x53EF;&#x4EE5;&#x82B1;&#x8D39;&#x8BE5;&#x8F93;&#x51FA;&#x503C;&#x3002;</p><p>&#x8BE5;&#x811A;&#x672C;&#x548C;<code>Pay To Public Key</code>&#x7684;&#x811A;&#x672C;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;&#x516C;&#x94A5;&#x54C8;&#x5E0C;&#x5F15;&#x5165;&#x4E86;&#x989D;&#x5916;&#x7684;&#x95F4;&#x63A5;&#x8FD0;&#x7B97;&#x3002;</p><p>&#x5173;&#x4E8E;&#x8FD9;&#x7C7B;&#x811A;&#x672C;&#x5982;&#x4F55;&#x9A8C;&#x8BC1;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x53C2;&#x89C1; <a href="https://bitcoin.org/en/developer-guide#p2pkh-script-validation" target="_blank">pay to public hash validation</a> &#x3002;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../part3/ico.html" class="navigation navigation-prev " aria-label="Previous page: Complex Crowdsale">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="smart-contract.html" class="navigation navigation-next " aria-label="Next page: Smart Contract">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Inspect Raw TX","level":"5.1","depth":1,"next":{"title":"Smart Contract","level":"5.2","depth":1,"path":"part4/smart-contract.md","ref":"part4/smart-contract.md","articles":[]},"previous":{"title":"Complex Crowdsale","level":"4.2","depth":1,"path":"part3/ico.md","ref":"part3/ico.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part4/inspect-raw-tx.md","mtime":"2018-05-29T03:18:23.341Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:22:18.438Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

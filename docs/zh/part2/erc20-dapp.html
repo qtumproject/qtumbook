@@ -1,0 +1,739 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <title>ERC20 DApp · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../part3/vevue-ico/" />
+    
+    
+    <link rel="prev" href="erc20-js.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第1部分  运行QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container（Docker容器）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#运行regtest模式">
+            
+                    
+                    运行regtest模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#生成新区块">
+            
+                    
+                    生成新区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    浏览器中的Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs & 余额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    测试网和主网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#获取测试网代币(Token">
+            
+                    
+                    获取测试网代币(Token)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="erc20-dapp.html">
+            
+                <a href="erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERC20 DApp</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="erc20-dapp"><a name="erc20-dapp" class="plugin-anchor" href="#erc20-dapp"><i class="fa fa-link" aria-hidden="true"></i></a>ERC20 DApp</h1><p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E3A; <a href="erc20-token.html">&#x524D;&#x9762;&#x90E8;&#x7F72;&#x7684;ERC20 Token</a> &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;DApp&#x3002;</p><p>&#x8BE5;DApp&#x7684;&#x7279;&#x6027;&#x548C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6784;&#x5EFA;&#x7684;NodeJS CLI&#x5DE5;&#x5177;&#x7684;&#x7279;&#x6027;&#x7C7B;&#x4F3C;&#x3002;DApp &#x9700;&#x8981;&#x505A;&#x5230;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p><ul><li>&#x8BA2;&#x9605;&#x548C;&#x663E;&#x793A;token transfer events&#x3002;
+</li>
+<li>&#x663E;&#x793A;&#x603B;&#x4F9B;&#x5E94;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x8BE5;&#x503C;&#x3002;
+</li>
+<li>&#x80FD;&#x591F;&#x94F8;&#x9020;&#x65B0;&#x7684;token&#x3002;
+</li>
+<li>&#x663E;&#x793A;&#x4EA4;&#x6613;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x4EA4;&#x6613;&#x786E;&#x8BA4;&#x7684;&#x6B21;&#x6570;&#x3002;
+</li></ul>
+<p>DApp&#x770B;&#x8D77;&#x6765;&#x5E94;&#x8BE5;&#x662F;&#x50CF;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p><p><img src="erc20-dapp/erc20-dapp.jpg"></p><p>&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF0C;DApp&#x5728;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x7528;&#x6237;&#x5141;&#x8BB8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x4EA4;&#x6613;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x7B14;&#x4EA4;&#x6613;&#xFF0C;&#x5E94;&#x8BE5;&#x7ED9;&#x7528;&#x6237;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x673A;&#x4F1A;&#xFF0C;&#x662F;&#x6279;&#x51C6;&#x8FD8;&#x662F;&#x62D2;&#x7EDD;&#x5B83;&#xFF1A;</p><p><img src="erc20-dapp/auth-ui.jpg"></p><p>ERC20 DApp&#x76F8;&#x6BD4;CLI App&#x66F4;&#x590D;&#x6742;&#xFF0C;&#x7528;&#x4E3A;DApp&#x9700;&#x8981;&#x8FFD;&#x8E2A;&#x591A;&#x7B14;&#x4EA4;&#x6613;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x65B0;&#x7684;&#x786E;&#x8BA4;&#x51FA;&#x73B0;&#x65F6;&#x9700;&#x66F4;&#x65B0;UI&#x3002;</p><p>&#x672C;&#x4E66;&#x4E2D;&#x4F7F;&#x7528; <a href="https://mobx.js.org/" target="_blank">mobx.js</a>&#xFF0C;&#x4E00;&#x79CD;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x7F16;&#x7A0B;&#x6846;&#x67B6;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x540C;&#x6B65;&#x3002;</p><p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x4ECE; <a href="https://github.com/qtumproject/qtumjs-dapp-erc20" target="_blank">qtumproject/qtumjs-dapp-erc20</a>&#x4E2D;&#x83B7;&#x53D6;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x542F;&#x52A8;&#x81EA;&#x5DF1;&#x7684;DApp&#x9879;&#x76EE;&#x3002;</p><h1 id="&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7B80;&#x4ECB;"><a name="&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7B80;&#x4ECB;</h1><p>GUI&#x7F16;&#x7A0B;&#x7684;&#x590D;&#x6742;&#x6027;&#x5927;&#x90E8;&#x5206;&#x5728;&#x4E8E;&#x540C;&#x6B65;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x548C;UI&#x72B6;&#x6001;&#x3002;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;UI&#x4E5F;&#x9700;&#x8981;&#x6539;&#x53D8;&#x3002;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;&#x5F53;UI&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF08;&#x6BD4;&#x5982;&#x7528;&#x6237;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF09;&#x65F6;&#xFF0C;&#x6570;&#x636E;&#x4E5F;&#x9700;&#x8981;&#x6539;&#x53D8;&#x3002;</p><p>&#x8BA9;UI&#x548C;&#x6570;&#x636E;&#x4FDD;&#x6301;&#x540C;&#x6B65;&#x662F;&#x5F88;&#x7E41;&#x7410;&#x4E14;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#x7684;&#x3002;</p><p>&#x5C06;UI&#x548C;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;&#x4F1A;&#x5F88;&#x597D;&#xFF0C;&#x8FD9;&#x6837;&#x5B83;&#x4EEC;&#x603B;&#x662F;&#x4E00;&#x8D77;&#x6539;&#x53D8;&#x3002;<code>mobx</code>&#x5C31;&#x63D0;&#x4F9B;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x529F;&#x80FD;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x975E;&#x5E38;&#x795E;&#x5947;&#x3002;</p><p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5728;&#x6CA1;&#x6709;&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x4F55;&#x624B;&#x52A8;&#x5730;&#x66F4;&#x65B0;UI&#x3002;&#x7136;&#x540E;&#x518D;&#x770B;&#x770B;mobx&#x662F;&#x5982;&#x4F55;&#x81EA;&#x52A8;&#x5316;&#x5B9E;&#x73B0;&#x8BE5;&#x8FC7;&#x7A0B;&#x3002;</p><h2 id="&#x624B;&#x52A8;&#x66F4;&#x65B0;ui"><a name="&#x624B;&#x52A8;&#x66F4;&#x65B0;ui" class="plugin-anchor" href="#&#x624B;&#x52A8;&#x66F4;&#x65B0;ui"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x52A8;&#x66F4;&#x65B0;UI</h2><p>&#x5047;&#x8BBE;&#x6570;&#x636E;&#x662F;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> obj = {
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+}</code></pre>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x4E3A;&#x89C6;&#x56FE;&#x6E32;&#x67D3;&#x7684;&#x51FD;&#x6570;&#x4E2D;&#x8BFB;&#x53D6;&#x8BE5;&#x6570;&#x636E;&#xFF1A;</p><pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderView</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">const</span> view = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      a: {obj.a}
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      b: {obj.b}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+  ReactDOM.render(view, <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#root&quot;</span>))
+}</code></pre>
+<p>&#x7136;&#x540E;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF1A;</p><pre><code class="lang-js">obj.a = <span class="hljs-number">10</span></code></pre>
+<p>&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x6B21;&#x624B;&#x52A8;&#x5730;&#x8C03;&#x7528;<code>renderView</code>&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF1A;</p><pre><code class="lang-js">renderView(obj)</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5FD8;&#x8BB0;&#x4E86;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x89C6;&#x56FE;&#x5C31;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x3002;&#x5728;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x8BB8;&#x591A;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5757;&#x7684;&#x4E0D;&#x540C;&#x89C6;&#x56FE;&#xFF0C;&#x6B63;&#x786E;&#x5730;&#x8BB0;&#x5F55;&#x6240;&#x6709;&#x6570;&#x636E;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x89C6;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x6311;&#x6218;&#x3002;</p><h2 id="&#x54CD;&#x5E94;&#x5F0F;&#x7684;ui&#x66F4;&#x65B0;"><a name="&#x54CD;&#x5E94;&#x5F0F;&#x7684;ui&#x66F4;&#x65B0;" class="plugin-anchor" href="#&#x54CD;&#x5E94;&#x5F0F;&#x7684;ui&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x54CD;&#x5E94;&#x5F0F;&#x7684;UI&#x66F4;&#x65B0;</h2><p>&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5728;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;<code>renderView</code>&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8C03;&#x7528;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p><pre><code class="lang-js">obj.a = <span class="hljs-number">10</span>
+<span class="hljs-comment">// &#x2728;&#x2728;&#x2728; the view automagically updates &#x2728;&#x2728;&#x2728;</span></code></pre>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;<code>mobx</code>&#x5F15;&#x5165;&#x4E86;&#x4E24;&#x4E2A;&#x795E;&#x5947;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p><ul><li><a href="https://mobx.js.org/refguide/observable.html" target="_blank">observable</a>: &#x5982;&#x679C;&#x4FEE;&#x6539;&#x4E86;&#x4E00;&#x4E2A;observable&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x4F9D;&#x8D56;&#x4E8E;&#x8BE5;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x3002;
+</li>
+<li><a href="https://mobx.js.org/refguide/autorun.html" target="_blank">autorun</a>: &#x6267;&#x884C;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x8FFD;&#x8E2A;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6240;&#x6709;observable&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x53D1;&#x751F;&#x4EFB;&#x4F55;&#x6539;&#x53D8;&#xFF0C;&#x5C31;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x3002;
+</li></ul>
+<p>&#x5C06;&#x524D;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4FEE;&#x6539;&#x6210;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-comment">// Turn an object into an observable</span>
+<span class="hljs-keyword">const</span> obj = observable({
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+})</code></pre>
+<p>&#x5E76;&#x4E14;&#x4F7F;&#x7528;<code>autorun</code>&#x6E32;&#x67D3;UI&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x5F53;<code>obj</code>&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#x5B83;&#x5C31;&#x4F1A;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-comment">// Will automatically run `renderView` if obj changes</span>
+autorun(() =&gt; {
+  renderView(obj)
+})</code></pre>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5; <a href="https://codepen.io/hayeah/pen/MrEVxy?editors=1011" target="_blank">try this example on codepen.io</a>&#x3002;&#x5728;&#x63D0;&#x4F9B;&#x7684;console&#xFF08;&#x63A7;&#x5236;&#x53F0;&#xFF09;&#x4FEE;&#x6539;<code>obj</code>&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x89C6;&#x56FE;&#x7684;&#x53D8;&#x5316;&#x3002;</p><p><img src="erc20-dapp/mobx-reaction.jpg"></p><blockquote><p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x5730;&#x8C03;&#x7528;<code>autorun</code>&#xFF0C;&#x6846;&#x67B6;&#x4F1A;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#x4E24;&#x8005;&#x7684;&#x601D;&#x60F3;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5373;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#x5C06;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p></blockquote><h1 id="project&#x8FD0;&#x884C;"><a name="project&#x8FD0;&#x884C;" class="plugin-anchor" href="#project&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>Project&#x8FD0;&#x884C;</h1><p>&#x590D;&#x5236;project:</p><pre><code>git clone https://github.com/qtumproject/qtumjs-dapp-erc20.git</code></pre>
+<p>&#x5B89;&#x88C5;&#x8BE5;project dependencies:</p><pre><code>yarn install
+# or: npm install</code></pre>
+<p>&#x548C;nodejs CLI&#x5DE5;&#x5177;&#x7C7B;&#x4F3C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5DF2;&#x90E8;&#x7F72;&#x5408;&#x7EA6;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;<code>solar.development.json</code>&#x6587;&#x4EF6;&#x590D;&#x5236;/&#x94FE;&#x63A5;&#x5230;&#x8BE5;project&#x4E2D;&#xFF1A;</p><pre><code>ln -s ~/qtumbook/examples/mytoken/solar.development.json solar.development.json</code></pre>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;web&#x670D;&#x52A1;&#x5668;&#xFF1A;</p><pre><code>npm start
+
+&gt; qutm-portal-ui@0.0.1 start /Users/howard/p/qtum/qtumjs-dapp-erc20
+&gt; neutrino start
+
+&#x2714; Development server running on: http://localhost:3000
+&#x2714; Build completed</code></pre>
+<p>&#x6253;&#x5F00;<a href="http://localhost:3000&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#xFF1A;" target="_blank">http://localhost:3000&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#xFF1A;</a></p><p><img src="erc20-dapp/initial-view.jpg"></p><h2 id="project-&#x7ED3;&#x6784;"><a name="project-&#x7ED3;&#x6784;" class="plugin-anchor" href="#project-&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>Project &#x7ED3;&#x6784;</h2><ul><li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/index.tsx" target="_blank">src/index.ts</a>: project&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x8BBE;&#x7F6E;&#x3002;
+</li>
+<li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/tree/master/src/views" target="_blank">src/views</a>: &#x8BE5;&#x76EE;&#x5F55;&#x5305;&#x542B;&#x6240;&#x6709;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x7EC4;&#x4EF6;&#x3002;
+</li>
+<li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/Store.ts" target="_blank">src/Store.ts</a>: &#x8BE5;observable&#x5BF9;&#x8C61;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x903B;&#x8F91;&#x548C;&#x6570;&#x636E;&#x3002;
+</li></ul>
+<p><code>rpc</code>&#x548C;<code>myToken</code>&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x5168;&#x5C40;&#x5E38;&#x91CF;&#x521D;&#x59CB;&#x5316;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> QtumRPC(QTUM_RPC)
+
+<span class="hljs-keyword">const</span> myToken = <span class="hljs-keyword">new</span> Contract(rpc, SOLAR_REPO.contracts[<span class="hljs-string">&quot;zeppelin-solidity/contracts/token/CappedToken.sol&quot;</span>])</code></pre>
+<p>&#x5E38;&#x91CF;<code>QTUM_RPC</code>&#x548C;<code>SOLAR_REPO</code> &#x5728; <a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/config/development.js" target="_blank">config/development.js</a> &#x4E2D;&#x5B9A;&#x4E49;&#x3002;</p><h1 id="&#x663E;&#x793A;&#x603B;&#x4F9B;&#x5E94;&#x91CF;"><a name="&#x663E;&#x793A;&#x603B;&#x4F9B;&#x5E94;&#x91CF;" class="plugin-anchor" href="#&#x663E;&#x793A;&#x603B;&#x4F9B;&#x5E94;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x663E;&#x793A;&#x603B;&#x4F9B;&#x5E94;&#x91CF;</h1><p><code>Store</code>&#x662F;&#x4E00;&#x4E2A;observable&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;<code>totalSupply</code>&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x7EC4;&#x4EF6;&#x4E5F;&#x4F1A;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;</p><p>&#x5F53;App&#x9996;&#x6B21;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x8C03;&#x7528;<code>updateTotalSupply</code>&#x6765;&#x83B7;&#x53D6;&#x603B;&#x4F9B;&#x5E94;&#x91CF;&#x3002;&#x7B80;&#x5316;&#x7684;<code>Store</code>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+  @observable public totalSupply: number = <span class="hljs-number">0</span>
+
+  <span class="hljs-comment">// `updateTotalSupply` is called when app is first loaded</span>
+  public <span class="hljs-keyword">async</span> updateTotalSupply() {
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> myToken.call(<span class="hljs-string">&quot;totalSupply&quot;</span>)
+    <span class="hljs-keyword">const</span> supply = result.outputs[<span class="hljs-number">0</span>]
+
+    <span class="hljs-comment">// Triggers update</span>
+    <span class="hljs-keyword">this</span>.totalSupply = supply.toNumber()
+  }
+}</code></pre>
+<p>&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x5730;&#x8BBE;&#x7F6E;<code>this.totalSupply</code>&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x89C6;&#x56FE;&#x5C31;&#x4F1A;&#x91CD;&#x65B0;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x6D89;&#x53CA;JSX&#x7684;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#xFF1A;</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;is-size-2&quot;</span>&gt;</span> {totalSupply} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  Total Supply
+<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<p><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/92d4aed5128ff5685e23bc1bb4e0b1842e0dccca/src/views/App.tsx#L28-L32" target="_blank">https://github.com/qtumproject/qtumjs-dapp-erc20/blob/92d4aed5128ff5685e23bc1bb4e0b1842e0dccca/src/views/App.tsx#L28-L32</a></p><h2 id="mint-events-&#x8BA2;&#x9605;"><a name="mint-events-&#x8BA2;&#x9605;" class="plugin-anchor" href="#mint-events-&#x8BA2;&#x9605;"><i class="fa fa-link" aria-hidden="true"></i></a>Mint Events &#x8BA2;&#x9605;</h2><p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x8BA2;&#x9605;<code>Mint</code> event&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x6709;&#x4EBA;&#x94F8;&#x9020;&#x4E86;&#x989D;&#x5916;&#x7684;token&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x7ACB;&#x523B;&#x66F4;&#x65B0;&#x603B;&#x4F9B;&#x5E94;&#x91CF;&#x7684;&#x6570;&#x503C;&#x3002;&#x7B80;&#x5316;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+  @observable.shallow public transferEvents: ITransferLog[] = []
+
+  <span class="hljs-comment">// `observeEvents` is called by `init`</span>
+  private <span class="hljs-keyword">async</span> observeEvents() {
+    <span class="hljs-keyword">this</span>.emitter = myToken.logEmitter()
+
+    <span class="hljs-keyword">this</span>.emitter.on(<span class="hljs-string">&quot;Mint&quot;</span>, () =&gt; {
+      <span class="hljs-keyword">this</span>.updateTotalSupply()
+    })
+
+    <span class="hljs-keyword">this</span>.emitter.on(<span class="hljs-string">&quot;Transfer&quot;</span>, (log: ITransferLog) =&gt; {
+      <span class="hljs-keyword">this</span>.transferEvents.unshift(log)
+    })
+  }
+}</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;App&#x5BF9;<code>Mint</code>&#x548C;<code>Transfer</code> events&#x90FD;&#x8FDB;&#x884C;&#x8BA2;&#x9605;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x7684;event&#x53D1;&#x751F;&#x65F6;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x76F8;&#x5E94;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p><ul><li><code>Mint</code>: &#x66F4;&#x65B0;&#x603B;&#x4F9B;&#x5E94;&#x91CF;&#x3002;
+</li>
+<li><code>Transfer</code>: &#x5C06;transfer event&#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;UI&#x4E2D;&#x663E;&#x793A;&#x5B83;&#x3002;
+</li></ul>
+<p>&#x6E32;&#x67D3;<code>transferEvents</code>&#x7684;&#x89C6;&#x56FE;&#x5F88;&#x7B80;&#x5355;&#xFF1A;</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Transfers <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+{transferEvents.length === 0 &amp;&amp; &quot;no transfer event observed yet&quot;}
+
+{
+  transferEvents.map((log) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">TransferLog</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{log.transactionHash}</span> <span class="hljs-attr">log</span>=<span class="hljs-string">{log}</span> /&gt;</span>)
+}</code></pre>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x65B0;&#x7684;item&#x6DFB;&#x52A0;&#x5230;<code>transferEvents</code>&#x4E2D;&#xFF0C;&#x89C6;&#x56FE;&#x5C31;&#x4F1A;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;</p><p>&#x4E0B;&#x9762;&#x5BF9;&#x8FD9;&#x4E00;&#x70B9;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4F7F;&#x7528;NodeJS CLI&#x94F8;&#x9020;&#x66F4;&#x591A;&#x7684;token&#xFF1A;</p><pre><code>node index.js mint dcd32b87270aeb980333213da2549c9907e09e94 1000
+
+mint tx: 7f0ff25475e2e6e0943fa6fb934999019d7a6a886126c220d0fa7cdcc3c36feb
+
+&#x2714; confirm mint</code></pre>
+<p>&#x867D;&#x7136;&#x94F8;&#x5E01;&#x8FC7;&#x7A0B;&#x662F;&#x5728;App&#x5916;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x4F1A;&#x6536;&#x5230;&#x901A;&#x77E5;&#x3002;&#x603B;&#x4F9B;&#x5E94;&#x91CF;&#x5E94;&#x8BE5;&#x589E;&#x52A0;1000&#xFF0C;&#x5E76;&#x4E14;UI&#x4E2D;&#x4F1A;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;<code>Transfer</code> event&#xFF1A;</p><p><img src="erc20-dapp/new-tokens-minted.jpg"></p><h1 id="&#x4EA4;&#x6613;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;"><a name="&#x4EA4;&#x6613;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x4EA4;&#x6613;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x6613;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;</h1><p>&#x5728;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;web App&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;App&#x5C31;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x4E00;&#x6B21;HTTP&#x8BF7;&#x6C42;&#x5E76;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5730;&#x5FAA;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x7528;&#x6237;&#x4E0D;&#x9700;&#x8981;&#x6279;&#x51C6;&#x8BE5;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;&#x8BE5;&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x88AB;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x3002;</p><p>&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5219;&#x6709;&#x66F4;&#x591A;&#x7684;&#x9636;&#x6BB5;&#xFF1A;</p><ol><li>&#x4EA4;&#x6613;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x5BA1;&#x6838;&#x548C;&#x6279;&#x51C6;&#x3002;
+</li>
+<li>&#x5C06;&#x4EA4;&#x6613;&#x53D1;&#x9001;&#x7ED9;qtumd&#xFF0C;&#x5E76;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#x3002;
+</li>
+<li>&#x7528;&#x6237;&#x7B49;&#x5F85;&#x4EA4;&#x6613;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x786E;&#x8BA4;&#x6B21;&#x6570;&#x3002;
+</li></ol>
+<p>App&#x9700;&#x8981;&#x6307;&#x793A;&#x4EA4;&#x6613;&#x6B63;&#x5904;&#x4E8E;&#x4E0A;&#x8FF0;&#x9636;&#x6BB5;&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x9636;&#x6BB5;&#x3002;</p><h1 id="&#x94F8;&#x9020;tokens"><a name="&#x94F8;&#x9020;tokens" class="plugin-anchor" href="#&#x94F8;&#x9020;tokens"><i class="fa fa-link" aria-hidden="true"></i></a>&#x94F8;&#x9020;Tokens</h1><p><code>mintTokens</code> method&#x4F1A;&#x8FFD;&#x8E2A;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x7684;&#x94F8;&#x5E01;&#x4EA4;&#x6613;&#xFF0C;&#x5E76;&#x968F;&#x7740;&#x4EA4;&#x6613;&#x5728;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x8FDB;&#x5C55;&#x800C;&#x66F4;&#x65B0;UI&#x3002;</p><p>&#x8BE5;method&#x7684;&#x524D;&#x534A;&#x90E8;&#x5206;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;observable&#x5BF9;&#x8C61;<code>txRecord</code>&#x3002; &#x540E;&#x534A;&#x90E8;&#x5206;&#x66F4;&#x65B0;txRecord&#xFF0C;&#x5B83;&#x53CD;&#x8FC7;&#x6765;&#x4E5F;&#x4F1A;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x7684;&#x66F4;&#x65B0;&#x3002;</p><p><code>mintTokens</code>&#x5E26;&#x6CE8;&#x91CA;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code class="lang-js">public <span class="hljs-keyword">async</span> mintTokens(toAddress: string, amount: number) {
+  <span class="hljs-comment">// `txRecords` is an observable array. Adding an object into the array</span>
+  <span class="hljs-comment">// will recursively convert the object into an observable.</span>
+  <span class="hljs-keyword">this</span>.txRecords.unshift({
+    method: <span class="hljs-string">&quot;mint&quot;</span>,
+    params: {
+      toAddress,
+      amount,
+    },
+
+    <span class="hljs-comment">// Initially undefined, until user approves or denies a mint request.</span>
+    tx: <span class="hljs-literal">undefined</span>,
+    error: <span class="hljs-literal">undefined</span>,
+  })
+
+  <span class="hljs-comment">// Getting the newly created observable txRecord instance.</span>
+  <span class="hljs-keyword">const</span> txRecord = <span class="hljs-keyword">this</span>.txRecords[<span class="hljs-number">0</span>]
+
+  <span class="hljs-comment">/*******************************************************
+
+  ********************************************************/</span>
+
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// `send` returns if user approved the tx, and the tx had</span>
+    <span class="hljs-comment">// been sent to qtumd.</span>
+    <span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;mint&quot;</span>, [toAddress, amount])
+
+    <span class="hljs-comment">// Updates txRecord with transaction info. This triggers view update.</span>
+    txRecord.tx = tx
+
+    <span class="hljs-comment">// Transaction is initially unconfirmed. Wait for 3 confirmations.</span>
+    <span class="hljs-keyword">await</span> tx.confirm(<span class="hljs-number">3</span>, (tx2) =&gt; {
+      <span class="hljs-comment">// Each additional confirmation would invoke this callback.</span>
+      <span class="hljs-comment">//</span>
+      <span class="hljs-comment">// Update txRecord with transaction info &amp; trigger view update.</span>
+      txRecord.tx = tx2
+    })
+  } <span class="hljs-keyword">catch</span> (err) {
+    <span class="hljs-comment">// User denied the transaction.</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Update the error info &amp; trigger view update.</span>
+    txRecord.error = err
+  }
+}</code></pre>
+<p>&#x8BE5;&#x5904;&#x7F16;&#x5199;&#x4E86;&#x8F83;&#x957F;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x4E3A;&#x4E86;&#x4F7F;&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x6709;&#x903B;&#x8F91;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8003;&#x8651;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5F52;&#x7ED3;&#x4E3A;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;mint&quot;</span>, [toAddress, amount])
+<span class="hljs-keyword">await</span> tx.confirm(<span class="hljs-number">3</span>)</code></pre>
+<h2 id="&#x94F8;&#x9020;token&#x7684;ux&#x6D41;&#x7A0B;"><a name="&#x94F8;&#x9020;token&#x7684;ux&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x94F8;&#x9020;token&#x7684;ux&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x94F8;&#x9020;Token&#x7684;UX&#x6D41;&#x7A0B;</h2><p>&#x8F93;&#x5165;&#x5730;&#x5740;&#x548C;&#x91D1;&#x989D;&#xFF0C;&#x70B9;&#x51FB;&#x201C;Mint Tokens&#x201D;&#x3002;&#x6700;&#x521D;&#x4EA4;&#x6613;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x6388;&#x6743;&#xFF1A;</p><p><img src="erc20-dapp/tx-pending.jpg"></p><p>&#x8FDB;&#x5165;&#x5230;&#x6388;&#x6743;UI&#xFF0C;&#x6279;&#x51C6;&#x8BE5;&#x4EA4;&#x6613; (<a href="http://localhost:9899/" target="_blank">http://localhost:9899/)&#xFF1A;</a>&#xFF1A;)</p><p><img src="erc20-dapp/tx-authorize.jpg"></p><p>&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x4F1A;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x4F1A;&#x663E;&#x793A;&#x4EA4;&#x6613;&#x5DF2;&#x7ECF;&#x786E;&#x8BA4;&#x7684;&#x6B21;&#x6570;&#xFF08;&#x56FE;&#x4E2D;&#x786E;&#x8BA4;&#x6B21;&#x6570;&#x4E3A;3&#xFF09;&#xFF1A;</p><p><img src="erc20-dapp/tx-confirmed.jpg"></p><h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1><p>&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;ERC20 token&#x6784;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;DApp&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E3A;&#x5B83;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x4F17;&#x7B79;ICO&#x3002;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="erc20-js.html#observing-contract-events" class="navigation navigation-prev " aria-label="Previous page: Stream Events">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../part3/vevue-ico/" class="navigation navigation-next " aria-label="Next page: Simple Crowdsale">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERC20 DApp","level":"3.3","depth":1,"next":{"title":"Simple Crowdsale","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"previous":{"title":"Stream Events","level":"3.2.4","depth":2,"anchor":"#observing-contract-events","path":"part2/erc20-js.md","ref":"./part2/erc20-js.md#observing-contract-events","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part2/erc20-dapp.md","mtime":"2018-05-29T03:18:23.307Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:22:18.438Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

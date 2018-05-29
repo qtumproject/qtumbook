@@ -1,0 +1,738 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <title>QTUM Docker Container · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="qtum-docker.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="qtum-docker-codenvy/">
+            
+                <a href="qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="utxos-balances.html">
+            
+                <a href="utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="networks.html">
+            
+                <a href="networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="networks.html">
+            
+                <a href="networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >QTUM Docker Container</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="qtum-docker-container"><a name="qtum-docker-container" class="plugin-anchor" href="#qtum-docker-container"><i class="fa fa-link" aria-hidden="true"></i></a>QTUM Docker Container</h1><p>For this book we have built a docker image to gaurantee a consistent environment, so it&apos;s easier to follow the examples. The docker container includes <code>qtumd</code>, as well as all the tools you&apos;ll need for the rest of this book.</p><p>Download the latest container image:</p><pre><code>docker pull hayeah/qtumportal:latest</code></pre>
+<h2 id="running-regtest-mode"><a name="running-regtest-mode" class="plugin-anchor" href="#running-regtest-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Running regtest Mode</h2><p>For development and testing purposes it is most convenient to run a local blockchain, so the transactions you make are processed cheaply on your own computer. You can run a local blockchain easily using <code>qtumd</code>&apos;s builtin <code>regtest</code> mode (short for &quot;regression test&quot;).</p><p><code>regtest</code> is similar to Ethereum&apos;s <code>testrpc</code>, but different in a few ways:</p><ul><li>The blockchain state is stored on disk, and persists across qtumd restarts.
+</li>
+<li>The blocks are not mined immediately, but at a semi-regular intervals.
+</li>
+<li>Need to manually seed the chain with 600 blocks.
+</li></ul>
+<p>By default, the <code>hayeah/qtumportal</code> docker image will start <code>qtumd</code> in <code>regtest</code> mode:</p><pre><code>docker run -it --rm \
+  --name myapp \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  -p 3889:3889 \
+  hayeah/qtumportal</code></pre>
+<ul><li><code>--name</code> Name of the container. You can change this to whatever.
+</li>
+<li><code>-it</code> Allocates a terminal device for the container.
+</li>
+<li><code>--rm</code> Remove the container immediately after exit.
+</li>
+<li><code>-v</code> Maps the current directory as <code>/dapp</code> inside the container.
+</li>
+<li><code>-p</code> Expose container ports for access from the host OS.
+</li></ul>
+<p>You should see output like this:</p><pre><code>02:46:17 portal | Starting portal on port 5001
+02:46:17  qtumd | Starting qtumd on port 5000
+02:46:17 portal | time=&quot;2017-12-13T02:46:17Z&quot; level=info msg=&quot;DApp service listening 0.0.0.0:9888&quot;
+02:46:17 portal | time=&quot;2017-12-13T02:46:17Z&quot; level=info msg=&quot;Auth service listening 0.0.0.0:9899&quot;
+02:46:17  qtumd | 2017-12-13 02:46:17
+02:46:17  qtumd | 2017-12-13 02:46:17 Qtum version v0.14.10.0-101922f-dirty
+02:46:17  qtumd | 2017-12-13 02:46:17 InitParameterInteraction: parameter interaction: -whitelistforcerelay=1 -&gt; setting -whitelistrelay=1
+02:46:17  qtumd | 2017-12-13 02:46:17 Validating signatures for all blocks.
+02:46:17  qtumd | 2017-12-13 02:46:17
+02:46:17  qtumd | 2017-12-13 02:46:17 Default data directory /root/.qtum
+02:46:17  qtumd | 2017-12-13 02:46:17 Using data directory /dapp/.qtum/regtest
+...
+02:46:22  qtumd | 2017-12-13 02:46:22 ERROR: Read: Failed to open file /dapp/.qtum/regtest/banlist.dat
+02:46:22  qtumd | 2017-12-13 02:46:22 Invalid or missing banlist.dat; recreating
+02:46:22  qtumd | 2017-12-13 02:46:22 init message: Starting network threads...
+02:46:22  qtumd | 2017-12-13 02:46:22 net thread start
+02:46:22  qtumd | 2017-12-13 02:46:22 addcon thread start
+02:46:22  qtumd | 2017-12-13 02:46:22 init message: Done loading
+02:46:22  qtumd | 2017-12-13 02:46:22 opencon thread start
+02:46:22  qtumd | 2017-12-13 02:46:22 msghand thread start
+02:46:22  qtumd | 2017-12-13 02:46:22 dnsseed thread start
+02:46:22  qtumd | 2017-12-13 02:46:22 Loading addresses from DNS seeds (could take a while)
+02:46:22  qtumd | 2017-12-13 02:46:22 0 addresses found from DNS seeds
+02:46:22  qtumd | 2017-12-13 02:46:22 dnsseed thread exit</code></pre>
+<p>To terminate the container, hit <code>ctrl-c</code> in the terminal, and you should see some more cleanup logs:</p><pre><code>02:48:06  qtumd | 2017-12-13 02:48:06 tor: Thread interrupt
+02:48:06  qtumd | 2017-12-13 02:48:06 torcontrol thread exit
+02:48:06  qtumd | 2017-12-13 02:48:06 addcon thread exit
+02:48:06  qtumd | 2017-12-13 02:48:06 opencon thread exit
+02:48:06  qtumd | 2017-12-13 02:48:06 scheduler thread interrupt
+02:48:06  qtumd | 2017-12-13 02:48:06 Shutdown: In progress...
+02:48:06  qtumd | 2017-12-13 02:48:06 msghand thread exit
+02:48:06  qtumd | 2017-12-13 02:48:06 net thread exit
+02:48:06  qtumd | 2017-12-13 02:48:06 Dumped mempool: 0.001657s to copy, 0.00729s to dump
+02:48:06  qtumd | 2017-12-13 02:48:06 ...  02:48:06.292|  Closing state DB
+02:48:06  qtumd | 2017-12-13 02:48:06 ...  02:48:06.306|  Closing state DB
+02:48:06  qtumd | 2017-12-13 02:48:06 Shutdown: done
+02:48:06  qtumd | Terminating qtumd</code></pre>
+<p>You should see that the blockchain database for <code>regtest</code> had been created in your local project directory at the path <code>.qtum/regtest</code>:</p><pre><code>ls .qtum/regtest
+
+banlist.dat       chainstate        debug.log         mempool.dat       stateQtum         wallet.dat
+blocks            db.log            fee_estimates.dat peers.dat         vm.log</code></pre>
+<p>Let&apos;s restart the container, and <code>qtumd</code> should reuse the blockchain database saved in <code>.qtum</code>.</p><pre><code>docker run -it --rm \
+  --name myapp \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  -p 3889:3889 \
+  hayeah/qtumportal</code></pre>
+<h4 id="running-testnet"><a name="running-testnet" class="plugin-anchor" href="#running-testnet"><i class="fa fa-link" aria-hidden="true"></i></a>Running Testnet</h4><p>You can run on the test network by setting the QTUM_NETWORK environment variable inside the container, like so:</p><pre><code>docker run -it --rm \
+  --name myapp \
+  -e &quot;QTUM_NETWORK=testnet&quot; \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  -p 3889:3889 \
+  -p 13888:13888 \
+  hayeah/qtumportal</code></pre>
+<h2 id="shell-access-into-the-container"><a name="shell-access-into-the-container" class="plugin-anchor" href="#shell-access-into-the-container"><i class="fa fa-link" aria-hidden="true"></i></a>Shell Access Into The Container</h2><p>Let&apos;s verify that the container is running:</p><pre><code>docker ps</code></pre>
+<pre><code>CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                                                      NAMES
+72d7b2c22f97        hayeah/qtumportal   &quot;/bin/sh -c &apos;mkdir...&quot;   About a minute ago   Up About a minute   0.0.0.0:9888-&gt;9888/tcp, 0.0.0.0:9899-&gt;9899/tcp, 0.0.0.0:13889-&gt;13889/tcp   myapp</code></pre>
+<p>The container&apos;s name is <code>myapp</code>. We can gain shell access:</p><pre><code>docker exec -it myapp sh</code></pre>
+<p>The <code>/dapp</code> directory inside the container should be the same as your project directory.</p><p>Inside the container, we can use the <code>qcli</code> command to interact with qtumd. To get some basic info about the blockchain state:</p><pre><code>qcli getinfo
+
+{
+  &quot;version&quot;: 141000,
+  &quot;protocolversion&quot;: 70016,
+  &quot;walletversion&quot;: 130000,
+  &quot;balance&quot;: 0.00000000,
+  &quot;stake&quot;: 0.00000000,
+  &quot;blocks&quot;: 0,
+  &quot;timeoffset&quot;: 0,
+  &quot;connections&quot;: 0,
+  &quot;proxy&quot;: &quot;&quot;,
+  &quot;difficulty&quot;: {
+    &quot;proof-of-work&quot;: 4.656542373906925e-10,
+    &quot;proof-of-stake&quot;: 4.656542373906925e-10
+  },
+  &quot;testnet&quot;: false,
+  &quot;moneysupply&quot;: 0,
+  &quot;keypoololdest&quot;: 1513133181,
+  &quot;keypoolsize&quot;: 100,
+  &quot;paytxfee&quot;: 0.00000000,
+  &quot;relayfee&quot;: 0.00400000,
+  &quot;errors&quot;: &quot;&quot;
+}</code></pre>
+<h1 id="new-blocks-on-demand"><a name="new-blocks-on-demand" class="plugin-anchor" href="#new-blocks-on-demand"><i class="fa fa-link" aria-hidden="true"></i></a>New Blocks On Demand</h1><p>The chain is initially empty. As we have seen in <code>getinfo</code>, there is no block yet:</p><pre><code>&quot;blocks&quot;: 0</code></pre>
+<p>Furthermore, your initial wallet balance is 0:</p><pre><code>qcli getbalance
+
+0.00000000</code></pre>
+<p>In <code>regtest</code> mode, you are allowed to mine new blocks for testing purposes. This is useful in two ways:</p><ol><li>Generate enough balance to pay for transactions.
+</li>
+<li>To confirm transactions quickly instead of waiting for a new block to be mined.
+</li></ol>
+<p>Let&apos;s seed the chain with 600 blocks:</p><pre><code>qcli generate 600</code></pre>
+<pre><code>[
+  // more ...
+  &quot;43e9c190679a4d040d07c6d0d5d34c1d49f7b6b6539ceb87eea76af3ef39eed5&quot;,
+  &quot;7d5b6a0e5e76cf18e35ac18d4534155a0fd96201feaefc720118452dd50bcd5b&quot;,
+  &quot;70013fa6e01ad527e1f71033ebf59c5233877fcd0fd8233ea032ddaface3cbbc&quot;,
+  &quot;6c73fe21f7c7874b550e190dcc69320c13a96f188bfb89ab858bc42adc0a1398&quot;,
+  &quot;5b48289b22fbf073f6a345d97968c3b8ee44381e8e10e6f940d31b7355684968&quot;,
+  &quot;4f9444d8bd3ece4f6839d7bcfc7f964e95187e2868128681b7bc4cb42d719b41&quot;
+]</code></pre>
+<p>Now your balance is non-zero:</p><pre><code>qcli getbalance
+
+2000000.00000000</code></pre>
+<p>And number of blocks is about 600ish:</p><pre><code>qcli getinfo
+
+&quot;blocks&quot;: 603,</code></pre>
+<blockquote><p>Note: QTUM&apos;s proof-of-stake reward is unspendable until it &quot;matures&quot; after 500 blocks. By generating 600 blocks, we get 100 matured block rewards, of 20k QTUM each.</p></blockquote><h1 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h1><p>In this chapter we have run qtumd in a docker container:</p><pre><code>docker run -it --rm \
+  --name myapp \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  -p 3889:3889 \
+  hayeah/qtumportal</code></pre>
+<p>To shell into the container:</p><pre><code>docker exec -it myapp sh</code></pre>
+<p>Once inside the container, use <code>qcli</code> to interact with qtumd, for example:</p><pre><code>qcli getinfo</code></pre>
+<p>For a list of available <code>qcli</code> commands and arguments:</p><pre><code>qcli help</code></pre>
+<pre><code>... more
+listsinceblock ( &quot;blockhash&quot; target_confirmations include_watchonly)
+listtransactions ( &quot;account&quot; count skip include_watchonly)
+listunspent ( minconf maxconf  [&quot;addresses&quot;,...] [include_unsafe] )
+lockunspent unlock ([{&quot;txid&quot;:&quot;txid&quot;,&quot;vout&quot;:n},...])
+move &quot;fromaccount&quot; &quot;toaccount&quot; amount ( minconf &quot;comment&quot; )
+removeprunedfunds &quot;txid&quot;
+reservebalance [&lt;reserve&gt; [amount]]
+sendfrom &quot;fromaccount&quot; &quot;toaddress&quot; amount ( minconf &quot;comment&quot; &quot;comment_to&quot; )
+sendmany &quot;fromaccount&quot; {&quot;address&quot;:amount,...} ( minconf &quot;comment&quot; [&quot;address&quot;,...] )
+sendmanywithdupes &quot;fromaccount&quot; {&quot;address&quot;:amount,...} ( minconf &quot;comment&quot; [&quot;address&quot;,...] )
+sendtoaddress &quot;address&quot; amount ( &quot;comment&quot; &quot;comment_to&quot; subtractfeefromamount )
+sendtocontract &quot;contractaddress&quot; &quot;data&quot; (amount gaslimit gasprice senderaddress broadcast)
+setaccount &quot;address&quot; &quot;account&quot;
+settxfee amount
+signmessage &quot;address&quot; &quot;message&quot;</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="qtum-docker.html#running-regtest-mode" class="navigation navigation-next " aria-label="Next page: Tip: regtest Mode">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"QTUM Docker Container","level":"2.1","depth":1,"next":{"title":"Tip: regtest Mode","level":"2.1.1","depth":2,"anchor":"#running-regtest-mode","path":"part1/qtum-docker.md","ref":"part1/qtum-docker.md#running-regtest-mode","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"part1/qtum-docker.md","mtime":"2018-01-05T04:38:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:22:18.438Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
