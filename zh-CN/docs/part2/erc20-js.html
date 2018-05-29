@@ -1,0 +1,865 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>ERC20 With QtumJS · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="erc20-js.html" />
+    
+    
+    <link rel="prev" href="erc20-token.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="erc20-token.html">
+            
+                <a href="erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="erc20-js.html">
+            
+                <a href="erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="erc20-dapp.html">
+            
+                <a href="erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/">
+            
+                <a href="../part3/vevue-ico/">
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERC20 With QtumJS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="erc20-with-qtumjs"><a name="erc20-with-qtumjs" class="plugin-anchor" href="#erc20-with-qtumjs"><i class="fa fa-link" aria-hidden="true"></i></a>ERC20 With QtumJS</h1><p>In this chapter we will use <a href="https://github.com/qtumproject/qtumjs" target="_blank">qtumjs</a> to build a NodeJS CLI tool to interact with the ERC20 <a href="erc20-token.html">token we deployed previously</a>.</p><p>You can download the project code: <a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli" target="_blank">qtumproject/qtumbook-mytoken-qtumjs-cli</a>.</p><p>For now, qtumjs relies on <code>qtumd</code>&apos;s RPC service, so make sure that the docker container is running:</p><pre><code>docker run -it --rm \
+  --name myapp \
+  -v `pwd`:/dapp \
+  -p 9899:9899 \
+  -p 9888:9888 \
+  -p 3889:3889 \
+  hayeah/qtumportal</code></pre>
+<h2 id="note-on-nodejs-compatibility"><a name="note-on-nodejs-compatibility" class="plugin-anchor" href="#note-on-nodejs-compatibility"><i class="fa fa-link" aria-hidden="true"></i></a>Note On NodeJS Compatibility</h2><p>You&apos;ll need a version of <code>node</code> that supports <a href="https://blog.risingstack.com/mastering-async-await-in-nodejs/" target="_blank">async/await</a>. You should be ok if your version number is greater than 8.</p><p>My version is 8.6 (nothing special about this version...):</p><pre><code>node --version
+
+v8.6.0</code></pre>
+<p>I recommend that you download the <a href="https://nodejs.org/en/download/" target="_blank">Long Term Support</a> version (8.9.3):</p><p><img src="erc20-js/node-lts-8.jpg"></p><p>You can test whether async/await is supported or not by entering into the node REPL:</p><pre><code>$ node</code></pre>
+<p>Then create an async function:</p><pre><code>&gt; async () =&gt; { }
+[AsyncFunction]</code></pre>
+<blockquote><p>If for some reason you need to run qtumjs on a platform that does not support async/await, please <a href="https://github.com/qtumproject/qtumjs/issues" target="_blank">create an issue</a>.</p></blockquote><h2 id="note-on-code-editor"><a name="note-on-code-editor" class="plugin-anchor" href="#note-on-code-editor"><i class="fa fa-link" aria-hidden="true"></i></a>Note on Code Editor</h2><p>For modern JavaScript development, you really owe it to yourself to try <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>. <code>qtumjs</code> comes with static type definitions for its API, and with VSCode you get some of the most useful IDE features (e.g. type-accurate autocomplete) without the UX bloat:</p><p><img src="erc20-js/qtumjs-vscode.jpg"></p><p>While I am on my evangelizing soapbox, you should try <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a> too! JavaScript is in fact an extremely powerful language, though it seems like a joke. TypeScript is the sobered-up version, yet retaining the same dynamism and expressivity that JavaScript developers love.</p><p>Now, back to QTUM :p</p><h1 id="setup-the-erc20-cli-project"><a name="setup-the-erc20-cli-project" class="plugin-anchor" href="#setup-the-erc20-cli-project"><i class="fa fa-link" aria-hidden="true"></i></a>Setup The ERC20 CLI Project</h1><p>Let&apos;s clone the NodeJS project to the directory <code>mytoken-js</code>:</p><pre><code>git clone https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli.git mytoken-js</code></pre>
+<p>The project dependencies are listed in <code>package.json</code>:</p><pre><code>{
+  ...
+
+  &quot;dependencies&quot;: {
+    &quot;minimist&quot;: &quot;^1.2.0&quot;,
+    &quot;ora&quot;: &quot;^1.3.0&quot;,
+    &quot;qtumjs&quot;: &quot;^1.4.1&quot;
+  }
+}</code></pre>
+<p><a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/23e6d0c40890075163eefacc0c66b018dc9c8bbc/package.json#L7-L9" target="_blank">https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/23e6d0c40890075163eefacc0c66b018dc9c8bbc/package.json#L7-L9</a></p><p>Install these dependencies:</p><pre><code>npm install</code></pre>
+<blockquote><p>Or <code>yarn install</code> if you prefer that. See: <a href="https://yarnpkg.com/en/docs/install" target="_blank">https://yarnpkg.com/en/docs/install</a></p></blockquote><h1 id="getting-the-total-supply"><a name="getting-the-total-supply" class="plugin-anchor" href="#getting-the-total-supply"><i class="fa fa-link" aria-hidden="true"></i></a>Getting The Total Supply</h1><p>Let&apos;s try to get the token&apos;s total supply. Run the script <a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/23e6d0c40890075163eefacc0c66b018dc9c8bbc/index.js" target="_blank">index.js</a>:</p><pre><code>node index.js supply
+
+Error: Cannot find module &apos;./solar.json&apos;</code></pre>
+<p>Oops, the script needs to load information about the contracts you have deployed.</p><pre><code class="lang-js"><span class="hljs-comment">// Load deployment information generated by solar</span>
+<span class="hljs-keyword">const</span> repo = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./solar.json&quot;</span>)
+
+<span class="hljs-comment">// Contract needs the contract address, owner address, and ABI.</span>
+<span class="hljs-keyword">const</span> myToken = <span class="hljs-keyword">new</span> Contract(rpc, repo.contracts[
+  <span class="hljs-string">&quot;zeppelin-solidity/contracts/token/CappedToken.sol&quot;</span>
+])</code></pre>
+<ul><li>The <code>require</code> function loads <code>solar.json</code> as a JavaScript object.
+</li></ul>
+<p>You should link (or copy) <code>solar.development.json</code> generated in the previous chapter to the project directory as <code>solar.json</code>:</p><pre><code>ln -s ~/qtumbook/examples/mytoken/solar.development.json solar.json</code></pre>
+<blockquote><p>See an example <a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/master/solar.development.json.example" target="_blank">solar.development.json</a> file</p></blockquote><p>Now try again:</p><pre><code>node index.js supply
+
+supply 14000</code></pre>
+<p>Yay it works (hopefully).</p><h1 id="calling-a-read-only-method"><a name="calling-a-read-only-method" class="plugin-anchor" href="#calling-a-read-only-method"><i class="fa fa-link" aria-hidden="true"></i></a>Calling A Read-Only Method</h1><p>The Solidity method we called is:</p><pre><code>function totalSupply() public view returns(uint256)</code></pre>
+<p>The ABI definition (loaded from <code>solar.json</code>) is:</p><pre><code class="lang-js">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;totalSupply&quot;</span>,
+  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;function&quot;</span>,
+  <span class="hljs-string">&quot;payable&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;inputs&quot;</span>: [],
+  <span class="hljs-string">&quot;outputs&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+      <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;uint256&quot;</span>,
+      <span class="hljs-string">&quot;indexed&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  ],
+  <span class="hljs-string">&quot;constant&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;anonymous&quot;</span>: <span class="hljs-literal">false</span>
+}</code></pre>
+<p><a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/solar.development.json.example#L46-L60" target="_blank">https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/solar.development.json.example#L46-L60</a></p><p>And to call this method using JavaScript:</p><pre><code class="lang-js"><span class="hljs-comment">// const myToken = new Contract( ... )</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">totalSupply</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> myToken.call(<span class="hljs-string">&quot;totalSupply&quot;</span>)
+
+  <span class="hljs-comment">// supply is a BigNumber instance (see: bn.js)</span>
+  <span class="hljs-keyword">const</span> supply = result.outputs[<span class="hljs-number">0</span>]
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;supply&quot;</span>, supply.toNumber())
+}</code></pre>
+<p><a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/index.js#L15-L22" target="_blank">https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/index.js#L15-L22</a></p><ul><li><code>myToken.call(&quot;totalSupply&quot;)</code> returns a <a href="https://developers.google.com/web/fundamentals/primers/promises" target="_blank">Promise</a>, and <code>await</code> is a syntatic sugar to that waits for the asynchronous computation, then returns the result.
+</li>
+<li>Solidity numbers (int, uint, etc.) are represented in JavaScript using <a href="https://github.com/indutny/bn.js/" target="_blank">BigNumber</a>.
+</li></ul>
+<p>The <code>result</code> object contains other useful information aside from the returned values.</p><p>Do <code>console.log(result)</code> to print it out:</p><pre><code>{ address: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+  executionResult:
+   { gasUsed: 21689,
+     excepted: &apos;None&apos;,
+     newAddress: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+     output: &apos;00000000000000000000000000000000000000000000000000000000000036b0&apos;,
+     codeDeposit: 0,
+     gasRefunded: 0,
+     depositSize: 0,
+     gasForDeposit: 0 },
+  transactionReceipt:
+   { stateRoot: &apos;5a0d9cd5df18165c75755f4345ca81da94f9247c1c031171fd6e2ce1a368844c&apos;,
+     gasUsed: 21689,
+     bloom: &apos;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000&apos;,
+     log: [] },
+  outputs: [ &lt;BN: 36b0&gt; ] }</code></pre>
+<p>If you hover your mouse cursor over the <code>result</code> variable, you should see that its type is <code>IContractCallDecodedResult</code>:</p><p><img src="erc20-js/hover-call-result-typehint.jpg"></p><p>The type definition for <a href="https://sourcegraph.com/github.com/qtumproject/qtumjs@803dae6430e27a1903373eb6f2589d055ce16b73/-/blob/src/Contract.ts#L81" target="_blank">IContractCallDecodedResult</a>:</p><pre><code class="lang-js"><span class="hljs-keyword">export</span> interface IContractCallDecodedResult extends IRPCCallContractResult {
+    outputs: any[];
+}
+
+<span class="hljs-keyword">export</span> interface IRPCCallContractResult {
+    address: string;
+    executionResult: IExecutionResult;
+    transactionReceipt: {
+        stateRoot: string;
+        gasUsed: string;
+        bloom: string;
+        log: any[];
+    };
+}
+
+<span class="hljs-keyword">export</span> interface IExecutionResult {
+    gasUsed: number;
+    excepted: string;
+    newAddress: string;
+    output: string;
+    codeDeposit: number;
+    gasRefunded: number;
+    depositSize: number;
+    gasForDeposit: number;
+}</code></pre>
+<h1 id="call-method-with-arguments"><a name="call-method-with-arguments" class="plugin-anchor" href="#call-method-with-arguments"><i class="fa fa-link" aria-hidden="true"></i></a>Call Method With Arguments</h1><p>The <code>balance</code> subcommand checks how many tokens an account has:</p><pre><code>node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
+
+balance: 13700</code></pre>
+<p>The JavaScript code that implements this:</p><pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">balanceOf</span>(<span class="hljs-params">owner</span>) </span>{
+  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> myToken.call(<span class="hljs-string">&quot;balanceOf&quot;</span>, [owner])
+
+  <span class="hljs-comment">// balance is a BigNumber instance (see: bn.js)</span>
+  <span class="hljs-keyword">const</span> balance = res.outputs[<span class="hljs-number">0</span>]
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`balance:`</span>,  balance.toNumber())
+}</code></pre>
+<p><a href="https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/index.js#L24-L31" target="_blank">https://github.com/qtumproject/qtumbook-mytoken-qtumjs-cli/blob/5e2e162efcd8d32971e7fab6d1c843ac1c843933/index.js#L24-L31</a></p><p>The arguments to <code>balanceOf</code> are passed in as an array.</p><h1 id="send-vs-call"><a name="send-vs-call" class="plugin-anchor" href="#send-vs-call"><i class="fa fa-link" aria-hidden="true"></i></a>Send VS Call</h1><p>Confusingly, there are two ways to invoke a method: <code>send</code> and <code>call</code>. These two names are inherited from Ethereum. A more descriptive way to name them is perhaps to call <code>send</code> &quot;commit&quot; and <code>call</code> &quot;query&quot;.</p><ul><li><code>call</code> (or &quot;query&quot;): executes contract code on your own local <code>qtumd</code> node as a &quot;simulation&quot;, returning results, but not changing the blockchain. This is free.
+</li>
+<li><code>send</code> (or &quot;commit&quot;): creates an actual transaction that would execute code globally on the network, changing the blockchain. This costs gas.
+</li></ul>
+<p>Next, we are going to mint some new tokens using qtumjs. And because minting token changes the blockchain, we&apos;ll use <code>send</code>.</p><h1 id="mint-tokens-with-send"><a name="mint-tokens-with-send" class="plugin-anchor" href="#mint-tokens-with-send"><i class="fa fa-link" aria-hidden="true"></i></a>Mint Tokens With Send</h1><p>The <code>mint</code> command creates new tokens by using <code>send</code> to create a new transaction. Then it waits for that transaction to confirm:</p><pre><code>node index.js mint dcd32b87270aeb980333213da2549c9907e09e94 10000
+
+mint tx: 469d0e6a1e1a421c84cd009b983fc153aa5db7da26fa1f89837f2731fa75586c
+{ amount: 0,
+  fee: -0.081064,
+  confirmations: 0,
+  trusted: true,
+  txid: &apos;469d0e6a1e1a421c84cd009b983fc153aa5db7da26fa1f89837f2731fa75586c&apos;,
+  walletconflicts: [],
+  time: 1514442911,
+  timereceived: 1514442911,
+  &apos;bip125-replaceable&apos;: &apos;no&apos;,
+  details:
+   [ { account: &apos;&apos;,
+       category: &apos;send&apos;,
+       amount: 0,
+       vout: 0,
+       fee: -0.081064,
+       abandoned: false } ],
+  hex: &apos;02000000014d195e5308764e1f64236c64b8975030dd8b8815d7cfa88ee838c029e64fa03f0200000047463043022052a137063b24e74c3953891230dae739ae3adfa2144c91805de4e46ae7c4b152021f0ccdf1b3e4dd86de7777f437447dd147955e9e112c2607bfd67ddc4e7d6e2001feffffff02000000000000000063010403400d0301284440c10f19000000000000000000000000dcd32b87270aeb980333213da2549c9907e09e94000000000000000000000000000000000000000000000000000000000000271014a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3c2606ecea8d1010000
+1976a914dcd32b87270aeb980333213da2549c9907e09e9488acc3080000&apos;,
+  method: &apos;mint&apos;,
+  confirm: [Function: confirm] }
+&#x2714; confirm mint</code></pre>
+<p>We should see that the balance had increased:</p><pre><code>node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
+
+balance: 23700</code></pre>
+<p>The <code>mint</code> function source code:</p><pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mint</span>(<span class="hljs-params">toAddr, amount</span>) </span>{
+  <span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;mint&quot;</span>, [toAddr, amount])
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;mint tx:&quot;</span>, tx.txid)
+  <span class="hljs-built_in">console</span>.log(tx)
+
+  <span class="hljs-keyword">await</span> tx.confirm(<span class="hljs-number">1</span>)
+}</code></pre>
+<ul><li><code>tx</code> is the transaction submitted.
+</li>
+<li><code>tx.confirm(1)</code> is a Promise that returns when there is one confirmation for the transaction.
+</li></ul>
+<h1 id="token-transfer"><a name="token-transfer" class="plugin-anchor" href="#token-transfer"><i class="fa fa-link" aria-hidden="true"></i></a>Token Transfer</h1><p>Let&apos;s transfer tokens from <code>dcd32...9e94</code> to another account. The contract&apos;s <code>transfer</code> method takes two arguments:</p><ul><li><code>_to</code> address is the receiver of the tokens.
+</li>
+<li><code>_value</code> is the amount of tokens to transfer.
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transfer</span>(<span class="hljs-params">address _to, uint256 _value</span>) <span class="hljs-title">public</span> <span class="hljs-title">returns</span> (<span class="hljs-params">bool</span>) </span>{
+  <span class="hljs-built_in">require</span>(_to != address(<span class="hljs-number">0</span>));
+  <span class="hljs-built_in">require</span>(_value &lt;= balances[msg.sender]);
+
+  <span class="hljs-comment">// SafeMath.sub will throw if there is not enough balance.</span>
+  balances[msg.sender] = balances[msg.sender].sub(_value);
+  balances[_to] = balances[_to].add(_value);
+  Transfer(msg.sender, _to, _value);
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}</code></pre>
+<p>Note that the API does not require the <code>_from</code> address. It is assumed that <code>msg.sender</code> is the source of the token balance to transfer from.</p><p>Ah, <code>msg.sender</code>, our old nemesis.</p><p>As we&apos;ve learned in <a href="erc20-token.html#the-owner-UTXO-address">The Owner UTXO Address</a>, QTUM doesn&apos;t really have the idea of an &quot;account&quot;. The <code>msg.sender</code> is the address of whatever UTXO that was used to pay for the transaction.</p><p>To act as <code>dcb3...9e94</code>, we need to explicitly specify an UTXO that has the same address. We can do this by using the <code>senderAddress</code> option.</p><pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transfer</span>(<span class="hljs-params">fromAddr, toAddr, amount</span>) </span>{
+  <span class="hljs-keyword">const</span> tx = <span class="hljs-keyword">await</span> myToken.send(<span class="hljs-string">&quot;transfer&quot;</span>, [toAddr, amount], {
+    senderAddress: fromAddr,
+  })
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;transfer tx:&quot;</span>, tx.txid)
+  <span class="hljs-built_in">console</span>.log(tx)
+
+  <span class="hljs-comment">// or: await tx.confirm(1)</span>
+  <span class="hljs-keyword">const</span> confirmation = tx.confirm(<span class="hljs-number">1</span>)
+  ora.promise(confirmation, <span class="hljs-string">&quot;confirm transfer&quot;</span>)
+  <span class="hljs-keyword">await</span> confirmation
+}</code></pre>
+<p>In the above code, the third argument of <code>send</code> allows you to specify the <code>msg.sender</code>. Remember to <a href="http://localhost:4000/part2/erc20-token.html#prefunding-the-owner-address" target="_blank">prefund</a> this address with UTXOs.</p><p>There are other options you can specify for send. The full type definition is <code>IContractSendRequestOptions</code>:</p><pre><code class="lang-js"><span class="hljs-keyword">export</span> interface IContractSendRequestOptions {
+  <span class="hljs-comment">/**
+   * The amount in QTUM to send. eg 0.1, default: 0
+   */</span>
+  amount?: number | string
+
+  <span class="hljs-comment">/**
+   * gasLimit, default: 200000, max: 40000000
+   */</span>
+  gasLimit?: number
+
+  <span class="hljs-comment">/**
+   * Qtum price per gas unit, default: 0.00000001, min:0.00000001
+   */</span>
+  gasPrice?: number | string
+
+  <span class="hljs-comment">/**
+   * The quantum address that will be used as sender.
+   */</span>
+  senderAddress?: string
+}</code></pre>
+<p>To test <code>transfer</code>, let&apos;s generate a new receiver address, and convert it to hex:</p><pre><code>qcli getnewaddress
+qXuvswhQ9Vjza8AFj1vmUL4N531CDVoWsz
+
+qcli gethexaddress qXuvswhQ9Vjza8AFj1vmUL4N531CDVoWsz
+9d748f98e65c6875dbed7bfb6ffbeca426ff9cc6</code></pre>
+<p>To transfer 100 tokens from <code>dcb3...9e94</code>:</p><pre><code>node index.js transfer \
+ qdgznat81MfTHZUrQrLZDZteAx212X4Wjj \
+ 9d748f98e65c6875dbed7bfb6ffbeca426ff9cc6 \
+ 100
+
+transfer tx: a1ba017b3974b98bf9c8edc824c3abc0ce17678a14e7cfac94b5900a290bdd07
+&#x2714; confirm transfer</code></pre>
+<blockquote><p>Note that we MUST specify the senderAddress using base58 address format. We&apos;ll fix this in the future. See: <a href="https://github.com/qtumproject/qtumjs/issues/2" target="_blank">qtumjs issues#2</a></p></blockquote><p>We can then verify that <code>9d74...9cc6</code> had indeed received the tokens:</p><pre><code>node index.js balance 9d748f98e65c6875dbed7bfb6ffbeca426ff9cc6
+
+balance: 100</code></pre>
+<p>And that the origin account&apos;s balance decremented by 100:</p><pre><code>node index.js balance dcd32b87270aeb980333213da2549c9907e09e94
+
+balance: 23600</code></pre>
+<h1 id="observing-contract-events"><a name="observing-contract-events" class="plugin-anchor" href="#observing-contract-events"><i class="fa fa-link" aria-hidden="true"></i></a>Observing Contract Events</h1><p>The <code>CappedToken</code> contract defines a few events. The <code>Transfer</code> event is emitted whenever fund is moved from one account to another (also when minting new tokens). The <code>Transfer</code> event:</p><pre><code>event Transfer(
+  address indexed from,
+  address indexed to,
+  uint256 value
+);</code></pre>
+<p>Let&apos;s use qtumjs to subscribe to the stream of contract events, so we can react in a timely manner when a transfer occurs. The code:</p><pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">streamEvents</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Subscribed to contract events&quot;</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Ctrl-C to terminate events subscription&quot;</span>)
+
+  myToken.onLog((entry) =&gt; {
+    <span class="hljs-built_in">console</span>.log(entry)
+  }, { minconf: <span class="hljs-number">1</span> })
+}</code></pre>
+<p>Let&apos;s see it in action. Launch the <code>events</code> subscriber:</p><pre><code>node index.js events
+
+Subscribed to contract events
+Ctrl-C to terminate events subscription</code></pre>
+<p>The program hangs there waiting for new events. In another terminal, mint more tokens:</p><pre><code>node index.js mint dcd32b87270aeb980333213da2549c9907e09e94 10000
+
+mint tx: c0e3007178a1b9e05b33e770f7a0e7d084f2d06732658524be042dc0e9864cc4</code></pre>
+<p>Wait for a bit for confirmations. In the <code>events</code> terminal, you should see both <code>Mint</code> and <code>Transfer</code> events printed out:</p><pre><code>{ blockHash: &apos;d8135a1a0e4cddb82a6912fc7eb2bd7f717b7e85069dc2fa3b8f0f8c02acbd17&apos;,
+  blockNumber: 2372,
+  transactionHash: &apos;c0e3007178a1b9e05b33e770f7a0e7d084f2d06732658524be042dc0e9864cc4&apos;,
+  transactionIndex: 2,
+  from: &apos;dcd32b87270aeb980333213da2549c9907e09e94&apos;,
+  to: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+  cumulativeGasUsed: 39306,
+  gasUsed: 39306,
+  contractAddress: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+  topics:
+   [ &apos;0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885&apos;,
+     &apos;000000000000000000000000dcd32b87270aeb980333213da2549c9907e09e94&apos; ],
+  data: &apos;0000000000000000000000000000000000000000000000000000000000002710&apos;,
+  event:
+   { type: &apos;Mint&apos;,
+     to: &apos;0xdcd32b87270aeb980333213da2549c9907e09e94&apos;,
+     amount: &lt;BN: 2710&gt; } }
+{ blockHash: &apos;d8135a1a0e4cddb82a6912fc7eb2bd7f717b7e85069dc2fa3b8f0f8c02acbd17&apos;,
+  blockNumber: 2372,
+  transactionHash: &apos;c0e3007178a1b9e05b33e770f7a0e7d084f2d06732658524be042dc0e9864cc4&apos;,
+  transactionIndex: 2,
+  from: &apos;dcd32b87270aeb980333213da2549c9907e09e94&apos;,
+  to: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+  cumulativeGasUsed: 39306,
+  gasUsed: 39306,
+  contractAddress: &apos;a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3&apos;,
+  topics:
+   [ &apos;ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef&apos;,
+     &apos;0000000000000000000000000000000000000000000000000000000000000000&apos;,
+     &apos;000000000000000000000000dcd32b87270aeb980333213da2549c9907e09e94&apos; ],
+  data: &apos;0000000000000000000000000000000000000000000000000000000000002710&apos;,
+  event:
+   { type: &apos;Transfer&apos;,
+     from: &apos;0x0000000000000000000000000000000000000000&apos;,
+     to: &apos;0xdcd32b87270aeb980333213da2549c9907e09e94&apos;,
+     value: &lt;BN: 2710&gt; } }</code></pre>
+<blockquote><p>If you are running your own qtumd node instead of the provided docker image, you&apos;ll need to enable <code>-logevents</code> for events logging to work. See: <a href="https://github.com/hayeah/qtum-docker/blob/b6a556033a91ce7a60c40a3f7dfc6742d2c9a761/dapp/qtumd-launch#L25" target="_blank">qtum-docker/dapp</a>.</p></blockquote><h1 id="conclusion"><a name="conclusion" class="plugin-anchor" href="#conclusion"><i class="fa fa-link" aria-hidden="true"></i></a>Conclusion</h1><p>In this chapter we&apos;ve developed a simple NodeJS CLI tool to interact with an ERC20 contract.</p><ul><li>qtumjs is a Promise-based API. Use async/await to write clean asynchronous code.
+</li>
+<li><code>call</code> is like &quot;query&quot;, <code>send</code> is like &quot;commit&quot;.
+</li>
+<li>Use <code>senderAddress</code> to in <code>call</code> or <code>send</code> to specify the <code>msg.owner</code>.
+</li></ul>
+<p>Now that you know how to use qtumjs, you are ready to build a DApp, and be on your way to fame and riches!</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="erc20-token.html#using-abiplayer" class="navigation navigation-prev " aria-label="Previous page: ABIPlayer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="erc20-js.html#getting-the-total-supply" class="navigation navigation-next " aria-label="Next page: Load Contract">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERC20 With QtumJS","level":"3.2","depth":1,"next":{"title":"Load Contract","level":"3.2.1","depth":2,"anchor":"#getting-the-total-supply","path":"part2/erc20-js.md","ref":"./part2/erc20-js.md#getting-the-total-supply","articles":[]},"previous":{"title":"ABIPlayer","level":"3.1.4","depth":2,"anchor":"#using-abiplayer","path":"part2/erc20-token.md","ref":"part2/erc20-token.md#using-abiplayer","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors"],"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part2/erc20-js.md","mtime":"2018-02-08T10:41:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-04-26T10:31:38.680Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
