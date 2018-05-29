@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <title>Smart Contract · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="inspect-raw-tx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第1部分  运行QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html">
+            
+                    
+                    QTUM Docker Container（Docker容器）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#运行regtest模式">
+            
+                    
+                    运行regtest模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/qtum-docker.html">
+            
+                <a href="../part1/qtum-docker.html#生成新区块">
+            
+                    
+                    生成新区块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../part1/qtum-docker-codenvy/">
+            
+                <a href="../part1/qtum-docker-codenvy/">
+            
+                    
+                    浏览器中的Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../part1/utxos-balances.html">
+            
+                <a href="../part1/utxos-balances.html">
+            
+                    
+                    UTXOs & 余额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html">
+            
+                    
+                    测试网和主网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../part1/networks.html">
+            
+                <a href="../part1/networks.html#获取测试网代币(Token">
+            
+                    
+                    获取测试网代币(Token)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/README.md">
+            
+                <span>
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="inspect-raw-tx.html">
+            
+                <a href="inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="smart-contract.html">
+            
+                <a href="smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Smart Contract</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x539F;&#x59CB;&#x4EA4;&#x6613;"><a name="&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x539F;&#x59CB;&#x4EA4;&#x6613;" class="plugin-anchor" href="#&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x539F;&#x59CB;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x539F;&#x59CB;&#x4EA4;&#x6613;</h1><p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;JSON RPC&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#xFF0C;&#x5E76;&#x4E0E;&#x4E4B;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B9E;&#x73B0;QTUM&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x5E73;&#x53F0;&#x7684;&#x5E95;&#x5C42;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x3002;</p><p>&#x4E0B;&#x9762;&#x4E3A;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x5355;&#x4E2A;&#x5B58;&#x50A8;&#x53D8;&#x91CF;&#x7684;&#x5408;&#x7EA6;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p><pre><code>pragma solidity ^0.4.18;
+contract SimpleStore {
+  function SimpleStore(uint _value) public {
+    value = _value;
+  }
+
+    function set(uint newValue) public {
+        value = newValue;
+    }
+
+    function get() public constant returns (uint) {
+        return value;
+    }
+
+    uint value;
+}</code></pre>
+<h1 id="&#x521B;&#x5EFA;&#x5408;&#x7EA6;"><a name="&#x521B;&#x5EFA;&#x5408;&#x7EA6;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x5408;&#x7EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x5408;&#x7EA6;</h1><p>&#x5C06;&#x5408;&#x7EA6;&#x7F16;&#x8BD1;&#x4E3A;&#x5B57;&#x8282;&#x7801;&#xFF1A;</p><pre><code>solc --optimize --bin SimpleStore.sol
+
+======= SimpleStore.sol:SimpleStore =======
+Binary:
+608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b200029</code></pre>
+<p>&#x4E3A;&#x4E86;&#x521B;&#x5EFA;&#x8BE5;&#x5408;&#x7EA6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x4EA4;&#x6613;&#xFF0C;&#x8BE5;&#x4EA4;&#x6613;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x5B57;&#x8282;&#x7801;&#x4F5C;&#x4E3A;&#x4EA4;&#x6613;&#x7684;payload&#x6570;&#x636E;&#x3002;</p><p>&#x5408;&#x7EA6;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x503C;<code>_value</code>&#xFF1A;</p><pre><code>function SimpleStore(uint _value) public {
+  value = _value;
+}</code></pre>
+<p>&#x4F7F;&#x7528;<code>1</code>&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x503C;&#x3002;&#x6240;&#x6709;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x90FD;&#x9700;&#x8981;&#x8FDB;&#x884C;ABI&#x7F16;&#x7801;&#x3002;&#x6570;&#x5B57;<code>1</code>&#x7684;ABI&#x7F16;&#x7801;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;32&#x5B57;&#x8282;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p><pre><code>0000000000000000000000000000000000000000000000000000000000000001</code></pre>
+<p>&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x4F20;&#x9012;ABI&#x7F16;&#x7801;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x5462;&#xFF1F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x5B83;&#x9644;&#x52A0;&#x5230;&#x5B57;&#x8282;&#x7801;&#x7684;&#x672B;&#x5C3E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x4EA4;&#x6613;payload&#x5E94;&#x8BE5;&#x9075;&#x5FAA;&#x4EE5;&#x4E0B;&#x7ED3;&#x6784;&#xFF1A;</p><pre><code>&lt;bytecode&gt;&lt;constructor parameters&gt;</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#x7684;RPC&#x547D;&#x4EE4;&#x662F;<code>createcontract</code>&#x3002;&#x5C06;&#x7F16;&#x8BD1;&#x5668;&#x8F93;&#x51FA;&#x7684;&#x5B57;&#x8282;&#x7801;&#x548C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#xFF1A;</p><pre><code>qcli createcontract \
+  608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001
+
+{
+  &quot;txid&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;sender&quot;: &quot;qZ2kTyK4vLvGSngtYynmRdfd8n9UBFNwMv&quot;,
+  &quot;hash160&quot;: &quot;a9b6e7e59974d92b949a9c9aa8eb420f73518364&quot;,
+  &quot;address&quot;: &quot;ecb30fa67545211d0e4b859213872442cd9d37c5&quot;
+}</code></pre>
+<h2 id="createcontract&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;"><a name="createcontract&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;" class="plugin-anchor" href="#createcontract&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>CREATECONTRACT&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;</h2><p>&#x4E3A;&#x4E86;&#x6DF1;&#x5165;&#x4E86;&#x89E3;<code>createcontract</code>&#x8C03;&#x7528;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x68C0;&#x67E5;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4EA4;&#x6613;&#x7684;&#x5E95;&#x5C42;UTXO&#x3002;&#x9996;&#x5148;&#xFF0C;&#x83B7;&#x53D6;&#x8BE5;&#x4EA4;&#x6613;id&#x76F8;&#x5173;&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#x6570;&#x636E;&#xFF1A;</p><pre><code>qcli getrawtransaction 4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68
+02000000019b96d26a797a9952dbd8d81400de9143e30cc73ae2d83fe6d3bcc46dc665ebb5000000004847304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01feffffff02107851a3d10100001976a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac0000000000000000fd1e01010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1fe010000</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5BF9;&#x8BE5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF1A;</p><pre><code>qcli decoderawtransaction \
+  02000000019b96d26a797a9952dbd8d81400de9143e30cc73ae2d83fe6d3bcc46dc665ebb5000000004847304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01feffffff02107851a3d10100001976a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac0000000000000000fd1e01010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1fe010000</code></pre>
+<p>&#x8F93;&#x51FA;&#x4E3A;&#xFF1A;</p><pre><code>{
+  &quot;txid&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;hash&quot;: &quot;4caa93a015ecf4e9fafd84c7cda2ad4897068777f29a1b1e1804e50553990c68&quot;,
+  &quot;size&quot;: 454,
+  &quot;vsize&quot;: 454,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 510,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;b5eb65c66dc4bcd3e63fd8e23ac70ce34391de0014d8d8db52997a796ad2969b&quot;,
+      &quot;vout&quot;: 0,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d[ALL]&quot;,
+        &quot;hex&quot;: &quot;47304402207601cc15aa2abc535de1673e1fe07d902d7970d2ea46892a5dc7dd7fbd394f5002201a6dd6dba6fe73f065cd2b2906d8b0632cfee68622835de23a8af6e73f7f968d01&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19998.99818000,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 41d6ac4feec70a7b28c59c23e92be5ea2a15879a OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91441d6ac4feec70a7b28c59c23e92be5ea2a15879a88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qPZWFFMrHtxsaop1wJKh6SCnnurMFjPexC&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 0.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;4 2500000 40 608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001 OP_CREATE&quot;,
+        &quot;hex&quot;: &quot;010403a0252601284d1201608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001c1&quot;,
+        &quot;type&quot;: &quot;create&quot;
+      }
+    }
+  ]
+}</code></pre>
+<ul><li>&#x7B2C;&#x4E00;&#x4E2A;vout&#x4E3A;&#x627E;&#x56DE;&#x7684;&#x96F6;&#x94B1;&#xFF0C;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x7ED9;&#x53D1;&#x9001;&#x65B9;&#x94B1;&#x5305;
+</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;vout&#x4E3A;&#x4E00;&#x6BB5;OP_CREATE&#x811A;&#x672C;
+</li></ul>
+<p>OP_CREATE&#x662F;QTUM&#x4E3A;&#x652F;&#x6301;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x5E73;&#x53F0;&#x800C;&#x6DFB;&#x52A0;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x6307;&#x4EE4;&#x3002;&#x5B83;&#x5728;&#x6808;&#x4E0A;&#x6709;4&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p><pre><code># VM version
+4
+# gas limit
+2500000
+# gas price
+40
+# bytecode + constructor params
+608060405234801561001057600080fd5b506040516020806100f2833981016040525160005560bf806100336000396000f30060806040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166360fe47b18114604d5780636d4ce63c146064575b600080fd5b348015605857600080fd5b5060626004356088565b005b348015606f57600080fd5b506076608d565b60408051918252519081900360200190f35b600055565b600054905600a165627a7a723058202926444d9654f866e083cd06b8bfddde21cecfc614d9a03045246423c47f9b2000290000000000000000000000000000000000000000000000000000000000000001
+# create instruction
+OP_CREATE</code></pre>
+<h1 id="&#x4F7F;&#x7528;solar&#x90E8;&#x7F72;&#x5408;&#x7EA6;"><a name="&#x4F7F;&#x7528;solar&#x90E8;&#x7F72;&#x5408;&#x7EA6;" class="plugin-anchor" href="#&#x4F7F;&#x7528;solar&#x90E8;&#x7F72;&#x5408;&#x7EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;Solar&#x90E8;&#x7F72;&#x5408;&#x7EA6;</h1><p>&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x4F7F;&#x7528;solar&#x90E8;&#x7F72;<code>SimpleStore</code>&#x5408;&#x7EA6;&#x3002;&#x5B83;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x6240;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;</p><pre><code>solar deploy SimpleStore.sol &apos;[1]&apos;
+
+&#x1F680;   All contracts confirmed
+   deployed SimpleStore.sol =&gt; cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4</code></pre>
+<h2 id="&#x4E0E;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;"><a name="&#x4E0E;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;" class="plugin-anchor" href="#&#x4E0E;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0E;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;</h2><p>&#x4E0E;&#x5408;&#x7EA6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x79CD;&#x3002;</p><ol><li><code>callcontract</code> - &#x5408;&#x7EA6;method&#x7684;&#x53EA;&#x8BFB;&#x67E5;&#x8BE2;&#x3002;
+</li>
+<li><code>sendtocontract</code> - &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F1A;&#x6539;&#x53D8;&#x5408;&#x7EA6;&#x72B6;&#x6001;&#x7684;&#x4EA4;&#x6613;&#x3002;
+</li></ol>
+<p>&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x7684;method&#x3002;&#x53C2;&#x6570;&#x9700;&#x8981;&#x4E3A;ABI&#x7F16;&#x7801;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;<code>solar</code>&#x6765;&#x521B;&#x5EFA;&#x53D1;&#x9001;&#x7ED9;&#x5E95;&#x5C42;RPC&#x547D;&#x4EE4;&#x7684;&#x201C;data payload&#x201D;&#x3002;</p><h1 id="&#x8C03;&#x7528;&#x5408;&#x7EA6;"><a name="&#x8C03;&#x7528;&#x5408;&#x7EA6;" class="plugin-anchor" href="#&#x8C03;&#x7528;&#x5408;&#x7EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;&#x5408;&#x7EA6;</h1><p>&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5BF9;&#x8C03;&#x7528;&#x7684;method&#x8FDB;&#x884C;ABI&#x7F16;&#x7801;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x53D1;&#x9001;&#x7ED9;<code>callcontract</code>RPC&#x8C03;&#x7528;&#x3002;</p><p>&#x8C03;&#x7528;<code>get</code> method&#xFF0C;&#x8BE5;method&#x8FD4;&#x56DE;SimpleStore&#x5408;&#x7EA6;&#x7684;&#x5F53;&#x524D;&#x503C;</p><pre><code>solar encode SimpleStore.sol get
+6d4ce63c</code></pre>
+<p>callcontract&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5408;&#x7EA6;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x53CA;ABI&#x7F16;&#x7801;&#x7684;&#x8C03;&#x7528;&#x7684;method&#xFF1A;</p><pre><code>qcli callcontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  6d4ce63c</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code>{
+  &quot;address&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+  &quot;executionResult&quot;: {
+    &quot;gasUsed&quot;: 21678,
+    &quot;excepted&quot;: &quot;None&quot;,
+    &quot;newAddress&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+    &quot;output&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000001&quot;,
+    &quot;codeDeposit&quot;: 0,
+    &quot;gasRefunded&quot;: 0,
+    &quot;depositSize&quot;: 0,
+    &quot;gasForDeposit&quot;: 0
+  },
+  &quot;transactionReceipt&quot;: {
+    &quot;stateRoot&quot;: &quot;88407020db33e8aca4ac47b16940fb31f9942bf8ff734e68156e899992465eda&quot;,
+    &quot;gasUsed&quot;: 21678,
+    &quot;bloom&quot;: &quot;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;,
+    &quot;log&quot;: [
+    ]
+  }
+}</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E0A;&#x8FF0;&#x7ED3;&#x679C;&#x4E2D;&#x7684;<code>output</code>&#x9879;&#x8FD4;&#x56DE;&#x4E86;&#x6211;&#x4EEC;&#x7528;&#x4E8E;&#x6784;&#x9020;&#x8BE5;&#x5408;&#x7EA6;&#x7684;&#x503C;&#x3002;</p><h1 id="&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#x4EA4;&#x6613;"><a name="&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#x4EA4;&#x6613;" class="plugin-anchor" href="#&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x5408;&#x7EA6;&#x4EA4;&#x6613;</h1><p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>sendtocontract</code>&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x6539;&#x53D8;SimpleStore&#x5408;&#x7EA6;&#x72B6;&#x6001;&#x7684;&#x4EA4;&#x6613;&#x3002;</p><p>&#x5BF9;<code>set(2)</code>&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF1A;</p><pre><code>solar encode SimpleStore.sol set &apos;[2]&apos;
+60fe47b10000000000000000000000000000000000000000000000000000000000000002</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x5408;&#x7EA6;&#x5730;&#x5740;&#x4EE5;&#x53CA;ABI&#x7F16;&#x7801;&#x7684;method&#x8FDB;&#x884C;<code>sendtocontract</code>RPC&#x8C03;&#x7528;&#xFF1A;</p><pre><code>qcli sendtocontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  60fe47b10000000000000000000000000000000000000000000000000000000000000002</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x4EA4;&#x6613;id&#x4E3A;&#xFF1A;</p><pre><code>{
+  &quot;txid&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;sender&quot;: &quot;qKNc7xc44W9teoxoWLUaxeJNq1967JaUoD&quot;,
+  &quot;hash160&quot;: &quot;13e67f7e74b6e81a841292ebeaabfc7333d3e1cb&quot;
+}</code></pre>
+<p>&#x4E00;&#x65E6;&#x4EA4;&#x6613;&#x5DF2;&#x7ECF;&#x88AB;&#x786E;&#x8BA4;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x8C03;&#x7528;callcontract&#x83B7;&#x53D6;&#x65B0;&#x7684;&#x503C;&#xFF1A;</p><pre><code>qcli callcontract cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 \
+  6d4ce63c
+
+{
+  &quot;address&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+  &quot;executionResult&quot;: {
+    &quot;gasUsed&quot;: 21678,
+    &quot;excepted&quot;: &quot;None&quot;,
+    &quot;newAddress&quot;: &quot;cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4&quot;,
+    &quot;output&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000002&quot;,
+    &quot;codeDeposit&quot;: 0,
+    &quot;gasRefunded&quot;: 0,
+    &quot;depositSize&quot;: 0,
+    &quot;gasForDeposit&quot;: 0
+  },
+  &quot;transactionReceipt&quot;: {
+    &quot;stateRoot&quot;: &quot;c4c0aac17cdde49eb2ae303941c8721c7e4b2f394d27e15aec4f15778e4cd087&quot;,
+    &quot;gasUsed&quot;: 21678,
+    &quot;bloom&quot;: &quot;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&quot;,
+    &quot;log&quot;: [
+    ]
+  }
+}</code></pre>
+<p><code>value</code>&#x5B58;&#x50A8;&#x53D8;&#x91CF;&#x786E;&#x5B9E;&#x5DF2;&#x7ECF;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#x3002;</p><h1 id="sendtocontract&#x4EA4;&#x6613;"><a name="sendtocontract&#x4EA4;&#x6613;" class="plugin-anchor" href="#sendtocontract&#x4EA4;&#x6613;"><i class="fa fa-link" aria-hidden="true"></i></a>SendToContract&#x4EA4;&#x6613;</h1><p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x68C0;&#x67E5;&#x5B9E;&#x73B0;<code>sendtocontract</code>&#x7684;&#x539F;&#x59CB;&#x4EA4;&#x6613;&#xFF1A;</p><pre><code>qcli getrawtransaction f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139
+
+0200000001c919f89ddefa4bc09ad83330f993360fc419c9c91ef1560ede7f2df4f680eca6010000006a47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30ffeffffff02c0348d9bd10100001976a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac00000000000000004301040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c221020000</code></pre>
+<p>&#x5BF9;&#x8BE5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF1A;</p><pre><code>qcli decoderawtransaction 0200000001c919f89ddefa4bc09ad83330f993360fc419c9c91ef1560ede7f2df4f680eca6010000006a47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30ffeffffff02c0348d9bd10100001976a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac00000000000000004301040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c221020000</code></pre>
+<p>&#x89E3;&#x6790;&#x51FA;&#x6765;&#x7684;&#x4EA4;&#x6613;&#x6570;&#x636E;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code>{
+  &quot;txid&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;hash&quot;: &quot;f6e934db283949a91a3f134246f48c52a7c8d580db36e998fa838d8c10c3b139&quot;,
+  &quot;size&quot;: 267,
+  &quot;vsize&quot;: 267,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 545,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;a6ec80f6f42d7fde0e56f11ec9c919c40f3693f93033d89ac04bfade9df819c9&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b[ALL] 02f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30f&quot;,
+        &quot;hex&quot;: &quot;47304402207401aa5c7f4fddb9e3917c26a383fe250cecda61b51f722ce2fbc2c47bcb1aa40220585badcf06a9b77156d54d5bd5f5d30e9606c340012e9e5097d52c2bd8e1839b012102f0d1abe6acc590a400c3719a562299637c55e45e56d4c75658e07d263ab8b30f&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19997.69515200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 58a1b81dbdeedd166bb166f528bb861048baf9b2 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91458a1b81dbdeedd166bb166f528bb861048baf9b288ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qRe2MMp8cyzXs7WpCGZKvpdrJJYyoKm9Lg&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 0.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;4 250000 40 60fe47b10000000000000000000000000000000000000000000000000000000000000002 cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4 OP_CALL&quot;,
+        &quot;hex&quot;: &quot;01040390d00301282460fe47b1000000000000000000000000000000000000000000000000000000000000000214cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4c2&quot;,
+        &quot;type&quot;: &quot;call&quot;
+      }
+    }
+  ]
+}</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;vout&#x4E3A;&#x8C03;&#x7528;&#x667A;&#x80FD;&#x5408;&#x7EA6;&#x7684;&#x811A;&#x672C;&#x3002;&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x548C;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5408;&#x7EA6;&#x7684;OP_CREATE&#x811A;&#x672C;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;&#x5176;&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p><pre><code># VM version
+4
+# gas limit
+250000
+# gas price
+40
+# ABI-encoded method invokation
+60fe47b10000000000000000000000000000000000000000000000000000000000000002
+# address of contract
+cd20af1f2d6ac4173f9464030e7cef40bf9cb7c4
+OP_CALL</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="inspect-raw-tx.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Inspect Raw TX">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Smart Contract","level":"5.2","depth":1,"previous":{"title":"Inspect Raw TX","level":"5.1","depth":1,"path":"part4/inspect-raw-tx.md","ref":"part4/inspect-raw-tx.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part4/smart-contract.md","mtime":"2018-05-29T03:18:23.341Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:27:05.206Z"},"basePath":"..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

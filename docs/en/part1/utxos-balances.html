@@ -1,0 +1,721 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <title>UTXOs Accounting · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="networks.html" />
+    
+    
+    <link rel="prev" href="qtum-docker-codenvy/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1 - Running QTUM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html">
+            
+                    
+                    QTUM Docker Container
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#running-regtest-mode">
+            
+                    
+                    Tip: regtest Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="qtum-docker.html">
+            
+                <a href="qtum-docker.html#new-blocks-on-demand">
+            
+                    
+                    Tip: New Blocks On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="qtum-docker-codenvy/">
+            
+                <a href="qtum-docker-codenvy/">
+            
+                    
+                    Docker In Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="utxos-balances.html">
+            
+                <a href="utxos-balances.html">
+            
+                    
+                    UTXOs Accounting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="networks.html">
+            
+                <a href="networks.html">
+            
+                    
+                    Test & Main Networks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="networks.html">
+            
+                <a href="networks.html#getting-testnet-tokens">
+            
+                    
+                    Tip: Free Testnet Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2 - ERC20</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html">
+            
+                    
+                    ERC20 Token
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#deploy-contract">
+            
+                    
+                    Deploy Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+            
+                    
+                    Contract Ownership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+            
+                    
+                    Prefund Owner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
+            
+                <a href="../part2/erc20-token.html#using-abiplayer">
+            
+                    
+                    ABIPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html">
+            
+                    
+                    ERC20 With QtumJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#getting-the-total-supply">
+            
+                    
+                    Load Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+            
+                    
+                    Call Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+            
+                    
+                    Send Tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
+            
+                <a href="../part2/erc20-js.html#observing-contract-events">
+            
+                    
+                    Stream Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part2/erc20-dapp.html">
+            
+                <a href="../part2/erc20-dapp.html">
+            
+                    
+                    ERC20 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3 - Crowdsale</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part3/vevue-ico/README.md">
+            
+                <span>
+            
+                    
+                    Simple Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part3/ico.html">
+            
+                <a href="../part3/ico.html">
+            
+                    
+                    Complex Crowdsale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4 - Blockchain API</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/inspect-raw-tx.html">
+            
+                <a href="../part4/inspect-raw-tx.html">
+            
+                    
+                    Inspect Raw TX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/smart-contract.html">
+            
+                <a href="../part4/smart-contract.html">
+            
+                    
+                    Smart Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >UTXOs Accounting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="utxos--balances"><a name="utxos--balances" class="plugin-anchor" href="#utxos--balances"><i class="fa fa-link" aria-hidden="true"></i></a>UTXOs &amp; Balances</h1><p>If you are a developer coming from Ethereum, the biggest practical difference is that QTUM&apos;s account model is built on Bitcoin&apos;s UTXOs.</p><p>In Ethereum, you&apos;d typically have an account with an unique address that holds a balance. You&apos;d be sending/receiving money and interacting with Smart Contracts using one account.</p><p>In QTUM, you don&apos;t really have accounts. Instead, you have a collection of UTXOs, each of which has its own address. An UTXO may be used only once when you send money or interact with a Smart Contract. If an UTXO has more value than you intend to use, it&apos;d be splitted up into multiple UTXOs after a transaction.</p><p>In this chapter we&apos;ll explore the UTXO model by sending some money using the <code>qcli</code> command, and peeking into the transaction data.</p><p>Later in Part II we&apos;ll see how QTUM&apos;s Smart Contract implementation bridges Bitcoin&apos;s UTXO model with Ethereum&apos;s account model.</p><h1 id="utxo-address"><a name="utxo-address" class="plugin-anchor" href="#utxo-address"><i class="fa fa-link" aria-hidden="true"></i></a>UTXO Address</h1><p>With UTXO, you <em>can</em> reuse a payment address. For better anonymity, though, you&apos;d typically generate new addresses for each payment you&apos;d like to receive.</p><p>Let&apos;s generate an address:</p><pre><code>qcli getnewaddress</code></pre>
+<p>You get a new address:</p><pre><code>qfsPCLrjjmqXptxWNXXg3wQruzC8bhPx63</code></pre>
+<p>Get as many as you want:</p><pre><code>&gt; qcli getnewaddress
+qZWeFWECjKQ3KstHhCjxFj9hiM7jzXWw3p
+
+&gt; qcli getnewaddress
+qJbSKruSXWnjSRZvSXMf2Y33gEw9FqHMHf
+
+&gt; qcli getnewaddress
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<p>An UTXO address is 20 bytes (160 bits) long, <a href="https://en.bitcoin.it/wiki/Base58Check_encoding" target="_blank">base58 encoded</a>. This is the same length as Ethereum&apos;s address. We can convert it to an Ethereum compatible hexadecimal address:</p><pre><code>qcli gethexaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2
+
+dd2c6512563e4274dafd8312e0e738ede48f3046</code></pre>
+<p>And to convert it back to base58 UTXO address:</p><pre><code>qcli fromhexaddress dd2c6512563e4274dafd8312e0e738ede48f3046
+
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<h1 id="send-money-transaction"><a name="send-money-transaction" class="plugin-anchor" href="#send-money-transaction"><i class="fa fa-link" aria-hidden="true"></i></a>Send Money Transaction</h1><p>Now let&apos;s send money to an UTXO address. You&apos;d be sending money to yourself, but this is exactly the same process as when you send money to somebody else.</p><p>First generate a new receiving address:</p><pre><code>qcli getnewaddress
+
+qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code></pre>
+<p>(You should replace the following commands with the address you&apos;ve generated.)</p><p>Next, send 10 qtums to this address:</p><pre><code>qcli sendtoaddress qdiqg2mp646KhSQjVud3whv6C34hNHQnL2 10</code></pre>
+<p>A transaction ID (txid) is returned for this transfer:</p><pre><code>11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d</code></pre>
+<p>Wait for a minute or two for the transaction be be confirmed. You should see something like this in the container&apos;s log:</p><pre><code>07:25:54  qtumd | CTransaction(hash=11e790d26d, ver=2, vin.size=1, vout.size=2, nLockTime=1680)
+07:25:54  qtumd |     CTxIn(COutPoint(5ada2447bc, 1), scriptSig=473044022063b61ff64f6340, nSequence=4294967294)
+07:25:54  qtumd |     CScriptWitness()
+07:25:54  qtumd |     CTxOut(nValue=19979.99832800, scriptPubKey=76a914dc41025b0c419681bffc3446)
+07:25:54  qtumd |     CTxOut(nValue=10.00000000, scriptPubKey=76a914dd2c6512563e4274dafd8312)</code></pre>
+<p>Use <code>gettransaction</code> to get some general information about this transaction:</p><pre><code>qcli gettransaction 11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d
+
+{
+  &quot;amount&quot;: 0.00000000,
+  &quot;fee&quot;: -0.00090400,
+  &quot;confirmations&quot;: 2,
+  &quot;blockhash&quot;: &quot;63b646290e7924a15073b7a2b1bde9f35c40d8de73a15eeea00d80a3ee7f7f70&quot;,
+  &quot;blockindex&quot;: 2,
+  &quot;blocktime&quot;: 1513149968,
+  &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;walletconflicts&quot;: [
+  ],
+  &quot;time&quot;: 1513149954,
+  &quot;timereceived&quot;: 1513149954,
+  &quot;bip125-replaceable&quot;: &quot;no&quot;,
+  &quot;details&quot;: [
+    {
+      &quot;account&quot;: &quot;&quot;,
+      &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+      &quot;category&quot;: &quot;send&quot;,
+      &quot;amount&quot;: -10.00000000,
+      &quot;label&quot;: &quot;&quot;,
+      &quot;vout&quot;: 1,
+      &quot;fee&quot;: -0.00090400,
+      &quot;abandoned&quot;: false
+    },
+    {
+      &quot;account&quot;: &quot;&quot;,
+      &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+      &quot;category&quot;: &quot;receive&quot;,
+      &quot;amount&quot;: 10.00000000,
+      &quot;label&quot;: &quot;&quot;,
+      &quot;vout&quot;: 1
+    }
+  ],
+  &quot;hex&quot;: &quot;02000000017d2c908ccf224c7204024699fa9bee9cafc4319297e3c682b2d2d4bc4724da5a010000006a473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017feffffff02e0fe1132d10100001976a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac00ca9a3b000000001976a914dd2c6512563e4274dafd8312e0e738ede48f304688ac90060000&quot;
+}</code></pre>
+<p>This transaction had been confirmed twice so far:</p><pre><code>&quot;confirmations&quot;: 2,</code></pre>
+<p>Let&apos;s now use <code>listunspent</code> to list recently created UTXOs. List UTXOs that had been confirmed less than 20 times:</p><pre><code>qcli listunspent 0 20
+
+[
+  {
+    &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+    &quot;vout&quot;: 0,
+    &quot;address&quot;: &quot;qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k&quot;,
+    &quot;scriptPubKey&quot;: &quot;76a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac&quot;,
+    &quot;amount&quot;: 19989.99923200,
+    &quot;confirmations&quot;: 11,
+    &quot;spendable&quot;: true,
+    &quot;solvable&quot;: true
+  },
+  {
+    &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+    &quot;vout&quot;: 1,
+    &quot;address&quot;: &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;,
+    &quot;account&quot;: &quot;&quot;,
+    &quot;scriptPubKey&quot;: &quot;76a914dd2c6512563e4274dafd8312e0e738ede48f304688ac&quot;,
+    &quot;amount&quot;: 10.00000000,
+    &quot;confirmations&quot;: 11,
+    &quot;spendable&quot;: true,
+    &quot;solvable&quot;: true
+  }
+]</code></pre>
+<p>Note that both of these UTXOs share the same txid. In other words, one send money transaction created two new UTXOs:</p><ul><li><code>qdiqg2mp646KhSQjVud3whv6C34hNHQnL2</code>: Receiving address, holding value of 10.
+</li>
+<li><code>qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k</code>: The original sender UTXO had 20k qtum, the amount generated. This a new UTXO created to hold the change, minus fees.
+</li></ul>
+<h2 id="decoding-transaction-data"><a name="decoding-transaction-data" class="plugin-anchor" href="#decoding-transaction-data"><i class="fa fa-link" aria-hidden="true"></i></a>Decoding Transaction Data</h2><p>We can dig a little deeper into the transaction data to see that QTUM really shares the same UTXO data structure as Bitcoin. From the earlier <code>gettransaction</code> output, we got the raw transaction data in hexadecimals (i.e. <code>02000000017d2...ac90060000</code>).</p><p>Let&apos;s decode the transaction data:</p><pre><code>qcli decoderawtransaction \
+02000000017d2c908ccf224c7204024699fa9bee9cafc4319297e3c682b2d2d4bc4724da5a010000006a473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017feffffff02e0fe1132d10100001976a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac00ca9a3b000000001976a914dd2c6512563e4274dafd8312e0e738ede48f304688ac90060000</code></pre>
+<p>The decoded transaction:</p><pre><code>{
+  &quot;txid&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;hash&quot;: &quot;11e790d26d6996803960ef1586cbaeb54af20fd3e1f41508843c36f2ef60bb9d&quot;,
+  &quot;size&quot;: 225,
+  &quot;vsize&quot;: 225,
+  &quot;version&quot;: 2,
+  &quot;locktime&quot;: 1680,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;5ada2447bcd4d2b282c6e3979231c4af9cee9bfa99460204724c22cf8c902c7d&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;3044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699[ALL] 02dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017&quot;,
+        &quot;hex&quot;: &quot;473044022063b61ff64f63407a7ef1e2060d6f54cae987a10b30d20b55d722f69e0bcc225e0220340fa34885cb0bdf056067d90f16b53318d44861872635051963237623c63699012102dd47f2c6e005fdc2182135ffe72c985a095ca9c59000d7f1576ed8717ef6e017&quot;
+      },
+      &quot;sequence&quot;: 4294967294
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 19989.99923200,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 dc41025b0c419681bffc3446ee8b506dde59e18e OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914dc41025b0c419681bffc3446ee8b506dde59e18e88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qddyh9oMU44qZ28bEY9WhCDbmCaALVDr1k&quot;
+        ]
+      }
+    },
+    {
+      &quot;value&quot;: 10.00000000,
+      &quot;n&quot;: 1,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 dd2c6512563e4274dafd8312e0e738ede48f3046 OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a914dd2c6512563e4274dafd8312e0e738ede48f304688ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;qdiqg2mp646KhSQjVud3whv6C34hNHQnL2&quot;
+        ]
+      }
+    }
+  ]
+}</code></pre>
+<p>As you can see, this is a <a href="https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash" target="_blank">Pay-to-PubkeyHash</a> transaction!</p><h1 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h1><p>QTUM manages money using Bitcoin&apos;s UTXO model. Instead of using accounts to track balances, a QTUM wallet keeps track of the collection of UTXOs. When a transaction is created, the wallet searches the collection to find UTXOs that add up to enough value to pay for the amount transferred and the fees.</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="qtum-docker-codenvy/" class="navigation navigation-prev " aria-label="Previous page: Docker In Browser">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="networks.html" class="navigation navigation-next " aria-label="Next page: Test & Main Networks">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"UTXOs Accounting","level":"2.2","depth":1,"next":{"title":"Test & Main Networks","level":"2.3","depth":1,"path":"part1/networks.md","ref":"part1/networks.md","articles":[{"title":"Tip: Free Testnet Tokens","level":"2.3.1","depth":2,"anchor":"#getting-testnet-tokens","path":"part1/networks.md","ref":"part1/networks.md#getting-testnet-tokens","articles":[]}]},"previous":{"title":"Docker In Browser","level":"2.1.3","depth":2,"path":"part1/qtum-docker-codenvy/README.md","ref":"part1/qtum-docker-codenvy/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"part1/utxos-balances.md","mtime":"2018-02-08T10:44:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:27:05.206Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
