@@ -15,24 +15,24 @@
 ### Part 2 - ERC20
 
 * [ERC20 Token](part2/erc20-token.md)
-  * [Deploy Contract](part2/erc20-token.md#deploy-contract)
-  * [Contract Ownership](part2/erc20-token.md#the-owner-UTXO-address)
-  * [Prefund Owner](part2/erc20-token.md#prefunding-the-owner-address)
-  * [ABIPlayer](part2/erc20-token.md#using-abiplayer)
-* [ERC20 With QtumJS](part2/erc20-js.md)
-  * [Load Contract](./part2/erc20-js.md#getting-the-total-supply)
-  * [Call Method](./part2/erc20-js.md#calling-a-read-only-method)
-  * [Send Tx](./part2/erc20-js.md#mint-tokens-with-send)
-  * [Stream Events](./part2/erc20-js.md#observing-contract-events)
+  * [部署合约](part2/erc20-token.md#部署CappedToken)
+  * [合约Owner地址](part2/erc20-token.md#Owner地址)
+  * [Owner作为发送方](part2/erc20-token.md#Owner的UTXO地址作为发送方)
+  * [使用ABIPlayer](part2/erc20-token.md#使用ABIPlayer)
+* [ERC20与QtumJS](part2/erc20-js.md)
+  * [加载合约](./part2/erc20-js.md#获取总供应量)
+  * [调用合约method](./part2/erc20-js.md#调用一个只读Method)
+  * [Send交易](./part2/erc20-js.md#调用Send铸造Tokens)
+  * [观察合约Events](./part2/erc20-js.md#观察合约Events)
 * [ERC20 DApp](part2/erc20-dapp.md)
 
 
-### Part 3 - Crowdsale
+### Part 3 - 众筹合约
 
-* [Simple Crowdsale](part3/vevue-ico/README.md)
-* [Complex Crowdsale](part3/ico.md)
+* [简单众筹合约](part3/vevue-ico/README.md)
+* [复杂众筹合约](part3/ico.md)
 
-### Part 4 - Blockchain API
+### Part 4 - 区块链API
 
-* [Inspect Raw TX](part4/inspect-raw-tx.md)
-* [Smart Contract](part4/smart-contract.md)
+* [原始交易数据](part4/inspect-raw-tx.md)
+* [智能合约原始交易](part4/smart-contract.md)

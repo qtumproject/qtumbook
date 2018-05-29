@@ -106,7 +106,7 @@ autorun(() => {
 })
 ```
 
-开发者可以 [try this example on codepen.io](https://codepen.io/hayeah/pen/MrEVxy?editors=1011)。在提供的console（控制台）修改`obj`，并查看视图的变化。
+开发者可以 [参考codepen.io上的例子](https://codepen.io/hayeah/pen/MrEVxy?editors=1011)。在提供的console（控制台）修改`obj`，并查看视图的变化。
 
 
 ![](./erc20-dapp/mobx-reaction.jpg)
@@ -146,7 +146,7 @@ npm start
 ✔ Build completed
 ```
 
-打开http://localhost:3000，你将看到：
+打开[http://localhost:3000](http://localhost:3000)，你将看到：
 
 ![](./erc20-dapp/initial-view.jpg)
 
