@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="zh" >
     <head>
-        <title>Complex Crowdsale · GitBook</title>
+        <title>复杂众筹合约 · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -243,10 +243,10 @@
     
         <li class="chapter " data-level="3.1.1" data-path="../part2/erc20-token.html">
             
-                <a href="../part2/erc20-token.html#deploy-contract">
+                <a href="../part2/erc20-token.html#部署CappedToken">
             
                     
-                    Deploy Contract
+                    部署合约
             
                 </a>
             
@@ -256,10 +256,10 @@
     
         <li class="chapter " data-level="3.1.2" data-path="../part2/erc20-token.html">
             
-                <a href="../part2/erc20-token.html#the-owner-UTXO-address">
+                <a href="../part2/erc20-token.html#Owner地址">
             
                     
-                    Contract Ownership
+                    合约Owner地址
             
                 </a>
             
@@ -269,10 +269,10 @@
     
         <li class="chapter " data-level="3.1.3" data-path="../part2/erc20-token.html">
             
-                <a href="../part2/erc20-token.html#prefunding-the-owner-address">
+                <a href="../part2/erc20-token.html#Owner的UTXO地址作为发送方">
             
                     
-                    Prefund Owner
+                    Owner作为发送方
             
                 </a>
             
@@ -282,10 +282,10 @@
     
         <li class="chapter " data-level="3.1.4" data-path="../part2/erc20-token.html">
             
-                <a href="../part2/erc20-token.html#using-abiplayer">
+                <a href="../part2/erc20-token.html#使用ABIPlayer">
             
                     
-                    ABIPlayer
+                    使用ABIPlayer
             
                 </a>
             
@@ -303,7 +303,7 @@
                 <a href="../part2/erc20-js.html">
             
                     
-                    ERC20 With QtumJS
+                    ERC20与QtumJS
             
                 </a>
             
@@ -314,10 +314,10 @@
     
         <li class="chapter " data-level="3.2.1" data-path="../part2/erc20-js.html">
             
-                <a href="../part2/erc20-js.html#getting-the-total-supply">
+                <a href="../part2/erc20-js.html#获取总供应量">
             
                     
-                    Load Contract
+                    加载合约
             
                 </a>
             
@@ -327,10 +327,10 @@
     
         <li class="chapter " data-level="3.2.2" data-path="../part2/erc20-js.html">
             
-                <a href="../part2/erc20-js.html#calling-a-read-only-method">
+                <a href="../part2/erc20-js.html#调用一个只读Method">
             
                     
-                    Call Method
+                    调用合约method
             
                 </a>
             
@@ -340,10 +340,10 @@
     
         <li class="chapter " data-level="3.2.3" data-path="../part2/erc20-js.html">
             
-                <a href="../part2/erc20-js.html#mint-tokens-with-send">
+                <a href="../part2/erc20-js.html#调用Send铸造Tokens">
             
                     
-                    Send Tx
+                    Send交易
             
                 </a>
             
@@ -353,10 +353,10 @@
     
         <li class="chapter " data-level="3.2.4" data-path="../part2/erc20-js.html">
             
-                <a href="../part2/erc20-js.html#observing-contract-events">
+                <a href="../part2/erc20-js.html#观察合约Events">
             
                     
-                    Stream Events
+                    观察合约Events
             
                 </a>
             
@@ -385,7 +385,7 @@
 
     
         
-        <li class="header">Part 3 - Crowdsale</li>
+        <li class="header">Part 3 - 众筹合约</li>
         
         
     
@@ -394,7 +394,7 @@
                 <span>
             
                     
-                    Simple Crowdsale
+                    简单众筹合约
             
                 </a>
             
@@ -407,7 +407,7 @@
                 <a href="ico.html">
             
                     
-                    Complex Crowdsale
+                    复杂众筹合约
             
                 </a>
             
@@ -418,7 +418,7 @@
 
     
         
-        <li class="header">Part 4 - Blockchain API</li>
+        <li class="header">Part 4 - 区块链API</li>
         
         
     
@@ -427,7 +427,7 @@
                 <a href="../part4/inspect-raw-tx.html">
             
                     
-                    Inspect Raw TX
+                    原始交易数据
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="../part4/smart-contract.html">
             
                     
-                    Smart Contract
+                    智能合约原始交易
             
                 </a>
             
@@ -478,7 +478,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Complex Crowdsale</a>
+        <a href=".." >复杂众筹合约</a>
     </h1>
 </div>
 
@@ -513,7 +513,7 @@
 </li>
 <li><a href="#&#x4F17;&#x7B79;&#x8BBE;&#x7F6E;">&#x914D;&#x7F6E;&#x5408;&#x7EA6;</a>
 </li>
-<li><a href="#Presale-pre-allocation&#xFF08;&#x9884;&#x552E;&#x7684;&#x9884;&#x5206;&#x914D;&#xFF09;">&#x5206;&#x914D;&#x7528;&#x4E8E;&#x9884;&#x552E;&#x7684;token</a>
+<li><a href="#Presale&#x9884;&#x5206;&#x914D;&#xFF09;">&#x5206;&#x914D;&#x7528;&#x4E8E;&#x9884;&#x552E;&#x7684;token</a>
 </li>
 <li><a href="#&#x516C;&#x4F17;&#x6295;&#x8D44;">&#x5141;&#x8BB8;&#x516C;&#x4F17;&#x8FDB;&#x884C;&#x6295;&#x8D44;</a>
 </li>
@@ -749,7 +749,7 @@ crowdsale end date: 2018-03-01T00:00:00.000Z
 investor count: 0
 qtum raised: 0
 tokens sold: 0</code></pre>
-<blockquote><p>&#x8BE5;&#x4FE1;&#x606F;&#x663E;&#x793A;&#x72B6;&#x6001;&#x4E3A;<code>PreFunding</code>&#xFF0C;&#x5373;&#x4F7F;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x4E86;&#x4F17;&#x7B79;&#x7684;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#x3002;&#x5B9E;&#x9645;&#x7684;&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x662F;<code>Funding</code>&#x3002; &#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5C06;&#x4F1A;&#x5728; <a href="https://github.com/qtumproject/qtum/issues/480" target="_blank">qtum #480</a> &#x91CC;&#x89E3;&#x51B3;&#x3002;</p></blockquote><h1 id="presale-pre-allocation&#xFF08;&#x9884;&#x552E;&#x7684;&#x9884;&#x5206;&#x914D;&#xFF09;"><a name="presale-pre-allocation&#xFF08;&#x9884;&#x552E;&#x7684;&#x9884;&#x5206;&#x914D;&#xFF09;" class="plugin-anchor" href="#presale-pre-allocation&#xFF08;&#x9884;&#x552E;&#x7684;&#x9884;&#x5206;&#x914D;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>Presale Pre-Allocation&#xFF08;&#x9884;&#x552E;&#x7684;&#x9884;&#x5206;&#x914D;&#xFF09;</h1><p>&#x6309;&#x7167;&#x6211;&#x4EEC;&#x7684;ICO&#x8BA1;&#x5212;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5C06;token&#x4F9B;&#x5E94;&#x91CF;&#x7684;10%&#xFF08;1&#x5343;&#x4E07;&#x4E2A;token&#xFF09;&#x51FA;&#x552E;&#x7ED9;&#x65E9;&#x671F;&#x7684;&#x6295;&#x8D44;&#x8005;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5C06;&#x4ED6;&#x4EEC;&#x7684;&#x6295;&#x8D44;&#x8BB0;&#x5F55;&#x5728;&#x8D26;&#x672C;&#x4E0A;&#x3002;</p><p>&#x5047;&#x8BBE;&#x6709;&#x4E24;&#x4E2A;&#x6295;&#x8D44;&#x8005;&#xFF0C;&#x4ED6;&#x4EEC;&#x4EE5;&#x76F8;&#x540C;&#x7684;&#x4EF7;&#x683C;&#x8FDB;&#x884C;&#x6295;&#x8D44;&#xFF1A;</p><pre><code class="lang-yaml"><span class="hljs-attr">- address:</span> <span class="hljs-string">&quot;77913e470293e72c1e93ed8dda8c1372dfc0274f&quot;</span>
+<blockquote><p>&#x8BE5;&#x4FE1;&#x606F;&#x663E;&#x793A;&#x72B6;&#x6001;&#x4E3A;<code>PreFunding</code>&#xFF0C;&#x5373;&#x4F7F;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x4E86;&#x4F17;&#x7B79;&#x7684;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#x3002;&#x5B9E;&#x9645;&#x7684;&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x662F;<code>Funding</code>&#x3002; &#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5C06;&#x4F1A;&#x5728; <a href="https://github.com/qtumproject/qtum/issues/480" target="_blank">qtum #480</a> &#x91CC;&#x89E3;&#x51B3;&#x3002;</p></blockquote><h1 id="presale&#x9884;&#x5206;&#x914D;"><a name="presale&#x9884;&#x5206;&#x914D;" class="plugin-anchor" href="#presale&#x9884;&#x5206;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>Presale&#x9884;&#x5206;&#x914D;</h1><p>&#x6309;&#x7167;&#x6211;&#x4EEC;&#x7684;ICO&#x8BA1;&#x5212;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5C06;token&#x4F9B;&#x5E94;&#x91CF;&#x7684;10%&#xFF08;1&#x5343;&#x4E07;&#x4E2A;token&#xFF09;&#x51FA;&#x552E;&#x7ED9;&#x65E9;&#x671F;&#x7684;&#x6295;&#x8D44;&#x8005;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5C06;&#x4ED6;&#x4EEC;&#x7684;&#x6295;&#x8D44;&#x8BB0;&#x5F55;&#x5728;&#x8D26;&#x672C;&#x4E0A;&#x3002;</p><p>&#x5047;&#x8BBE;&#x6709;&#x4E24;&#x4E2A;&#x6295;&#x8D44;&#x8005;&#xFF0C;&#x4ED6;&#x4EEC;&#x4EE5;&#x76F8;&#x540C;&#x7684;&#x4EF7;&#x683C;&#x8FDB;&#x884C;&#x6295;&#x8D44;&#xFF1A;</p><pre><code class="lang-yaml"><span class="hljs-attr">- address:</span> <span class="hljs-string">&quot;77913e470293e72c1e93ed8dda8c1372dfc0274f&quot;</span>
 <span class="hljs-attr">  tokens:</span> <span class="hljs-number">6000000</span>
 <span class="hljs-attr">  price:</span> <span class="hljs-number">50000</span>
 
@@ -1043,12 +1043,12 @@ token balance: 7000000</code></pre>
 
             
                 
-                <a href="vevue-ico/README.md" class="navigation navigation-prev " aria-label="Previous page: Simple Crowdsale">
+                <a href="vevue-ico/README.md" class="navigation navigation-prev " aria-label="Previous page: 简单众筹合约">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../part4/inspect-raw-tx.html" class="navigation navigation-next " aria-label="Next page: Inspect Raw TX">
+                <a href="../part4/inspect-raw-tx.html" class="navigation navigation-next " aria-label="Next page: 原始交易数据">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1059,7 +1059,7 @@ token balance: 7000000</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Complex Crowdsale","level":"4.2","depth":1,"next":{"title":"Inspect Raw TX","level":"5.1","depth":1,"path":"part4/inspect-raw-tx.md","ref":"part4/inspect-raw-tx.md","articles":[]},"previous":{"title":"Simple Crowdsale","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part3/ico.md","mtime":"2018-05-29T03:18:23.340Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:27:05.206Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"复杂众筹合约","level":"4.2","depth":1,"next":{"title":"原始交易数据","level":"5.1","depth":1,"path":"part4/inspect-raw-tx.md","ref":"part4/inspect-raw-tx.md","articles":[]},"previous":{"title":"简单众筹合约","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part3/ico.md","mtime":"2018-05-29T05:52:35.050Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T05:52:52.254Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

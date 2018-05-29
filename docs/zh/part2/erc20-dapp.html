@@ -243,10 +243,10 @@
     
         <li class="chapter " data-level="3.1.1" data-path="erc20-token.html">
             
-                <a href="erc20-token.html#deploy-contract">
+                <a href="erc20-token.html#部署CappedToken">
             
                     
-                    Deploy Contract
+                    部署合约
             
                 </a>
             
@@ -256,10 +256,10 @@
     
         <li class="chapter " data-level="3.1.2" data-path="erc20-token.html">
             
-                <a href="erc20-token.html#the-owner-UTXO-address">
+                <a href="erc20-token.html#Owner地址">
             
                     
-                    Contract Ownership
+                    合约Owner地址
             
                 </a>
             
@@ -269,10 +269,10 @@
     
         <li class="chapter " data-level="3.1.3" data-path="erc20-token.html">
             
-                <a href="erc20-token.html#prefunding-the-owner-address">
+                <a href="erc20-token.html#Owner的UTXO地址作为发送方">
             
                     
-                    Prefund Owner
+                    Owner作为发送方
             
                 </a>
             
@@ -282,10 +282,10 @@
     
         <li class="chapter " data-level="3.1.4" data-path="erc20-token.html">
             
-                <a href="erc20-token.html#using-abiplayer">
+                <a href="erc20-token.html#使用ABIPlayer">
             
                     
-                    ABIPlayer
+                    使用ABIPlayer
             
                 </a>
             
@@ -303,7 +303,7 @@
                 <a href="erc20-js.html">
             
                     
-                    ERC20 With QtumJS
+                    ERC20与QtumJS
             
                 </a>
             
@@ -314,10 +314,10 @@
     
         <li class="chapter " data-level="3.2.1" data-path="erc20-js.html">
             
-                <a href="erc20-js.html#getting-the-total-supply">
+                <a href="erc20-js.html#获取总供应量">
             
                     
-                    Load Contract
+                    加载合约
             
                 </a>
             
@@ -327,10 +327,10 @@
     
         <li class="chapter " data-level="3.2.2" data-path="erc20-js.html">
             
-                <a href="erc20-js.html#calling-a-read-only-method">
+                <a href="erc20-js.html#调用一个只读Method">
             
                     
-                    Call Method
+                    调用合约method
             
                 </a>
             
@@ -340,10 +340,10 @@
     
         <li class="chapter " data-level="3.2.3" data-path="erc20-js.html">
             
-                <a href="erc20-js.html#mint-tokens-with-send">
+                <a href="erc20-js.html#调用Send铸造Tokens">
             
                     
-                    Send Tx
+                    Send交易
             
                 </a>
             
@@ -353,10 +353,10 @@
     
         <li class="chapter " data-level="3.2.4" data-path="erc20-js.html">
             
-                <a href="erc20-js.html#observing-contract-events">
+                <a href="erc20-js.html#观察合约Events">
             
                     
-                    Stream Events
+                    观察合约Events
             
                 </a>
             
@@ -385,7 +385,7 @@
 
     
         
-        <li class="header">Part 3 - Crowdsale</li>
+        <li class="header">Part 3 - 众筹合约</li>
         
         
     
@@ -394,7 +394,7 @@
                 <span>
             
                     
-                    Simple Crowdsale
+                    简单众筹合约
             
                 </a>
             
@@ -407,7 +407,7 @@
                 <a href="../part3/ico.html">
             
                     
-                    Complex Crowdsale
+                    复杂众筹合约
             
                 </a>
             
@@ -418,7 +418,7 @@
 
     
         
-        <li class="header">Part 4 - Blockchain API</li>
+        <li class="header">Part 4 - 区块链API</li>
         
         
     
@@ -427,7 +427,7 @@
                 <a href="../part4/inspect-raw-tx.html">
             
                     
-                    Inspect Raw TX
+                    原始交易数据
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="../part4/smart-contract.html">
             
                     
-                    Smart Contract
+                    智能合约原始交易
             
                 </a>
             
@@ -532,7 +532,7 @@
 autorun(() =&gt; {
   renderView(obj)
 })</code></pre>
-<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5; <a href="https://codepen.io/hayeah/pen/MrEVxy?editors=1011" target="_blank">try this example on codepen.io</a>&#x3002;&#x5728;&#x63D0;&#x4F9B;&#x7684;console&#xFF08;&#x63A7;&#x5236;&#x53F0;&#xFF09;&#x4FEE;&#x6539;<code>obj</code>&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x89C6;&#x56FE;&#x7684;&#x53D8;&#x5316;&#x3002;</p><p><img src="erc20-dapp/mobx-reaction.jpg"></p><blockquote><p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x5730;&#x8C03;&#x7528;<code>autorun</code>&#xFF0C;&#x6846;&#x67B6;&#x4F1A;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#x4E24;&#x8005;&#x7684;&#x601D;&#x60F3;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5373;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#x5C06;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p></blockquote><h1 id="project&#x8FD0;&#x884C;"><a name="project&#x8FD0;&#x884C;" class="plugin-anchor" href="#project&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>Project&#x8FD0;&#x884C;</h1><p>&#x590D;&#x5236;project:</p><pre><code>git clone https://github.com/qtumproject/qtumjs-dapp-erc20.git</code></pre>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5; <a href="https://codepen.io/hayeah/pen/MrEVxy?editors=1011" target="_blank">&#x53C2;&#x8003;codepen.io&#x4E0A;&#x7684;&#x4F8B;&#x5B50;</a>&#x3002;&#x5728;&#x63D0;&#x4F9B;&#x7684;console&#xFF08;&#x63A7;&#x5236;&#x53F0;&#xFF09;&#x4FEE;&#x6539;<code>obj</code>&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x89C6;&#x56FE;&#x7684;&#x53D8;&#x5316;&#x3002;</p><p><img src="erc20-dapp/mobx-reaction.jpg"></p><blockquote><p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x5730;&#x8C03;&#x7528;<code>autorun</code>&#xFF0C;&#x6846;&#x67B6;&#x4F1A;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#x4E24;&#x8005;&#x7684;&#x601D;&#x60F3;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5373;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#x5C06;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p></blockquote><h1 id="project&#x8FD0;&#x884C;"><a name="project&#x8FD0;&#x884C;" class="plugin-anchor" href="#project&#x8FD0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>Project&#x8FD0;&#x884C;</h1><p>&#x590D;&#x5236;project:</p><pre><code>git clone https://github.com/qtumproject/qtumjs-dapp-erc20.git</code></pre>
 <p>&#x5B89;&#x88C5;&#x8BE5;project dependencies:</p><pre><code>yarn install
 # or: npm install</code></pre>
 <p>&#x548C;nodejs CLI&#x5DE5;&#x5177;&#x7C7B;&#x4F3C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5DF2;&#x90E8;&#x7F72;&#x5408;&#x7EA6;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;<code>solar.development.json</code>&#x6587;&#x4EF6;&#x590D;&#x5236;/&#x94FE;&#x63A5;&#x5230;&#x8BE5;project&#x4E2D;&#xFF1A;</p><pre><code>ln -s ~/qtumbook/examples/mytoken/solar.development.json solar.development.json</code></pre>
@@ -543,7 +543,7 @@ autorun(() =&gt; {
 
 &#x2714; Development server running on: http://localhost:3000
 &#x2714; Build completed</code></pre>
-<p>&#x6253;&#x5F00;<a href="http://localhost:3000&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#xFF1A;" target="_blank">http://localhost:3000&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#xFF1A;</a></p><p><img src="erc20-dapp/initial-view.jpg"></p><h2 id="project-&#x7ED3;&#x6784;"><a name="project-&#x7ED3;&#x6784;" class="plugin-anchor" href="#project-&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>Project &#x7ED3;&#x6784;</h2><ul><li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/index.tsx" target="_blank">src/index.ts</a>: project&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x8BBE;&#x7F6E;&#x3002;
+<p>&#x6253;&#x5F00;<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#xFF1A;</p><p><img src="erc20-dapp/initial-view.jpg"></p><h2 id="project-&#x7ED3;&#x6784;"><a name="project-&#x7ED3;&#x6784;" class="plugin-anchor" href="#project-&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>Project &#x7ED3;&#x6784;</h2><ul><li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/blob/master/src/index.tsx" target="_blank">src/index.ts</a>: project&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x8BBE;&#x7F6E;&#x3002;
 </li>
 <li><a href="https://github.com/qtumproject/qtumjs-dapp-erc20/tree/master/src/views" target="_blank">src/views</a>: &#x8BE5;&#x76EE;&#x5F55;&#x5305;&#x542B;&#x6240;&#x6709;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x7EC4;&#x4EF6;&#x3002;
 </li>
@@ -680,12 +680,12 @@ mint tx: 7f0ff25475e2e6e0943fa6fb934999019d7a6a886126c220d0fa7cdcc3c36feb
 
             
                 
-                <a href="erc20-js.html#observing-contract-events" class="navigation navigation-prev " aria-label="Previous page: Stream Events">
+                <a href="erc20-js.html#观察合约Events" class="navigation navigation-prev " aria-label="Previous page: 观察合约Events">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../part3/vevue-ico/README.md" class="navigation navigation-next " aria-label="Next page: Simple Crowdsale">
+                <a href="../part3/vevue-ico/README.md" class="navigation navigation-next " aria-label="Next page: 简单众筹合约">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -696,7 +696,7 @@ mint tx: 7f0ff25475e2e6e0943fa6fb934999019d7a6a886126c220d0fa7cdcc3c36feb
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ERC20 DApp","level":"3.3","depth":1,"next":{"title":"Simple Crowdsale","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"previous":{"title":"Stream Events","level":"3.2.4","depth":2,"anchor":"#observing-contract-events","path":"part2/erc20-js.md","ref":"./part2/erc20-js.md#observing-contract-events","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part2/erc20-dapp.md","mtime":"2018-05-29T03:18:23.307Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T03:27:05.206Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"ERC20 DApp","level":"3.3","depth":1,"next":{"title":"简单众筹合约","level":"4.1","depth":1,"path":"part3/vevue-ico/README.md","ref":"part3/vevue-ico/README.md","articles":[]},"previous":{"title":"观察合约Events","level":"3.2.4","depth":2,"anchor":"#观察合约Events","path":"part2/erc20-js.md","ref":"./part2/erc20-js.md#观察合约Events","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part2/erc20-dapp.md","mtime":"2018-05-29T05:52:35.047Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T05:52:52.254Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
