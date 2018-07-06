@@ -31,12 +31,12 @@ In particular,
 
 # Deploy CappedToken
 
-Create the project directory, and clone the [zeppelin-solidity](https://github.com/OpenZeppelin/zeppelin-solidity) repository to the project directory:
+Create the project directory, and clone the [zeppelin-solidity](https://github.com/OpenZeppelin/openzeppelin-solidity) repository to the project directory:
 
 ```
 mkdir mytoken && cd mytoken
 
-git clone https://github.com/OpenZeppelin/zeppelin-solidity.git
+git clone https://github.com/OpenZeppelin/openzeppelin-solidity.git
 ```
 
 For this exercise, we'll start `qtumd` from scratch, in regtest mode:
@@ -147,7 +147,7 @@ The [solar](https://github.com/qtumproject/solar.git) Smart Contract deployment 
 To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array (remember to set `QTUM_SENDER`):
 
 ```
-solar deploy zeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
+solar deploy openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
   '[21000000]'
 ```
 
@@ -155,7 +155,7 @@ Then solar waits for confirmation:
 
 ```
 🚀  All contracts confirmed
-   deployed zeppelin-solidity/contracts/token/CappedToken.sol =>
+   deployed openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol =>
       a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3
 ```
 
@@ -166,7 +166,7 @@ The `solar status` command lists all contracts that had been deployed with solar
 ```
 solar status
 
-✅  zeppelin-solidity/contracts/token/CappedToken.sol
+✅  openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol
         txid: 457a5afe15686c0bd596635aeb78d4ff7d2bf6a75df66c7251e89ce4d9c8f6d3
      address: 3db297ee4c225b45219d2a7aa68afea7f4e68832
    confirmed: true
@@ -273,7 +273,6 @@ You may now call `balanceOf` and `totalSupply` to check if the owner had receive
 In this chapter we have deployed a basic ERC20 token, and encounter a few tools along the way:
 
 + `solar deploy` to compile & create a contract.
-+ `solar prefund` to create UTXOs that has the same address as the contract owner.
 + Use ABIPlayer to interact with deployed contracts: http://localhost:9899/abiplay/
 + Authorize requests that cost money: http://localhost:9899/
 
