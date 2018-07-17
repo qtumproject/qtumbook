@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="zh" >
     <head>
-        <title>浏览器中的Docker · GitBook</title>
+        <title>简单众筹合约 · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../utxos-balances.html" />
+    <link rel="next" href="../ico.html" />
     
     
-    <link rel="prev" href="../qtum-docker.html" />
+    <link rel="prev" href="../../part2/erc20-dapp.html" />
     
 
     </head>
@@ -117,9 +117,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../qtum-docker.html">
+        <li class="chapter " data-level="2.1" data-path="../../part1/qtum-docker.html">
             
-                <a href="../qtum-docker.html">
+                <a href="../../part1/qtum-docker.html">
             
                     
                     QTUM Docker 容器
@@ -131,9 +131,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="../qtum-docker.html">
+        <li class="chapter " data-level="2.1.1" data-path="../../part1/qtum-docker.html">
             
-                <a href="../qtum-docker.html#运行regtest模式">
+                <a href="../../part1/qtum-docker.html#运行regtest模式">
             
                     
                     运行regtest模式
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="../qtum-docker.html">
+        <li class="chapter " data-level="2.1.2" data-path="../../part1/qtum-docker.html">
             
-                <a href="../qtum-docker.html#生成新区块">
+                <a href="../../part1/qtum-docker.html#生成新区块">
             
                     
                     生成新区块
@@ -157,9 +157,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.3" data-path="./">
+        <li class="chapter " data-level="2.1.3" data-path="../../part1/qtum-docker-codenvy/">
             
-                <a href="./">
+                <a href="../../part1/qtum-docker-codenvy/">
             
                     
                     浏览器中的Docker
@@ -175,9 +175,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../utxos-balances.html">
+        <li class="chapter " data-level="2.2" data-path="../../part1/utxos-balances.html">
             
-                <a href="../utxos-balances.html">
+                <a href="../../part1/utxos-balances.html">
             
                     
                     UTXOs & 余额
@@ -188,9 +188,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../networks.html">
+        <li class="chapter " data-level="2.3" data-path="../../part1/networks.html">
             
-                <a href="../networks.html">
+                <a href="../../part1/networks.html">
             
                     
                     测试网和主网
@@ -202,9 +202,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../networks.html">
+        <li class="chapter " data-level="2.3.1" data-path="../../part1/networks.html">
             
-                <a href="../networks.html#获取测试网代币(Token">
+                <a href="../../part1/networks.html#获取测试网代币(Token">
             
                     
                     获取测试网代币(Token)
@@ -389,9 +389,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../../part3/vevue-ico/">
+        <li class="chapter active" data-level="4.1" data-path="./">
             
-                <a href="../../part3/vevue-ico/">
+                <a href="./">
             
                     
                     简单众筹合约
@@ -402,9 +402,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../../part3/ico.html">
+        <li class="chapter " data-level="4.2" data-path="../ico.html">
             
-                <a href="../../part3/ico.html">
+                <a href="../ico.html">
             
                     
                     复杂众筹合约
@@ -478,7 +478,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >浏览器中的Docker</a>
+        <a href="../.." >简单众筹合约</a>
     </h1>
 </div>
 
@@ -493,10 +493,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4F7F;&#x7528;codenvy&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5F00;&#x53D1;qtum"><a name="&#x4F7F;&#x7528;codenvy&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5F00;&#x53D1;qtum" class="plugin-anchor" href="#&#x4F7F;&#x7528;codenvy&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5F00;&#x53D1;qtum"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;Codenvy&#x96C6;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x5F00;&#x53D1;QTUM</h1><p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7535;&#x8111;&#x4E0A;&#x6CA1;&#x6709;&#x5B89;&#x88C5;docker&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<a href="https://codenvy.io" target="_blank">https://codenvy.io</a>&#x4E0A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x53EF;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5B89;&#x88C5;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;&#x8FD9;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5728;QTUM&#x4E0A;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p><p>&#x9996;&#x5148;&#xFF0C;&#x5728;<a href="https://codenvy.io/dashboard/#/stacks" target="_blank">https://codenvy.io/dashboard/#/stacks</a>&#x7F51;&#x9875;&#x4E2D;&#x70B9;&#x51FB;&#x201C;Build Stack From Recipe&#x201D;&#x6309;&#x94AE;&#x3002;</p><p>&#x7C98;&#x8D34;&#x4E0B;&#x5217;recipe&#xFF1A;</p><pre><code>services:
- dev-machine:
-  image: &apos;hayeah/che-qtumportal:latest&apos;</code></pre>
-<p><img src="create-stack.jpg"></p><p>&#x7136;&#x540E;&#x7F16;&#x8F91;stack&#x7684;&#x540D;&#x79F0;&#x548C;&#x63CF;&#x8FF0;&#xFF0C;&#x5E76;&#x4E14;&#x70B9;&#x51FB;&#x201C;save&#x201D;&#x6309;&#x94AE;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;stack&#xFF08;&#x4F8B;&#x5982;&#xFF0C;QTUM&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#x89C4;&#x8303;&#xFF09;&#xFF1A;</p><p><img src="create-stack-save.jpg"></p><p>&#x4E00;&#x65E6;&#x5728;recipe&#x4E2D;&#x521B;&#x5EFA;&#x4E86;stack&#xFF0C;&#x8BBF;&#x95EE;<a href="https://codenvy.io/dashboard/#/create-workspace" target="_blank">https://codenvy.io/dashboard/#/create-workspace</a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;qtum&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#xFF09;&#xFF1A;</p><p><img src="create-workspace.jpg"></p><p>&#x5927;&#x6982;&#x9700;&#x8981;1&#x5206;&#x949F;&#x7684;&#x65F6;&#x95F4;&#x542F;&#x52A8;&#x3002;Codenvy&#x7684;&#x7F16;&#x7A0B;&#x7528;&#x6237;&#x754C;&#x9762;&#x5982;&#x4E0B;&#xFF1A;</p><p><img src="codenvy-ide.jpg"></p><p>&#x901A;&#x8FC7;&#x8FD0;&#x884C;<code>qcli getinfo</code>&#x547D;&#x4EE4;&#x6765;&#x9A8C;&#x8BC1;&#x73AF;&#x5883;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF1A;</p><p><img src="terminal-getinfo.jpg"></p>
+                                <h1 id="&#x7B80;&#x5355;&#x7684;&#x4F17;&#x7B79;"><a name="&#x7B80;&#x5355;&#x7684;&#x4F17;&#x7B79;" class="plugin-anchor" href="#&#x7B80;&#x5355;&#x7684;&#x4F17;&#x7B79;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x7684;&#x4F17;&#x7B79;</h1><p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;Vevue&#x7684;ICO&#x7684;&#x5408;&#x7EA6;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x4F17;&#x7B79;&#x3002;&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;ERC20 token&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;<code>buyTokens</code> method&#x3002;&#x5F53;&#x7528;&#x6237;&#x4F7F;&#x7528;<code>buyTokens</code>&#x5C06;&#x94B1;&#x53D1;&#x9001;&#x7ED9;&#x5408;&#x7EA6;&#x65F6;&#xFF0C;&#x6839;&#x636E;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x5151;&#x6362;&#x6BD4;&#x7387;&#x5F97;&#x5230;&#x7684;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;token&#x4F1A;&#x88AB;&#x94F8;&#x9020;&#x51FA;&#x6765;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x88AB;&#x8BA1;&#x5165;&#x5728;&#x4E70;&#x65B9;&#x540D;&#x4E0B;&#x3002;</p><p>&#x672C;&#x7AE0;&#x4F7F;&#x7528;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x5728; <a href="https://github.com/qtumproject/qtumjs-vevue-ico" target="_blank">qtumproject/qtumjs-vevue-ico</a> &#x4E2D;&#x3002;</p><p>&#x5728;token&#x5408;&#x7EA6;&#x4E2D;&#x6709;&#x4E00;&#x4E9B;&#x5199;&#x6B7B;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;token&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x8BBE;&#x8BA1;&#x6765;&#x8C03;&#x6574;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x3002;</p><p>&#x90E8;&#x5206;&#x5408;&#x7EA6;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p><ul><li><p><code>decimals</code>: &#x4E00;&#x4E2A;&#x5355;&#x4F4D;&#x7684;token&#x662F;&#x5982;&#x4F55;&#x5206;&#x5272;&#x7684;&#x3002;</p><ul><li>&#x5C0F;&#x6570;&#x70B9;&#x540E;8&#x4F4D;&#xFF0C;&#x5C31;&#x50CF;&#x6BD4;&#x7279;&#x5E01;&#x4E00;&#x6837;&#x5206;&#x5272;&#x3002;&#x6700;&#x5C0F;&#x7684;&#x5355;&#x4F4D;&#x662F;satoshi&#x3002;
+</li></ul>
+</li>
+<li><p><code>tokenTotalSupply</code>: token&#x7684;&#x6700;&#x5927;&#x4F9B;&#x5E94;&#x91CF;&#x3002;</p><ul><li>&#x603B;&#x5171;1&#x4EBF;&#x4E2A;token
+</li></ul>
+</li>
+<li><p><code>saleAmount</code>: &#x51FA;&#x552E;&#x7684;token&#x6570;&#x91CF;&#x3002;</p><ul><li>&#x51FA;&#x552E;4&#x5343;&#x4E07;&#x4E2A;token
+</li></ul>
+</li>
+<li><p><code>_initialExchangeRate</code>: &#x5151;&#x6362;&#x6BD4;&#x7387;&#x3002;</p><ul><li>&#x8BBE;&#x7F6E;1&#x4E2A;qtum&#x5151;&#x6362;100&#x4E2A;token&#x3002;
+</li></ul>
+</li></ul>
+<p>&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x7981;&#x7528;&#x4E86;&#x4F17;&#x7B79;&#x7684;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#xFF08;&#x4EE5;&#x533A;&#x5757;&#x53F7;&#x6307;&#x5B9A;&#xFF09;&#x3002;</p><p>&#x4E0B;&#x9762;&#x5C31;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x4F17;&#x7B79;&#xFF01;</p><h1 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;owner&#x5730;&#x5740;"><a name="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;owner&#x5730;&#x5740;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;owner&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Owner&#x5730;&#x5740;</h1><p>&#x9996;&#x5148;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x5408;&#x7EA6;owner&#x7684;&#x5730;&#x5740;&#x3002;&#x4F17;&#x7B79;&#x7684;&#x6536;&#x5165;&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x3002;</p><pre><code>qcli getnewaddress
+qJtdUF9ko4Hk95cqTzq7SDs18dapNwjRNS
+
+qcli gethexaddress qJtdUF9ko4Hk95cqTzq7SDs18dapNwjRNS
+0e9bfa516890f857beaba3eba35cc478ab10bce4</code></pre>
+<p>&#x7ED9;owner&#x5730;&#x5740;&#x53D1;&#x9001;&#x4E00;&#x4E9B;&#x8D44;&#x91D1;&#x7528;&#x4E8E;&#x652F;&#x4ED8;gas&#x8D39;&#x7528;&#xFF1A;</p><pre><code>qcli sendtoaddress qJtdUF9ko4Hk95cqTzq7SDs18dapNwjRNS 1</code></pre>
+<p>&#x7136;&#x540E;&#x914D;&#x7F6E;<code>solar</code>&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x90E8;&#x7F72;&#x5408;&#x7EA6;&#x65F6;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x8BE5;&#x5730;&#x5740;&#x3002;</p><pre><code>export QTUM_SENDER=qJtdUF9ko4Hk95cqTzq7SDs18dapNwjRNS</code></pre>
+<h1 id="&#x90E8;&#x7F72;token&#x5408;&#x7EA6;"><a name="&#x90E8;&#x7F72;token&#x5408;&#x7EA6;" class="plugin-anchor" href="#&#x90E8;&#x7F72;token&#x5408;&#x7EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;Token&#x5408;&#x7EA6;</h1><p>&#x4F7F;&#x7528;solar&#x90E8;&#x7F72;&#x5408;&#x7EA6;&#xFF1A;</p><pre><code>solar deploy VevueToken.sol --force
+
+&#x1F680;  All contracts confirmed
+   deployed VevueToken.sol =&gt; 09b97cc71a300f1bdad44711f4ce9f25bd404d8b</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x5408;&#x7EA6;owner&#x662F;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x7684;<code>QTUM_SENDER</code>&#x7684;&#x5730;&#x5740;&#xFF1A;</p><pre><code>solar status
+
+&#x2705;  VevueToken.sol
+        txid: 08528ef006f05fdfe1d6eb3006bac7dfc21d6f854822081575b9ff8b61950cdd
+     address: 09b97cc71a300f1bdad44711f4ce9f25bd404d8b
+   confirmed: true
+       owner: qJtdUF9ko4Hk95cqTzq7SDs18dapNwjRNS</code></pre>
+<h2 id="&#x521D;&#x59CB;&#x5316;&#x4F17;&#x7B79;&#x72B6;&#x6001;"><a name="&#x521D;&#x59CB;&#x5316;&#x4F17;&#x7B79;&#x72B6;&#x6001;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x4F17;&#x7B79;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x4F17;&#x7B79;&#x72B6;&#x6001;</h2><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5E26;&#x7684;qtumjs&#x811A;&#x672C;&#x6253;&#x5370;&#x4F17;&#x7B79;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF1A;</p><pre><code>node index.js info
+
+supply cap: 100000000.00000000
+sales cap: 40000000.00000000
+current token supply: 0.0
+tokens sold: 0.0</code></pre>
+<ul><li><p>&#x9A8C;&#x8BC1;supply cap&#xFF08;&#x4F9B;&#x5E94;&#x91CF;&#x9650;&#x989D;&#xFF09;&#x548C;sales cap&#xFF08;&#x9500;&#x552E;&#x9650;&#x989D;&#xFF09;&#x662F;&#x5426;&#x5DF2;&#x6307;&#x5B9A;</p><ul><li>&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x6709;8&#x4F4D;
+</li></ul>
+</li>
+<li><p>&#x76EE;&#x524D;&#x7684;supply&#x4E3A;0</p></li></ul>
+<h1 id="&#x8D2D;&#x4E70;token"><a name="&#x8D2D;&#x4E70;token" class="plugin-anchor" href="#&#x8D2D;&#x4E70;token"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D2D;&#x4E70;Token</h1><p>&#x751F;&#x6210;&#x53E6;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x8BE5;&#x5730;&#x5740;&#x6765;&#x63A5;&#x6536;&#x8D2D;&#x4E70;&#x7684;token&#xFF1A;</p><pre><code>qcli getnewaddress
+qgMR2N4ANuswodFh8T4gYMD3a3VNAd11Jt</code></pre>
+<pre><code>qcli gethexaddress qgMR2N4ANuswodFh8T4gYMD3a3VNAd11Jt
+fa0775ed07771e390c5a3bd2f00cef05bc4185f2</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x82B1;&#x8D39;1&#x4E2A;qtum&#x6765;&#x8D2D;&#x4E70;token&#xFF08;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;100&#x4E2A;token&#xFF09;&#xFF1A;</p><pre><code>node index.js buy fa0775ed07771e390c5a3bd2f00cef05bc4185f2 1</code></pre>
+<p>&#x4EA4;&#x6613;&#x786E;&#x8BA4;&#x540E;&#xFF0C;token&#x7684;supply&#x589E;&#x52A0;100&#xFF1A;</p><pre><code>node index.js info
+
+supply cap: 100000000.00000000
+sales cap: 40000000.00000000
+current token supply: 100.00000000
+tokens sold: 100.00000000</code></pre>
+<p>&#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x7528;&#x4E8E;&#x8D2D;&#x4E70;token&#x7684;&#x7279;&#x5B9A;&#x5730;&#x5740;&#x7684;&#x4F59;&#x989D;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF1A;</p><pre><code>node index.js balanceOf fa0775ed07771e390c5a3bd2f00cef05bc4185f2
+100.00000000</code></pre>
+
                                 
                                 </section>
                             
@@ -523,12 +573,12 @@
 
             
                 
-                <a href="../qtum-docker.html#生成新区块" class="navigation navigation-prev " aria-label="Previous page: 生成新区块">
+                <a href="../../part2/erc20-dapp.html" class="navigation navigation-prev " aria-label="Previous page: ERC20 DApp">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../utxos-balances.html" class="navigation navigation-next " aria-label="Next page: UTXOs & 余额">
+                <a href="../ico.html" class="navigation navigation-next " aria-label="Next page: 复杂众筹合约">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -539,7 +589,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"浏览器中的Docker","level":"2.1.3","depth":2,"next":{"title":"UTXOs & 余额","level":"2.2","depth":1,"path":"part1/utxos-balances.md","ref":"part1/utxos-balances.md","articles":[]},"previous":{"title":"生成新区块","level":"2.1.2","depth":2,"anchor":"#生成新区块","path":"part1/qtum-docker.md","ref":"part1/qtum-docker.md#生成新区块","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part1/qtum-docker-codenvy/README.md","mtime":"2018-05-29T05:52:35.046Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-17T05:44:49.974Z"},"basePath":"../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"简单众筹合约","level":"4.1","depth":1,"next":{"title":"复杂众筹合约","level":"4.2","depth":1,"path":"part3/ico.md","ref":"part3/ico.md","articles":[]},"previous":{"title":"ERC20 DApp","level":"3.3","depth":1,"path":"part2/erc20-dapp.md","ref":"part2/erc20-dapp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"part3/vevue-ico/README.md","mtime":"2018-05-29T03:18:23.340Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-17T05:44:49.974Z"},"basePath":"../..","book":{"language":"zh"}});
         });
     </script>
 </div>
