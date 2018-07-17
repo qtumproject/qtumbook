@@ -1,9 +1,8 @@
 doc/*
-vevue-ico
-zeppelin-ico
 package.json
 .qtum
 _book
 myico
 myico2
 erc20-take2
+examples
