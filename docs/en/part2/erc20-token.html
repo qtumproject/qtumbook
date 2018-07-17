@@ -511,9 +511,9 @@
 </li>
 <li><code>CappedToken</code> adds limit to the max supply of tokens that could be minted.
 </li></ul>
-<h1 id="deploy-cappedtoken"><a name="deploy-cappedtoken" class="plugin-anchor" href="#deploy-cappedtoken"><i class="fa fa-link" aria-hidden="true"></i></a>Deploy CappedToken</h1><p>Create the project directory, and clone the <a href="https://github.com/OpenZeppelin/zeppelin-solidity" target="_blank">zeppelin-solidity</a> repository to the project directory:</p><pre><code>mkdir mytoken &amp;&amp; cd mytoken
+<h1 id="deploy-cappedtoken"><a name="deploy-cappedtoken" class="plugin-anchor" href="#deploy-cappedtoken"><i class="fa fa-link" aria-hidden="true"></i></a>Deploy CappedToken</h1><p>Create the project directory, and clone the <a href="https://github.com/OpenZeppelin/openzeppelin-solidity" target="_blank">zeppelin-solidity</a> repository to the project directory:</p><pre><code>mkdir mytoken &amp;&amp; cd mytoken
 
-git clone https://github.com/OpenZeppelin/zeppelin-solidity.git</code></pre>
+git clone https://github.com/OpenZeppelin/openzeppelin-solidity.git</code></pre>
 <p>For this exercise, we&apos;ll start <code>qtumd</code> from scratch, in regtest mode:</p><pre><code>docker run -it --rm \
   --name myapp \
   -v `pwd`:/dapp \
@@ -557,14 +557,14 @@ cf652f54e6a6dde3e60fa4e38eee1c529bf4ecf3f8424c7ac7ef9717850cc984</code></pre>
 </li>
 <li>Record the address of the contract, and owner of the contract, for later uses.
 </li></ol>
-<p>The <a href="https://github.com/qtumproject/solar.git" target="_blank">solar</a> Smart Contract deployment tool (included in the container) handles all of this for you.</p><p>To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array (remember to set <code>QTUM_SENDER</code>):</p><pre><code>solar deploy zeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
+<p>The <a href="https://github.com/qtumproject/solar.git" target="_blank">solar</a> Smart Contract deployment tool (included in the container) handles all of this for you.</p><p>To deploy the CappedToken contract, specifying 21 million as the capacity by passing in the constructor parameters as a JSON array (remember to set <code>QTUM_SENDER</code>):</p><pre><code>solar deploy openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol \
   &apos;[21000000]&apos;</code></pre>
 <p>Then solar waits for confirmation:</p><pre><code>&#x1F680;  All contracts confirmed
-   deployed zeppelin-solidity/contracts/token/CappedToken.sol =&gt;
+   deployed openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol =&gt;
       a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3</code></pre>
 <p>The contract had been deployed to <code>a778c05f1d0f70f1133f4bbf78c1a9a7bf84aed3</code>. (You&apos;d get a different contract address).</p><p>The <code>solar status</code> command lists all contracts that had been deployed with solar:</p><pre><code>solar status
 
-&#x2705;  zeppelin-solidity/contracts/token/CappedToken.sol
+&#x2705;  openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol
         txid: 457a5afe15686c0bd596635aeb78d4ff7d2bf6a75df66c7251e89ce4d9c8f6d3
      address: 3db297ee4c225b45219d2a7aa68afea7f4e68832
    confirmed: true
@@ -587,8 +587,6 @@ cf652f54e6a6dde3e60fa4e38eee1c529bf4ecf3f8424c7ac7ef9717850cc984</code></pre>
 
 qdgznat81MfTHZUrQrLZDZteAx212X4Wjj</code></pre>
 <h1 id="mint-with-abiplayer"><a name="mint-with-abiplayer" class="plugin-anchor" href="#mint-with-abiplayer"><i class="fa fa-link" aria-hidden="true"></i></a>Mint With ABIPlayer</h1><p>Let&apos;s mint some coins for the contract owner! Because we are sending the receiver address into the smart contract, we&apos;ll need to format the address in hexadecimal instead of base58.</p><p>To mint 1000 tokens:</p><p><img src="erc20-token/mint-send.jpg"></p><p>Click send, and you&apos;ll see that the transaction is waiting for authorization:</p><p><img src="erc20-token/mint-waiting-authorization.jpg"></p><p>This request requires your authorization because it costs QTUM. Visit the authorization UI (<a href="http://localhost:9899/" target="_blank">http://localhost:9899/</a>) to approve it:</p><p><img src="erc20-token/mint-auth.jpg"></p><p>Wait for confirmation, and you should see information about the transaction:</p><p><img src="erc20-token/mint-result.jpg"></p><p>You may now call <code>balanceOf</code> and <code>totalSupply</code> to check if the owner had received the minted tokens, and that the supply had increased accordingly:</p><p><img src="erc20-token/mint-balance-supply.jpg"></p><h1 id="conclusion"><a name="conclusion" class="plugin-anchor" href="#conclusion"><i class="fa fa-link" aria-hidden="true"></i></a>Conclusion</h1><p>In this chapter we have deployed a basic ERC20 token, and encounter a few tools along the way:</p><ul><li><code>solar deploy</code> to compile &amp; create a contract.
-</li>
-<li><code>solar prefund</code> to create UTXOs that has the same address as the contract owner.
 </li>
 <li>Use ABIPlayer to interact with deployed contracts: <a href="http://localhost:9899/abiplay/" target="_blank">http://localhost:9899/abiplay/</a>
 </li>
@@ -637,7 +635,7 @@ qdgznat81MfTHZUrQrLZDZteAx212X4Wjj</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ERC20 Token","level":"3.1","depth":1,"next":{"title":"Deploy Contract","level":"3.1.1","depth":2,"anchor":"#deploy-contract","path":"part2/erc20-token.md","ref":"part2/erc20-token.md#deploy-contract","articles":[]},"previous":{"title":"Tip: Free Testnet Tokens","level":"2.3.1","depth":2,"anchor":"#getting-testnet-tokens","path":"part1/networks.md","ref":"part1/networks.md#getting-testnet-tokens","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"part2/erc20-token.md","mtime":"2018-03-07T09:11:38.115Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-05-29T05:52:52.254Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"ERC20 Token","level":"3.1","depth":1,"next":{"title":"Deploy Contract","level":"3.1.1","depth":2,"anchor":"#deploy-contract","path":"part2/erc20-token.md","ref":"part2/erc20-token.md#deploy-contract","articles":[]},"previous":{"title":"Tip: Free Testnet Tokens","level":"2.3.1","depth":2,"anchor":"#getting-testnet-tokens","path":"part1/networks.md","ref":"part1/networks.md#getting-testnet-tokens","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"part2/erc20-token.md","mtime":"2018-07-06T08:02:01.952Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-07-17T04:44:34.621Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
