@@ -25,9 +25,9 @@ The `CappedToken` is an ERC20 compliant token, inheriting the basic functionalit
 
 In particular,
 
-+ `StandardToken` implements the ERC20 interface.
-+ `MintableToken` adds the `mint(address _to, uint256 _amount)` method, to create new tokens out of thin air.
-+ `CappedToken` adds limit to the max supply of tokens that could be minted.
+- `StandardToken` implements the ERC20 interface.
+- `MintableToken` adds the `mint(address _to, uint256 _amount)` method, to create new tokens out of thin air.
+- `CappedToken` adds limit to the max supply of tokens that could be minted.
 
 # Deploy CappedToken
 
@@ -36,7 +36,7 @@ Create the project directory, and clone the [zeppelin-solidity](https://github.c
 ```
 mkdir mytoken && cd mytoken
 
-git clone https://github.com/OpenZeppelin/openzeppelin-solidity.git
+git clone https://github.com/OpenZeppelin/openzeppelin-solidity.git --branch v1.5.0
 ```
 
 For this exercise, we'll start `qtumd` from scratch, in regtest mode:
@@ -272,7 +272,6 @@ You may now call `balanceOf` and `totalSupply` to check if the owner had receive
 
 In this chapter we have deployed a basic ERC20 token, and encounter a few tools along the way:
 
-+ `solar deploy` to compile & create a contract.
-+ Use ABIPlayer to interact with deployed contracts: http://localhost:9899/abiplay/
-+ Authorize requests that cost money: http://localhost:9899/
-
+- `solar deploy` to compile & create a contract.
+- Use ABIPlayer to interact with deployed contracts: http://localhost:9899/abiplay/
+- Authorize requests that cost money: http://localhost:9899/
